@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GroupOfAcadYear"></activity>
+        <activity android:name=".GroupOfAcadYear" />
+        <activity android:name=".AboutSubject"></activity>
     </application>
 
 </manifest>
