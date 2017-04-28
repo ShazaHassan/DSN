@@ -1,6 +1,7 @@
 package com.example.android.dsn;
 
 import android.content.Intent;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,50 +24,39 @@ public class SelectAcadYear extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_acad_year);
+        first= (Button)findViewById(R.id.firstyear);
+        second= (Button)findViewById(R.id.secondyear);
+        third= (Button)findViewById(R.id.thirdyear);
+        forth= (Button)findViewById(R.id.forthyear);
 
-        first=(Button) findViewById(R.id.firstyear);
-        second=(Button)  findViewById(R.id.secondyear);
-        third= (Button) findViewById(R.id.thirdyear);
-        forth=(Button) findViewById(R.id.forthyear);
-
-
-
-        // go to academic year page and write the name of year
-        first.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent registerIntent = new Intent(SelectAcadYear.this, GroupOfAcadYear.class);
-                String fi= first.getText().toString();
-                registerIntent.putExtra(EXTRA_MESSAGE, fi);
-                startActivity(registerIntent);
-            }
-        });
-        second.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent registerIntent = new Intent(SelectAcadYear.this, GroupOfAcadYear.class);
-                String fi= second.getText().toString();
-                registerIntent.putExtra(EXTRA_MESSAGE, fi);
-                startActivity(registerIntent);
-            }
-        });
-        third.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent registerIntent = new Intent(SelectAcadYear.this, GroupOfAcadYear.class);
-                String fi= third.getText().toString();
-                registerIntent.putExtra(EXTRA_MESSAGE, fi);
-                startActivity(registerIntent);
-            }
-        });
-        forth.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent registerIntent = new Intent(SelectAcadYear.this, GroupOfAcadYear.class);
-                String fi= forth.getText().toString();
-                registerIntent.putExtra(EXTRA_MESSAGE, fi);
-                startActivity(registerIntent);
-            }
-        });
     }
+
+
+    public void firstYear(View view) {
+        Intent next=new Intent(SelectAcadYear.this,GroupOfAcadYear.class);
+        String year=first.getText().toString();
+        next.putExtra( EXTRA_MESSAGE,year);
+        startActivity(next);
+
+    }
+    public void secondYear(View view) {
+        Intent next=new Intent(SelectAcadYear.this,GroupOfAcadYear.class);
+        String year=second.getText().toString();
+        next.putExtra( EXTRA_MESSAGE,year);
+        startActivity(next);
+
+    }
+    public void thirdYear(View view) {
+        Intent next=new Intent(SelectAcadYear.this,GroupOfAcadYear.class);
+        String year=third.getText().toString();
+        next.putExtra( EXTRA_MESSAGE,year);
+        startActivity(next);
+    }
+    public void forthYear(View view) {
+        Intent next=new Intent(SelectAcadYear.this,GroupOfAcadYear.class);
+        String year=third.getText().toString();
+        next.putExtra( EXTRA_MESSAGE,year);
+        startActivity(next);
+    }
+
 }

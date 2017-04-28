@@ -73,13 +73,11 @@ public class GroupOfAcadYear extends AppCompatActivity implements AdapterView.On
         post =new TextView(this);
         postButton=(Button) findViewById(R.id.post);
         writePost= (EditText) findViewById(R.id.writePost) ;
-        postButton.setOnClickListener(onClick());
 
 
 
 
 
-        //setOnClickListener(onClick());
 
     }
 
@@ -107,16 +105,11 @@ public class GroupOfAcadYear extends AppCompatActivity implements AdapterView.On
 
 
     //when click on post button add post to page
+    public void writePost(View view){
 
-    private View.OnClickListener onClick() {
-        return new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
                 addPost.addView(addNewPost(writePost.getText().toString()));
                 writePost.setText("");
-            }
-        };
+
     }
 
 

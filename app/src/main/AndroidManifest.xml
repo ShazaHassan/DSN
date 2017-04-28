@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SelectAcadYear">
+        <activity android:name=".StartPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,7 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".GroupOfAcadYear" />
-        <activity android:name=".AboutSubject"></activity>
+        <activity android:name=".AboutSubject" />
+        <activity android:name=".SelectAcadYear" />
+        <activity android:name=".Login" />
+        <activity android:name=".Registration" />
+        <activity android:name=".ResetPassword"></activity>
     </application>
 
 </manifest>
