@@ -86,12 +86,17 @@ public class GroupOfAcadYear extends AppCompatActivity implements AdapterView.On
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         // On selecting a spinner item
         String item = parent.getItemAtPosition(position).toString();
+        if(item!="select subject")
+        {
+            Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
+            Intent registerIntent = new Intent(GroupOfAcadYear.this, AboutSubject.class);
+            startActivity(registerIntent);
+        }
+
+
 
         // Showing selected spinner item
-        Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
 
-        Intent registerIntent = new Intent(GroupOfAcadYear.this, AboutSubject.class);
-        startActivity(registerIntent);
 
 
     }
