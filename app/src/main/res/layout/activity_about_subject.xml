@@ -46,16 +46,15 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true" />
 
-                <Button
-                    android:id="@+id/question"
+                <Spinner
+                    android:id="@+id/others"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="25dp"
-                    android:layout_marginRight="25dp"
+                    android:layout_marginEnd="55dp"
+                    android:layout_marginRight="55dp"
                     android:layout_toLeftOf="@+id/posted"
-                    android:layout_toStartOf="@+id/posted"
-                    android:text="Questions" />
+                    android:layout_toStartOf="@+id/posted" />
 
             </RelativeLayout>
 

@@ -17,4 +17,9 @@
         <item>To Staff</item>
         <item>To Representative</item>
     </string-array>
+    <string-array name="others">
+        <item>other</item>
+        <item>Task</item>
+        <item>Questions</item>
+    </string-array>
 </resources>

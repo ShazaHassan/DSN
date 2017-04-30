@@ -24,7 +24,7 @@ import static com.example.android.dsn.R.id.degreeOfSub;
 
 public class AboutSubject extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
-    Spinner editContain,editDegree,editTeach,messenger;
+    Spinner editContain,editDegree,editTeach,messenger,others;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +33,7 @@ public class AboutSubject extends AppCompatActivity implements AdapterView.OnIte
         addElementInSpinnerDegree();
         addElementInSpinnerTeachAssistance();
         addElementInSpinnerMessage();
+        addElementInSpinnerOthers();
     }
     //add element spinner of edit for contain
     private void addElementInSpinnerContain(){
@@ -71,6 +72,15 @@ public class AboutSubject extends AppCompatActivity implements AdapterView.OnIte
         ArrayAdapter<CharSequence> message=ArrayAdapter.createFromResource(this, R.array.message,android.R.layout.simple_spinner_item);
         message.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         messenger.setAdapter(message);
+    }
+
+    ////add element to spinner of others to go to task and questions page
+    private void addElementInSpinnerOthers(){
+        others =(Spinner) findViewById(R.id.others);
+        others.setOnItemSelectedListener(this);
+        ArrayAdapter<CharSequence> other=ArrayAdapter.createFromResource(this, R.array.others,android.R.layout.simple_spinner_item);
+        other.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        others.setAdapter(other);
     }
 
     @Override
