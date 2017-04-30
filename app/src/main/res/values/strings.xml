@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">DSN</string>
+    <string-array name="editContain">
+        <item></item>
+        <item>edit</item>
+    </string-array>
+    <string-array name="editDegree">
+        <item></item>
+        <item>edit</item>
+    </string-array>
+    <string-array name="editTeach">
+        <item></item>
+        <item>edit</item>
+    </string-array>
+    <string-array name="message">
+        <item>message</item>
+        <item>To Staff</item>
+        <item>To Representative</item>
+    </string-array>
 </resources>
