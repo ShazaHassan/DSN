@@ -1,10 +1,12 @@
 package com.example.android.dsn;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -15,6 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.R.id.list;
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 
 public class GroupOfAcadYear extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -69,10 +74,7 @@ public class GroupOfAcadYear extends AppCompatActivity implements AdapterView.On
 
 
         //when click on post button
-        addPost=(LinearLayout) findViewById(R.id.mainPage);
-        post =new TextView(this);
-        postButton=(Button) findViewById(R.id.post);
-        writePost= (EditText) findViewById(R.id.writePost) ;
+
 
 
 
@@ -113,18 +115,18 @@ public class GroupOfAcadYear extends AppCompatActivity implements AdapterView.On
 
     //when click on post button add post to page
     public void writePost(View view){
-
-                addPost.addView(addNewPost(writePost.getText().toString()));
-                writePost.setText("");
-
-    }
-
-
-    private TextView addNewPost(String text) {
-        final ActionBar.LayoutParams layoutParams= new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT);
-
-        post.setLayoutParams(layoutParams);
+        addPost=(LinearLayout) findViewById(R.id.writtenpost);
+        post =new TextView(this);
+        View view1 =new View(this);
+        view1.setLayoutParams(new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,1));//set the size of line which separate between posts
+        view1.setBackgroundColor(Color.GRAY);
+        post.setBackgroundResource(R.drawable.bordertopost);//add the rectangle for each post
+        writePost= (EditText) findViewById(R.id.writePost) ;
+        String text=writePost.getText().toString();//get text of post from EditText
+        writePost.setText("");//clear EditText after add text in group
         post.setText(text);
-        return post;
+        addPost.addView(post);//add text view in page
+        addPost.addView(view1);//add line to separate between posts
     }
+
 }

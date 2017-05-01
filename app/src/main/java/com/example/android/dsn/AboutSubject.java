@@ -148,6 +148,17 @@ public class AboutSubject extends AppCompatActivity implements AdapterView.OnIte
                 editTeachAss.setText(teachAssistance);
             }
         }
+        else if (spinner.getId()== R.id.message);
+        {
+            String item = ((TextView) view).getText().toString();
+            if (item.equals("To Staff")||item.equals("To Representative"))
+            {
+                messenger.setSelection(0);
+                Intent messagePage=new Intent(AboutSubject.this,MessageToRepresentative.class);
+                startActivity(messagePage);
+            }
+
+        }
     }
 
 

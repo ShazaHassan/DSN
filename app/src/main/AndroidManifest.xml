@@ -22,6 +22,8 @@
         <activity android:name=".Login" />
         <activity android:name=".Registration" />
         <activity android:name=".ResetPassword" />
+        <activity android:name=".MessageToStaff" />
+        <activity android:name=".MessageToRepresentative"></activity>
     </application>
 
 </manifest>
