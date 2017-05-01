@@ -40,11 +40,11 @@
                     android:id="@+id/posted"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Posted by Dr"
-                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:text="Posted by Dr" />
 
                 <Spinner
                     android:id="@+id/others"
@@ -54,7 +54,8 @@
                     android:layout_marginEnd="55dp"
                     android:layout_marginRight="55dp"
                     android:layout_toLeftOf="@+id/posted"
-                    android:layout_toStartOf="@+id/posted" />
+                    android:layout_toStartOf="@+id/posted"
+                    android:layout_alignBottom="@+id/message" />
 
             </RelativeLayout>
 

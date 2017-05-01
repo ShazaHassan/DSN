@@ -9,25 +9,26 @@
     <LinearLayout
 
         android:id="@+id/Linear"
-        android:layout_width="429dp"
-        android:layout_height="512dp"
+        android:layout_width="368dp"
+        android:layout_height="match_parent"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="#FF20B2AA"
         android:orientation="horizontal"
+        android:weightSum="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.529"
-        android:weightSum="1">
+        app:layout_constraintVertical_bias="0.529">
 
         <RelativeLayout
-            android:layout_width="373dp"
-            android:layout_height="520dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.17"
             tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp"
-            android:layout_weight="0.17">
+            tools:layout_editor_absoluteY="8dp">
 
             <TextView
                 android:id="@+id/textView4"
@@ -91,8 +92,8 @@
                 android:layout_alignStart="@+id/textView4"
                 android:layout_below="@+id/Pass"
                 android:layout_marginTop="22dp"
-                android:text="Login"
-                android:onClick="login"/>
+                android:onClick="login"
+                android:text="Login" />
 
             <Button
                 android:id="@+id/reserPass"

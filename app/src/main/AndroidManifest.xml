@@ -23,7 +23,9 @@
         <activity android:name=".Registration" />
         <activity android:name=".ResetPassword" />
         <activity android:name=".MessageToStaff" />
-        <activity android:name=".MessageToRepresentative"></activity>
+        <activity android:name=".MessageToRepresentative" />
+        <activity android:name=".Task" />
+        <activity android:name=".NewTask"></activity>
     </application>
 
 </manifest>
