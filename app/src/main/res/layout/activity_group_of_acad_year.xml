@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="15dp"
     android:orientation="vertical"
-    tools:context="com.example.android.dsn.GroupOfAcadYear">
+    tools:context="com.example.android.dsn.GroupOfAcadYearForProfessor">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -39,9 +39,19 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_alignTop="@+id/button6"
 
-                    />
+                    android:layout_below="@+id/acadYear" />
+
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="137dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="7dp"
+                    android:onClick="HODPage"
+                    android:text="HOD" />
             </RelativeLayout>
 
             <Space
@@ -50,7 +60,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="102dp">
+                android:layout_height="wrap_content">
 
                 <EditText
                     android:id="@+id/writePost"
@@ -72,14 +82,14 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_below="@+id/writePost"
-                    android:text="Post"
-                    android:onClick="writePost"/>
+                    android:onClick="writePost"
+                    android:text="Post" />
             </RelativeLayout>
 
             <LinearLayout
                 android:id="@+id/writtenpost"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"></LinearLayout>
 
         </LinearLayout>

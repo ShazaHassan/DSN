@@ -82,6 +82,59 @@ public class AboutSubject extends AppCompatActivity implements AdapterView.OnIte
         other.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         others.setAdapter(other);
     }
+    private void editInContain(View view){
+        TextView header = (TextView) findViewById(R.id.containOfCourse);
+        TextView containOfCourse = (TextView) findViewById(R.id.textView);
+        editContain = (Spinner) findViewById(R.id.editContain);
+        editContain.setSelection(0);
+        String contain = containOfCourse.getText().toString();
+        header.setVisibility(View.GONE);
+        containOfCourse.setVisibility(View.GONE);
+        editContain.setVisibility(View.GONE);
+        EditText containEdit = (EditText) findViewById(R.id.Contain);
+        Button edit = (Button) findViewById(R.id.EditContain);
+        containEdit.setVisibility(View.VISIBLE);
+        edit.setVisibility(View.VISIBLE);
+        containEdit.setText(contain);
+        editDegree(view);
+        editTeach(view);
+    }
+
+    private void editInDegree(View view){
+        TextView header = (TextView) findViewById(R.id.degree);
+        TextView degreeOfCourse = (TextView) findViewById(R.id.degreeOfSub);
+        editDegree = (Spinner) findViewById(R.id.editDegree);
+        editDegree.setSelection(0);
+        String degree = degreeOfCourse.getText().toString();
+        header.setVisibility(View.GONE);
+        degreeOfCourse.setVisibility(View.GONE);
+        editDegree.setVisibility(View.GONE);
+        EditText EditDegree = (EditText) findViewById(Edit);
+        Button edit = (Button) findViewById(R.id.EditDegree);
+        EditDegree.setVisibility(View.VISIBLE);
+        edit.setVisibility(View.VISIBLE);
+        EditDegree.setText(degree);
+        editTeach(view);
+        editContain(view);
+    }
+
+    private void editInTeach(View view){
+        TextView header = (TextView) findViewById(R.id.teach);
+        TextView assistanceOfSub = (TextView) findViewById(R.id.editTeachAssistance);
+        editTeach = (Spinner) findViewById(R.id.editTeachassistance);
+        editTeach.setSelection(0);
+        String teachAssistance = assistanceOfSub.getText().toString();
+        header.setVisibility(View.GONE);
+        assistanceOfSub.setVisibility(View.GONE);
+        editTeach.setVisibility(View.GONE);
+        EditText editTeachAss = (EditText) findViewById(R.id.editTeach);
+        Button edit = (Button) findViewById(R.id.EditTeach);
+        editTeachAss.setVisibility(View.VISIBLE);
+        edit.setVisibility(View.VISIBLE);
+        editTeachAss.setText(teachAssistance);
+        editDegree(view);
+        editContain(view);
+    }
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -92,20 +145,7 @@ public class AboutSubject extends AppCompatActivity implements AdapterView.OnIte
         {
             String item = ((TextView) view).getText().toString();
             if (item.equals("edit")) {
-
-                TextView header = (TextView) findViewById(R.id.containOfCourse);
-                TextView containOfCourse = (TextView) findViewById(R.id.textView);
-                editContain = (Spinner) findViewById(R.id.editContain);
-                editContain.setSelection(0);
-                String contain = containOfCourse.getText().toString();
-                header.setVisibility(View.GONE);
-                containOfCourse.setVisibility(View.GONE);
-                editContain.setVisibility(View.GONE);
-                EditText containEdit = (EditText) findViewById(R.id.Contain);
-                Button edit = (Button) findViewById(R.id.EditContain);
-                containEdit.setVisibility(View.VISIBLE);
-                edit.setVisibility(View.VISIBLE);
-                containEdit.setText(contain);
+                editInContain(view);
             }
         }
          else if(spinner.getId()== R.id.editDegree)
@@ -113,19 +153,7 @@ public class AboutSubject extends AppCompatActivity implements AdapterView.OnIte
             String item = parent.getItemAtPosition(position).toString();
             if (item.equals("edit"))
             {
-                TextView header = (TextView) findViewById(R.id.degree);
-                TextView degreeOfCourse = (TextView) findViewById(R.id.degreeOfSub);
-                editDegree = (Spinner) findViewById(R.id.editDegree);
-                editDegree.setSelection(0);
-                String degree = degreeOfCourse.getText().toString();
-                header.setVisibility(View.GONE);
-                degreeOfCourse.setVisibility(View.GONE);
-                editDegree.setVisibility(View.GONE);
-                EditText EditDegree = (EditText) findViewById(Edit);
-                Button edit = (Button) findViewById(R.id.EditDegree);
-                EditDegree.setVisibility(View.VISIBLE);
-                edit.setVisibility(View.VISIBLE);
-                EditDegree.setText(degree);
+                editInDegree(view);
             }
         }
          else if (spinner.getId()== R.id.editTeachassistance)
@@ -133,19 +161,7 @@ public class AboutSubject extends AppCompatActivity implements AdapterView.OnIte
             String item = ((TextView) view).getText().toString();
             if (item.equals("edit"))
             {
-                TextView header = (TextView) findViewById(R.id.teach);
-                TextView assistanceOfSub = (TextView) findViewById(R.id.editTeachAssistance);
-                editTeach = (Spinner) findViewById(R.id.editTeachassistance);
-                editTeach.setSelection(0);
-                String teachAssistance = assistanceOfSub.getText().toString();
-                header.setVisibility(View.GONE);
-                assistanceOfSub.setVisibility(View.GONE);
-                editTeach.setVisibility(View.GONE);
-                EditText editTeachAss = (EditText) findViewById(R.id.editTeach);
-                Button edit = (Button) findViewById(R.id.EditTeach);
-                editTeachAss.setVisibility(View.VISIBLE);
-                edit.setVisibility(View.VISIBLE);
-                editTeachAss.setText(teachAssistance);
+                editInTeach(view);
             }
         }
         else if (spinner.getId()== R.id.message);
@@ -158,6 +174,16 @@ public class AboutSubject extends AppCompatActivity implements AdapterView.OnIte
                 startActivity(messagePage);
             }
 
+        }
+        if(spinner.getId()== R.id.others)
+        {
+            String item = ((TextView) view).getText().toString();
+            if(item.equals("Task"))
+            {
+                others.setSelection(0);
+                Intent otherPages= new Intent(AboutSubject.this,Task.class);
+                startActivity(otherPages);
+            }
         }
     }
 

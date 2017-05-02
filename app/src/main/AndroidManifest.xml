@@ -16,16 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GroupOfAcadYear" />
+        <activity android:name=".GroupOfAcadYearForProfessor" />
+        <activity android:name=".GroupOfAcadYearForStudent" />
         <activity android:name=".AboutSubject" />
         <activity android:name=".SelectAcadYear" />
         <activity android:name=".Login" />
         <activity android:name=".Registration" />
         <activity android:name=".ResetPassword" />
-        <activity android:name=".MessageToStaff" />
         <activity android:name=".MessageToRepresentative" />
         <activity android:name=".Task" />
-        <activity android:name=".NewTask"></activity>
+        <activity android:name=".NewTask" />
+        <activity android:name=".HOD"></activity>
     </application>
 
 </manifest>

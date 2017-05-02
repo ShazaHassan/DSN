@@ -10,7 +10,7 @@
 
         android:id="@+id/Linear"
         android:layout_width="368dp"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"

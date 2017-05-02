@@ -22,4 +22,5 @@
         <item>Task</item>
         <item>Questions</item>
     </string-array>
+    <string name="error_field_required">This field is required</string>
 </resources>
