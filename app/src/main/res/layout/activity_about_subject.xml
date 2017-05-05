@@ -45,8 +45,8 @@
                     android:layout_alignParentTop="true"
                     android:layout_toLeftOf="@+id/posted"
                     android:layout_toStartOf="@+id/posted"
-                    android:layout_marginRight="70dp"
-                    android:layout_marginEnd="70dp" />
+                    android:layout_marginRight="57dp"
+                    android:layout_marginEnd="57dp" />
 
                 <Button
                     android:id="@+id/posted"
@@ -110,7 +110,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:layout_alignTop="@+id/textView"
+                    android:layout_below="@+id/editContain"
+                    android:layout_marginTop="16dp"
                     android:ems="10"
                     android:inputType="textMultiLine"
                     android:visibility="gone" />
@@ -174,7 +175,8 @@
                     android:layout_alignTop="@+id/degreeOfSub"
                     android:ems="10"
                     android:inputType="textMultiLine"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    android:layout_marginTop="16dp"/>
 
                 <Button
                     android:id="@+id/EditDegree"
@@ -223,19 +225,20 @@
                     android:layout_below="@+id/editTeachassistance"
                     android:layout_marginTop="8dp"
                     android:fontFamily="monospace"
+                    android:text="ggdfg"
                     android:textColor="@color/colorPrimaryDark" />
 
                 <EditText
                     android:id="@+id/editTeach"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/editTeachAssistance"
                     android:layout_alignBottom="@+id/editTeachAssistance"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:ems="10"
                     android:inputType="textMultiLine"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    android:layout_marginTop="16dp"/>
 
                 <Button
                     android:id="@+id/EditTeach"
