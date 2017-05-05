@@ -37,7 +37,6 @@ public class GroupOfAcadYearForProfessor extends AppCompatActivity implements Ad
         String message = intent.getStringExtra(SelectAcadYear.EXTRA_MESSAGE);
         TextView textView = (TextView) findViewById(R.id.acadYear);
         textView.setText(message);
-
         addElementInSpinnerOfSubject();
         editInElement();
     }
