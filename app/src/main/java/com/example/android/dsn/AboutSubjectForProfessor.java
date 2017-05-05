@@ -69,6 +69,12 @@ public class AboutSubjectForProfessor extends AppCompatActivity implements Adapt
         messenger.setAdapter(message);
     }
 
+
+
+
+
+
+
     ////add element to spinner of others to go to task and questions page
     @Override
     public void addElementInSpinnerOthers() {
