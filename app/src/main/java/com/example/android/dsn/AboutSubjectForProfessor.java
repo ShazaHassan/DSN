@@ -93,6 +93,7 @@ public class AboutSubjectForProfessor extends AppCompatActivity implements Adapt
         containEdit.setText(contain);
         editDegree(view);
         editTeach(view);
+
     }
 
     private void editInDegree(View view) {
