@@ -1,13 +1,12 @@
 package com.example.android.dsn;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+import android.view.View;
 
-public class HOD extends AppCompatActivity {
+/**
+ * Created by Shaza Hassan on 05-May-17.
+ */
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hod);
-    }
+public interface HOD {
+    public void writePost(View view);
+    public void editInElement();
 }

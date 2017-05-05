@@ -35,7 +35,7 @@
 
                 <Spinner
                     android:id="@+id/subjectSelect"
-                    android:layout_width="150dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
@@ -43,7 +43,7 @@
                     android:layout_below="@+id/acadYear" />
 
                 <Button
-                    android:id="@+id/button4"
+                    android:id="@+id/hod"
                     android:layout_width="137dp"
                     android:layout_height="40dp"
                     android:layout_alignParentBottom="true"
@@ -52,6 +52,16 @@
                     android:layout_marginBottom="7dp"
                     android:onClick="HODPage"
                     android:text="HOD" />
+
+                <Button
+                    android:id="@+id/MessageToRep"
+                    android:layout_width="137dp"
+                    android:layout_height="40dp"
+                    android:layout_alignBottom="@+id/hod"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:onClick="messagetoRep"
+                    android:text="Message" />
             </RelativeLayout>
 
             <Space
@@ -72,7 +82,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:ems="10"
-                    android:hint="Write Post"
+                    android:hint="Write Post..."
                     android:inputType="textMultiLine" />
 
                 <Button

@@ -9,7 +9,7 @@ import android.widget.Button;
 public class SelectAcadYear extends AppCompatActivity {
 
 
-    protected Button first,second,third,forth;
+    private Button first,second,third,forth;
 
     public static final String EXTRA_MESSAGE = "com.example.android.dsn.MESSAGE";
 

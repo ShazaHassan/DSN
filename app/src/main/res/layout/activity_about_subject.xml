@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="15dp"
-    tools:context="com.example.android.dsn.AboutSubject">
+    tools:context="com.example.android.dsn.AboutSubjectForProfessor">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,7 +15,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:baselineAligned="false">
 
             <TextView
                 android:id="@+id/title"
@@ -26,36 +27,36 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
             <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <Spinner
-                    android:id="@+id/message"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
-
-                <Button
-                    android:id="@+id/posted"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_weight="1"
-                    android:text="Posted by Dr" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/menu">
 
                 <Spinner
                     android:id="@+id/others"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    />
+
+                <Spinner
+                    android:id="@+id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="55dp"
-                    android:layout_marginRight="55dp"
                     android:layout_toLeftOf="@+id/posted"
                     android:layout_toStartOf="@+id/posted"
-                    android:layout_alignBottom="@+id/message" />
+                    android:layout_marginRight="70dp"
+                    android:layout_marginEnd="70dp" />
+
+                <Button
+                    android:id="@+id/posted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_weight="1"
+                    android:text="Posted by Dr" />
 
             </RelativeLayout>
 
@@ -67,7 +68,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            </ScrollView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -89,10 +93,24 @@
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true" />
 
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:text="hi"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_below="@+id/editContain"
+                    android:layout_alignRight="@+id/containOfCourse"
+                    android:layout_alignEnd="@+id/containOfCourse" />
+
                 <EditText
                     android:id="@+id/Contain"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/textView"
                     android:ems="10"
                     android:inputType="textMultiLine"
                     android:visibility="gone" />
@@ -100,24 +118,14 @@
                 <Button
                     android:id="@+id/EditContain"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
+                    android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
+                    android:layout_below="@+id/Contain"
+                    android:layout_marginTop="7dp"
                     android:onClick="editContain"
                     android:text="Edit"
                     android:visibility="gone" />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/editContain"
-                    android:layout_toEndOf="@+id/Contain"
-                    android:layout_toRightOf="@+id/Contain"
-                    android:fontFamily="monospace"
-                    android:text="hi"
-                    android:textColor="@color/colorPrimaryDark" />
 
             </RelativeLayout>
 
@@ -159,7 +167,7 @@
 
                 <EditText
                     android:id="@+id/Edit"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
@@ -171,10 +179,11 @@
                 <Button
                     android:id="@+id/EditDegree"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
+                    android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
+                    android:layout_below="@+id/Edit"
+                    android:layout_marginTop="13dp"
                     android:onClick="editDegree"
                     android:text="Edit"
                     android:visibility="gone" />
@@ -218,8 +227,12 @@
 
                 <EditText
                     android:id="@+id/editTeach"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/editTeachAssistance"
+                    android:layout_alignBottom="@+id/editTeachAssistance"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
                     android:ems="10"
                     android:inputType="textMultiLine"
                     android:visibility="gone" />
@@ -227,10 +240,11 @@
                 <Button
                     android:id="@+id/EditTeach"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
+                    android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
+                    android:layout_below="@+id/editTeach"
+                    android:layout_marginTop="9dp"
                     android:onClick="editTeach"
                     android:text="Edit"
                     android:visibility="gone" />
@@ -255,13 +269,14 @@
                 <Button
                     android:id="@+id/uploadSlides"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:text="Upload" />
             </RelativeLayout>
-
+        </LinearLayout>
+            </ScrollView>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

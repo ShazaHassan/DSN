@@ -8,4 +8,5 @@ import android.view.View;
 
 public interface GroupOfAcadYear {
     public void writePost(View view);
+    public void editInElement();
 }

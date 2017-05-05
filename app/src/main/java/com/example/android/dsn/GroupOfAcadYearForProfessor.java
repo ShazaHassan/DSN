@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -23,9 +24,9 @@ public class GroupOfAcadYearForProfessor extends AppCompatActivity implements Ad
 
 
 
-    LinearLayout addPost;
-    EditText writePost;
-    TextView post;
+   private LinearLayout addPost;
+    private EditText writePost;
+    private TextView post;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,7 +75,7 @@ public class GroupOfAcadYearForProfessor extends AppCompatActivity implements Ad
         if(!item.equals("select subject"))
         {
             Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
-            Intent registerIntent = new Intent(GroupOfAcadYearForProfessor.this, AboutSubject.class);
+            Intent registerIntent = new Intent(GroupOfAcadYearForProfessor.this, AboutSubjectForProfessor.class);
             Spinner select=(Spinner) findViewById(R.id.subjectSelect);
             select.setSelection(0);
             startActivity(registerIntent);
@@ -101,13 +102,23 @@ public class GroupOfAcadYearForProfessor extends AppCompatActivity implements Ad
         writePost= (EditText) findViewById(R.id.writePost) ;
         String text=writePost.getText().toString();//get text of post from EditText
         writePost.setText("");//clear EditText after add text in group
-        post.setText(text);
-        addPost.addView(post);//add text view in page
-        addPost.addView(view1);//add line to separate between posts
+        if(text.equals(""));
+        else {
+            writePost.setText("");//clear EditText after add text in group
+            post.setText(text);
+            addPost.addView(post);//add text view in page
+            addPost.addView(view1);//add line to separate between posts
+        }
+    }
+
+    @Override
+    public void editInElement() {
+        Button message=(Button) findViewById(R.id.MessageToRep);
+        message.setVisibility(View.GONE);
     }
 
     public void HODPage(View view) {
-        Intent HodPage=new Intent(GroupOfAcadYearForProfessor.this,HOD.class);
+        Intent HodPage=new Intent(GroupOfAcadYearForProfessor.this,HODForProfessor.class);
         startActivity(HodPage);
     }
 }

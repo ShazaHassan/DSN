@@ -8,30 +8,60 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static com.example.android.dsn.R.id.post;
-import static com.example.android.dsn.R.id.writePost;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Shaza Hassan on 02-May-17.
  */
 
 public class GroupOfAcadYearForStudent extends AppCompatActivity implements GroupOfAcadYear,AdapterView.OnItemSelectedListener {
-    LinearLayout addPost;
-    EditText writePost;
-    TextView post;
+    private LinearLayout addPost;
+    private EditText writePost;
+    private TextView post;
 
    @Override
     protected void onCreate(Bundle savedInstanceState) {
        super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_group_of_acad_year);
+       addElementInSpinnerOfSubject();
 
    }
+
+    private void addElementInSpinnerOfSubject(){
+        // Spinner element
+        Spinner spinner = (Spinner) findViewById(R.id.subjectSelect);
+
+        // Spinner click listener
+        spinner.setOnItemSelectedListener(this);
+
+        // Spinner Drop down elements
+        List<String> categories = new ArrayList<String>();
+        categories.add("select subject");
+        categories.add("Software 1");
+        categories.add("Math");
+        categories.add("UI");
+        categories.add("Software 2");
+
+
+        // Creating adapter for spinner
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
+
+        // Drop down layout style - list view with radio button
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // attaching data adapter to spinner
+        spinner.setAdapter(dataAdapter);
+
+    }
 
     @Override
     public void writePost(View view) {
@@ -44,10 +74,20 @@ public class GroupOfAcadYearForStudent extends AppCompatActivity implements Grou
         writePost= (EditText) findViewById(R.id.writePost) ;
         String text=writePost.getText().toString();//get text of post from EditText
         writePost.setText("");//clear EditText after add text in group
-        post.setText(text);
-        addPost.addView(post);//add text view in page
-        addPost.addView(view1);//add line to separate between posts
+        if(text.equals(""));
+        else {
+            writePost.setText("");//clear EditText after add text in group
+            post.setText(text);
+            addPost.addView(post);//add text view in page
+            addPost.addView(view1);//add line to separate between posts
+        }
 
+    }
+
+    @Override
+    public void editInElement() {
+        Button message=(Button) findViewById(R.id.MessageToRep);
+        message.setVisibility(View.GONE);
     }
 
     @Override
@@ -57,7 +97,7 @@ public class GroupOfAcadYearForStudent extends AppCompatActivity implements Grou
         if(!item.equals("select subject"))
         {
             Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
-            Intent registerIntent = new Intent(GroupOfAcadYearForStudent.this, AboutSubject.class);
+            Intent registerIntent = new Intent(GroupOfAcadYearForStudent.this, AboutSubjectForStudent.class);
             Spinner select=(Spinner) findViewById(R.id.subjectSelect);
             select.setSelection(0);
             startActivity(registerIntent);
@@ -71,7 +111,7 @@ public class GroupOfAcadYearForStudent extends AppCompatActivity implements Grou
     }
 
     public void HODPage(View view) {
-        Intent HodPage=new Intent(GroupOfAcadYearForStudent.this,HOD.class);
+        Intent HodPage=new Intent(GroupOfAcadYearForStudent.this,HODForStudent.class);
         startActivity(HodPage);
     }
 }

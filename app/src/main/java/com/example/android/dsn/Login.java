@@ -9,7 +9,7 @@ import android.widget.EditText;
 
 public class Login extends AppCompatActivity {
 
-    EditText username;
+   private EditText username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +37,14 @@ public class Login extends AppCompatActivity {
             startActivity(login);
             cancel=false;
             username.setText("");
-        } else{
+        }
+        else if (UserName.equals("Sara")) {
+            Intent login= new Intent(Login.this,HODForHOD.class);
+            startActivity(login);
+            cancel=false;
+            username.setText("");
+        }else
+        {
                 username.setError("error");
                 focusView = username;
                 cancel = true;
