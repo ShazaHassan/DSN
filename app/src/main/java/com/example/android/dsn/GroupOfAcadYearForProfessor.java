@@ -39,6 +39,7 @@ public class GroupOfAcadYearForProfessor extends AppCompatActivity implements Ad
         textView.setText(message);
 
         addElementInSpinnerOfSubject();
+        editInElement();
     }
     private void addElementInSpinnerOfSubject(){
         // Spinner element

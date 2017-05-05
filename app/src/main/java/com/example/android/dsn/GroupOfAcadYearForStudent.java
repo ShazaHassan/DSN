@@ -33,6 +33,7 @@ public class GroupOfAcadYearForStudent extends AppCompatActivity implements Grou
        super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_group_of_acad_year);
        addElementInSpinnerOfSubject();
+       editInElement();
 
    }
 
