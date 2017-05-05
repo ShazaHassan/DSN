@@ -29,6 +29,7 @@ public class AboutSubjectForProfessor extends AppCompatActivity implements Adapt
         addElementInSpinnerTeachAssistance();
         addElementInSpinnerMessage();
         addElementInSpinnerOthers();
+
     }
 
     //add element spinner of edit for contain
