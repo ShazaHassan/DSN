@@ -172,6 +172,15 @@ public class AboutSubjectForProfessor extends AppCompatActivity implements Adapt
                 Intent otherPages = new Intent(AboutSubjectForProfessor.this, Task.class);
                 startActivity(otherPages);
             }
+            else if(item.equals("Questions"))
+            {
+                others.setSelection(0);
+                Intent questionPage=new Intent(AboutSubjectForProfessor.this,QuestionStartPage.class);
+                TextView title= (TextView) findViewById(R.id.title) ;
+                String ti=title.getText().toString();
+                questionPage.putExtra("sub",ti);
+                startActivity(questionPage);
+            }
         }
     }
 

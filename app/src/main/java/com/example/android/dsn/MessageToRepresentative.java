@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import static com.example.android.dsn.R.id.post;
+import static com.example.android.dsn.R.id.writePost;
+
 public class MessageToRepresentative extends AppCompatActivity {
 
     @Override
@@ -23,15 +26,18 @@ public class MessageToRepresentative extends AppCompatActivity {
         TextView message=new TextView(this);
         EditText writeMessage= (EditText) findViewById(R.id.writeMessage);
         String messageWritten=writeMessage.getText().toString();
-        writeMessage.setText("");
-        message.setText(messageWritten);
-        message.setBackgroundResource(R.drawable.bordertomessage);//add the regtangle for each message
-        message.setTextColor(Color.WHITE);
-        messages.addView(message);
         View view1 =new View(this);//add a line to seperate between two message
         view1.setLayoutParams(new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,1));//set the height and width for line
         view1.setBackgroundColor(Color.WHITE);
-        messages.addView(view1);//add line to linear layout
+        message.setBackgroundResource(R.drawable.bordertomessage);//add the regtangle for each message
+        message.setTextColor(Color.WHITE);
+        if(messageWritten.equals(""));
+        else {
+            writeMessage.setText("");//clear EditText after send message
+            message.setText(messageWritten);
+            messages.addView(message);//add add message to window
+            messages.addView(view1);//add line to separate between posts
+        }
 
     }
 }

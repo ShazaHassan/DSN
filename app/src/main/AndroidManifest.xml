@@ -16,25 +16,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Login" />
         <activity android:name=".Registration" />
         <activity android:name=".ResetPassword" />
         <activity android:name=".SelectAcadYear" />
         <activity android:name=".GroupOfAcadYearForProfessor" />
         <activity android:name=".GroupOfAcadYearForStudent" />
-        <activity android:name=".GroupOfAcadYearForHOD"/>
+        <activity android:name=".GroupOfAcadYearForHOD" />
         <activity android:name=".AboutSubjectForProfessor" />
-        <activity android:name=".AboutSubjectForStudent"/>
-        <activity android:name=".MessageToHOD"/>
+        <activity android:name=".AboutSubjectForStudent" />
+        <activity android:name=".MessageToHOD" />
         <activity android:name=".MessageToRepresentative" />
         <activity android:name=".Task" />
         <activity android:name=".NewTask" />
-        <activity android:name=".HODForStudent"/>
-        <activity android:name=".HODForProfessor"/>
-        <activity android:name=".HODForHOD">
-
-        </activity>
+        <activity android:name=".HODForStudent" />
+        <activity android:name=".HODForProfessor" />
+        <activity android:name=".HODForHOD" />
+        <activity android:name=".QuestionStartPage" />
+        <activity android:name=".QuestionForCh"></activity>
     </application>
 
 </manifest>

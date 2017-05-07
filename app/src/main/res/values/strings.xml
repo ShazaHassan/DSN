@@ -18,7 +18,7 @@
         <item>To Representative</item>
     </string-array>
     <string-array name="others">
-        <item>other</item>
+        <item>Other</item>
         <item>Task</item>
         <item>Questions</item>
     </string-array>

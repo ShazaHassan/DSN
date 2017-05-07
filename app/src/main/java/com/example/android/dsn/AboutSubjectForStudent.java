@@ -60,8 +60,17 @@ public class AboutSubjectForStudent extends AppCompatActivity implements AboutSu
             if(item.equals("Task"))
             {
                 others.setSelection(0);
-                Intent otherPages= new Intent(AboutSubjectForStudent.this,Task.class);
-                startActivity(otherPages);
+                Intent taskPage = new Intent(AboutSubjectForStudent.this,Task.class);
+                startActivity(taskPage);
+            }
+            else if(item.equals("Questions"))
+            {
+                others.setSelection(0);
+                Intent questionPage=new Intent(AboutSubjectForStudent.this,QuestionStartPage.class);
+                TextView title= (TextView) findViewById(R.id.title) ;
+                String ti=title.getText().toString();
+                questionPage.putExtra("sub",ti);
+                startActivity(questionPage);
             }
 
     }
