@@ -32,7 +32,8 @@
         <activity android:name=".HODForProfessor" />
         <activity android:name=".HODForHOD" />
         <activity android:name=".QuestionStartPage" />
-        <activity android:name=".QuestionForCh"></activity>
+        <activity android:name=".QuestionForCh" />
+        <activity android:name=".AnswerPage"></activity>
     </application>
 
 </manifest>

@@ -32,12 +32,13 @@
             android:text="Important" />
 
         <Button
-            android:id="@+id/answerQuestion"
+            android:id="@+id/answeredQuestion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="0"
+            android:onClick="answeredQuestions"
             android:text="Answered" />
 
         <SearchView
@@ -111,14 +112,50 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_below="@+id/question"
+                        android:onClick="writeAnswer"
                         android:text="answer" />
 
                     <CheckBox
-                        android:id="@+id/checkBox"
+                        android:id="@+id/important"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/question"
                         android:text="Important" />
+
+                    <EditText
+                        android:id="@+id/WriteAnswer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/important"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginStart="9dp"
+                        android:ems="10"
+                        android:inputType="textMultiLine"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/publishAnsewr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/WriteAnswer"
+                        android:onClick="publishAnswer"
+                        android:text="Answer"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/Cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/WriteAnswer"
+                        android:layout_alignStart="@+id/WriteAnswer"
+                        android:layout_below="@+id/WriteAnswer"
+                        android:onClick="cancel"
+                        android:text="Cancel"
+                        android:visibility="gone" />
                 </RelativeLayout>
 
             </LinearLayout>
