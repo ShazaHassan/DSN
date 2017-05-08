@@ -32,7 +32,9 @@ public class GroupOfAcadYearForProfessor extends AppCompatActivity implements Ad
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_group_of_acad_year);
+
         //take the name of the button that select the academic year and add at the top of page
+
         Intent intent = getIntent();
         String message = intent.getStringExtra(SelectAcadYear.EXTRA_MESSAGE);
         TextView textView = (TextView) findViewById(R.id.acadYear);
@@ -93,6 +95,7 @@ public class GroupOfAcadYearForProfessor extends AppCompatActivity implements Ad
 
 
     //when click on post button add post to page
+
     public void writePost(View view){
         addPost=(LinearLayout) findViewById(R.id.writtenpost);
         post =new TextView(this);

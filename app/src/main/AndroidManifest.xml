@@ -28,7 +28,6 @@
         <activity android:name=".MessageToHOD" />
         <activity android:name=".MessageToRepresentative" />
         <activity android:name=".Task" />
-        <activity android:name=".NewTask" />
         <activity android:name=".HODForStudent" />
         <activity android:name=".HODForProfessor" />
         <activity android:name=".HODForHOD" />
