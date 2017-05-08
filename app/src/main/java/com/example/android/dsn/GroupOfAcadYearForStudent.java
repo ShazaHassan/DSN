@@ -48,9 +48,11 @@ public class GroupOfAcadYearForStudent extends AppCompatActivity implements Grou
         List<String> categories = new ArrayList<String>();
         categories.add("select subject");
         categories.add("Software 1");
+        categories.add("Software2");
+        categories.add("OS");
+        categories.add("Micro");
         categories.add("Math");
-        categories.add("UI");
-        categories.add("Software 2");
+
 
 
         // Creating adapter for spinner
@@ -100,8 +102,9 @@ public class GroupOfAcadYearForStudent extends AppCompatActivity implements Grou
             Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
             Intent registerIntent = new Intent(GroupOfAcadYearForStudent.this, AboutSubjectForStudent.class);
             Spinner select=(Spinner) findViewById(R.id.subjectSelect);
-            select.setSelection(0);
+            registerIntent.putExtra("subject",item)  ;
             startActivity(registerIntent);
+            select.setSelection(0);
         }
 
     }

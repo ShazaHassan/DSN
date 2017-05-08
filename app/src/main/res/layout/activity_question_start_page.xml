@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="10dp"
     android:orientation="vertical"
     tools:context="com.example.android.dsn.QuestionStartPage">
 
@@ -25,15 +26,13 @@
             android:id="@+id/addChapter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_below="@+id/questionTitle"
-            android:layout_marginEnd="13dp"
-            android:layout_marginRight="13dp"
             android:layout_marginTop="28dp"
             android:onClick="addChapter"
             android:text="Add Chapter"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:layout_below="@+id/questionTitle"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
         <LinearLayout
             android:layout_width="match_parent"

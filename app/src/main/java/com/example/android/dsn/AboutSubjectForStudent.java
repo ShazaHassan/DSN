@@ -26,8 +26,13 @@ public class AboutSubjectForStudent extends AppCompatActivity implements AboutSu
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_subject);
+        Intent SubjectName= getIntent();
+        String subject=SubjectName.getStringExtra("subject");
+        TextView title=(TextView) findViewById(R.id.title) ;
+        title.setText(subject);
         addElementInSpinnerOthers();
         editSomeElementInPage();
+
 
     }
     private void editSomeElementInPage(){
