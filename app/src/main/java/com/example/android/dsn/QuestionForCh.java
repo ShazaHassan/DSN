@@ -15,42 +15,59 @@ import android.widget.TextView;
 import static android.R.attr.id;
 
 public class QuestionForCh extends AppCompatActivity {
+    private static boolean push;
+    private static String Question, answer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_for_ch);
-        Intent intent=getIntent();
-        String chNo=intent.getStringExtra("no");
-        TextView title=(TextView) findViewById(R.id.chapterNo);
-        title.setText(chNo);
+        Intent intent = getIntent();
+        String chNo = intent.getStringExtra("no");//take the number  of ch
+        TextView title = (TextView) findViewById(R.id.chapterNo);
+        title.setText(chNo);//set the title of the page by the number of the ch
     }
 
     public void answeredQuestions(View view) {
-        Intent answersPage=new Intent(this,AnswerPage.class);
-        TextView title=(TextView) findViewById(R.id.chapterNo);
-        String ti=  title.getText().toString();
-        answersPage.putExtra("titleOfCh",ti);
+        Intent answersPage = new Intent(this, AnswerPage.class);
+        TextView title = (TextView) findViewById(R.id.chapterNo);
+        String ti = title.getText().toString();
+        answersPage.putExtra("titleOfCh", ti);
         startActivity(answersPage);
     }
 
     public void publishAnswer(View view) {
-        TextView question=(TextView) findViewById(R.id.question);
-        EditText writeAnswer= (EditText) findViewById(R.id.WriteAnswer);
-        String Question=question.getText().toString();
-        String answer=writeAnswer.getText().toString();
-        Intent answerPage= new Intent(this,AnswerPage.class);
-        answerPage.putExtra("question",Question);
-        answerPage.putExtra("answer",answer);
-        RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.question1);
-        ((LinearLayout) relativeLayout.getParent()).removeView(relativeLayout);
+        TextView question = (TextView) findViewById(R.id.question);
+        EditText writeAnswer = (EditText) findViewById(R.id.WriteAnswer);
+        Question = question.getText().toString();
+        answer = writeAnswer.getText().toString();
+        if(answer.equals(""))
+            cancel(view);
+        else {
+            push = true;
+            RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.question1);
+            ((LinearLayout) relativeLayout.getParent()).removeView(relativeLayout);
+        }
+
+    }
+
+    public static boolean isPush() {
+        return push;
+    }
+
+    public static String getQuestion() {
+        return Question;
+    }
+
+    public static String getAnswer() {
+        return answer;
     }
 
     public void cancel(View view) {
-        Button answerButton= (Button) findViewById(R.id.answerQuetions);
-        EditText writeAnswer= (EditText) findViewById(R.id.WriteAnswer);
-        Button publishAnswer= (Button) findViewById(R.id.publishAnsewr);
-        Button cancel= (Button) findViewById(R.id.Cancel);
+        Button answerButton = (Button) findViewById(R.id.answerQuetions);
+        EditText writeAnswer = (EditText) findViewById(R.id.WriteAnswer);
+        Button publishAnswer = (Button) findViewById(R.id.publishAnsewr);
+        Button cancel = (Button) findViewById(R.id.Cancel);
         answerButton.setVisibility(View.VISIBLE);
         writeAnswer.setText("");
         writeAnswer.setVisibility(View.GONE);
@@ -59,10 +76,10 @@ public class QuestionForCh extends AppCompatActivity {
     }
 
     public void writeAnswer(View view) {
-        Button answerButton= (Button) findViewById(R.id.answerQuetions);
-        EditText writeAnswer= (EditText) findViewById(R.id.WriteAnswer);
-        Button publishAnswer= (Button) findViewById(R.id.publishAnsewr);
-        Button cancel= (Button) findViewById(R.id.Cancel);
+        Button answerButton = (Button) findViewById(R.id.answerQuetions);
+        EditText writeAnswer = (EditText) findViewById(R.id.WriteAnswer);
+        Button publishAnswer = (Button) findViewById(R.id.publishAnsewr);
+        Button cancel = (Button) findViewById(R.id.Cancel);
         answerButton.setVisibility(View.GONE);
         writeAnswer.setVisibility(View.VISIBLE);
         publishAnswer.setVisibility(View.VISIBLE);
