@@ -3,7 +3,6 @@ package com.example.android.dsn;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,9 +11,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import static android.R.id.edit;
 import static com.example.android.dsn.R.id.Edit;
-import static com.example.android.dsn.R.id.containOfCourse;
 
 public class AboutSubjectForProfessor extends AppCompatActivity implements AdapterView.OnItemSelectedListener,AboutSubject {
 
@@ -173,7 +170,7 @@ public class AboutSubjectForProfessor extends AppCompatActivity implements Adapt
             String item = ((TextView) view).getText().toString();
             if (item.equals("Task")) {
                 others.setSelection(0);
-                Intent otherPages = new Intent(AboutSubjectForProfessor.this, Task.class);
+                Intent otherPages = new Intent(AboutSubjectForProfessor.this, TaskPageForDoctors.class);
                 startActivity(otherPages);
             }
             else if(item.equals("Questions"))

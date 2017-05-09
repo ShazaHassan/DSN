@@ -85,24 +85,22 @@
                 style="@android:style/Widget.Button.Inset"
                 android:layout_width="192dp"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/textView4"
-                android:layout_alignStart="@+id/textView4"
-                android:layout_below="@+id/Pass"
-                android:layout_marginTop="22dp"
                 android:onClick="login"
-                android:text="Login" />
+                android:text="Login"
+                android:layout_above="@+id/reserPass"
+                android:layout_alignRight="@+id/reserPass"
+                android:layout_alignEnd="@+id/reserPass" />
 
             <Button
                 android:id="@+id/reserPass"
                 style="@android:style/Widget.Button.Inset"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/Login"
-                android:layout_alignRight="@+id/Login"
-                android:layout_below="@+id/Login"
-                android:layout_marginTop="22dp"
                 android:onClick="GoToResetPassword"
-                android:text="Forgot your password" />
+                android:text="Forgot your password"
+                android:layout_marginBottom="39dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
 
         </RelativeLayout>
 

@@ -54,25 +54,26 @@
                 style="@android:style/Widget.Button.Inset"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/teach"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="66dp"
                 android:layout_weight="1"
                 android:onClick="GoToLogin"
-                android:text="Login" />
+                android:text="Login"
+                android:layout_below="@+id/teach"
+                android:layout_alignRight="@+id/MyToch"
+                android:layout_alignEnd="@+id/MyToch"
+                android:layout_marginTop="137dp" />
 
             <Button
                 android:id="@+id/RegBotton"
                 style="@android:style/Widget.Button.Inset"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/LogBotton"
-                android:layout_alignStart="@+id/LogBotton"
-                android:layout_below="@+id/LogBotton"
                 android:layout_marginTop="24dp"
                 android:layout_weight="1"
                 android:onClick="GoToRegisteration"
-                android:text="Registeration" />
+                android:text="Registeration"
+                android:layout_below="@+id/LogBotton"
+                android:layout_alignLeft="@+id/LogBotton"
+                android:layout_alignStart="@+id/LogBotton" />
 
             <TextView
                 android:id="@+id/MyToch"

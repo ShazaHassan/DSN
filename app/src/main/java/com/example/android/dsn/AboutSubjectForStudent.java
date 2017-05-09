@@ -4,15 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import static android.R.attr.id;
 
 /**
  * Created by Shaza Hassan on 05-May-17.
@@ -65,7 +61,7 @@ public class AboutSubjectForStudent extends AppCompatActivity implements AboutSu
             if(item.equals("Task"))
             {
                 others.setSelection(0);
-                Intent taskPage = new Intent(AboutSubjectForStudent.this,Task.class);
+                Intent taskPage = new Intent(AboutSubjectForStudent.this,TaskPageForStudents.class);
                 startActivity(taskPage);
             }
             else if(item.equals("Questions"))

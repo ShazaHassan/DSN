@@ -27,13 +27,15 @@
         <activity android:name=".AboutSubjectForStudent" />
         <activity android:name=".MessageToHOD" />
         <activity android:name=".MessageToRepresentative" />
-        <activity android:name=".Task" />
+        <activity android:name=".TaskPageForDoctors" />
         <activity android:name=".HODForStudent" />
         <activity android:name=".HODForProfessor" />
         <activity android:name=".HODForHOD" />
         <activity android:name=".QuestionStartPage" />
         <activity android:name=".QuestionForCh" />
-        <activity android:name=".AnswerPage"></activity>
+        <activity android:name=".TaskPageForStudents" />
+        <activity android:name=".AnswerPage" />
+        <activity android:name=".AnswersOfTasks"></activity>
     </application>
 
 </manifest>
