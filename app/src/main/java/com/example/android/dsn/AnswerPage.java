@@ -25,7 +25,7 @@ public class AnswerPage extends AppCompatActivity {
         String chNo = intent.getStringExtra("titleOfCh");
         TextView title = (TextView) findViewById(R.id.titleOfAnswer);
         title.setText("Answer of " + chNo);
-        QuestionForCh questionForCh = new QuestionForCh();
+       /* QuestionForCh questionForCh = new QuestionForCh();
 
         if (questionForCh.isPush())
         {
@@ -33,7 +33,7 @@ public class AnswerPage extends AppCompatActivity {
             String Answer = questionForCh.getAnswer();//get string that pass from activity QuestionForCh (Answer)
             write( Question,Answer);
 
-        }
+        }*/
 
     }
 

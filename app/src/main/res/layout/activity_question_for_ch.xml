@@ -83,6 +83,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_below="@+id/writeQuestion"
+                    android:onClick="askQuestion"
                     android:text="Ask" />
 
             </RelativeLayout>
@@ -96,7 +97,8 @@
                 <RelativeLayout
                     android:id="@+id/question1"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
 
                     <TextView
                         android:id="@+id/question"

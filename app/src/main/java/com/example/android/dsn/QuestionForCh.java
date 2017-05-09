@@ -1,6 +1,7 @@
 package com.example.android.dsn;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,9 +14,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import static android.R.attr.id;
+import static com.example.android.dsn.R.id.writeQuestion;
 
 public class QuestionForCh extends AppCompatActivity {
-    private static boolean push;
+    private static boolean pushQuestion;
     private static String Question, answer;
 
     @Override
@@ -36,7 +38,7 @@ public class QuestionForCh extends AppCompatActivity {
         startActivity(answersPage);
     }
 
-    public void publishAnswer(View view) {
+   /* public void publishAnswer(View view) {
         TextView question = (TextView) findViewById(R.id.question);
         EditText writeAnswer = (EditText) findViewById(R.id.WriteAnswer);
         Question = question.getText().toString();
@@ -49,21 +51,21 @@ public class QuestionForCh extends AppCompatActivity {
             ((LinearLayout) relativeLayout.getParent()).removeView(relativeLayout);
         }
 
+    }*/
+
+   public static boolean isPush() {
+        return pushQuestion;
     }
 
-    public static boolean isPush() {
-        return push;
-    }
-
-    public static String getQuestion() {
+   public static String getQuestion() {
         return Question;
     }
 
-    public static String getAnswer() {
+    /*public static String getAnswer() {
         return answer;
-    }
+    }*/
 
-    public void cancel(View view) {
+   /* public void cancel(View view) {
         Button answerButton = (Button) findViewById(R.id.answerQuetions);
         EditText writeAnswer = (EditText) findViewById(R.id.WriteAnswer);
         Button publishAnswer = (Button) findViewById(R.id.publishAnsewr);
@@ -73,9 +75,9 @@ public class QuestionForCh extends AppCompatActivity {
         writeAnswer.setVisibility(View.GONE);
         publishAnswer.setVisibility(View.GONE);
         cancel.setVisibility(View.GONE);
-    }
+    }*/
 
-    public void writeAnswer(View view) {
+    /*public void writeAnswer(View view) {
         Button answerButton = (Button) findViewById(R.id.answerQuetions);
         EditText writeAnswer = (EditText) findViewById(R.id.WriteAnswer);
         Button publishAnswer = (Button) findViewById(R.id.publishAnsewr);
@@ -84,5 +86,28 @@ public class QuestionForCh extends AppCompatActivity {
         writeAnswer.setVisibility(View.VISIBLE);
         publishAnswer.setVisibility(View.VISIBLE);
         cancel.setVisibility(View.VISIBLE);
+    }*/
+
+    public void askQuestion(View view) {
+        int count=0;
+        EditText writeQuestion= (EditText) findViewById(R.id.writeQuestion);
+        Question= writeQuestion.getText().toString();//get Question from edit text
+        TextView question= new TextView(this);
+        LinearLayout askedQuestion= (LinearLayout) findViewById(R.id.askedQuestion);
+        LinearLayout.LayoutParams attributeForQuestion=
+                new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        //add attribute for text view
+        question.setLayoutParams(attributeForQuestion);
+        if(question.equals(""));
+        else
+        {
+            count++;
+            writeQuestion.setText("");
+            pushQuestion=true;
+            question.setTextSize(20);
+            question.setTextColor(Color.BLACK);
+            question.setText("Question"+count+": "+question);
+            askedQuestion.addView(question);
+        }
     }
 }
