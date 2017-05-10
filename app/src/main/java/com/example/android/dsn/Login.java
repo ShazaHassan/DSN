@@ -9,12 +9,12 @@ import android.widget.EditText;
 public class Login extends AppCompatActivity {
 
    private EditText username;
-    DataBaseHelper myDB;
+    //DataBaseHelper myDB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        myDB = new DataBaseHelper (this); //call the constructor of database helper
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        super.onCreate(savedInstanceState);
+       // myDB = new DataBaseHelper (this); //call the constructor of database helper
     }
     public void GoToResetPassword(View view){
         Intent StartResetPasswordActivity = new Intent(Login.this,ResetPassword.class);
