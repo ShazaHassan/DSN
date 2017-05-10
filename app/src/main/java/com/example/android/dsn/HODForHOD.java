@@ -3,7 +3,6 @@ package com.example.android.dsn;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -37,13 +36,13 @@ public class HODForHOD extends AppCompatActivity implements HOD, AdapterView.OnI
 
     @Override
     public void writePost(View view) {
-        addPost=(LinearLayout) findViewById(R.id.writtenPostHOD);
+        addPost=(LinearLayout) findViewById(R.id.L3writtenPostHOD);
         post =new TextView(this);
         View view1 =new View(this);
         view1.setLayoutParams(new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,1));//set the size of line which separate between posts
         view1.setBackgroundColor(Color.GRAY);
         post.setBackgroundResource(R.drawable.bordertopost);//add the rectangle for each post
-        writePost= (EditText) findViewById(R.id.writePostHOD) ;
+        writePost= (EditText) findViewById(R.id.ETwritePostHOD) ;
         String text=writePost.getText().toString();//get text of post from EditText
         if(text.equals(""));
         else {
@@ -57,11 +56,11 @@ public class HODForHOD extends AppCompatActivity implements HOD, AdapterView.OnI
     @Override
     public void editInElement() {
         Button message;
-        message=(Button) findViewById(R.id.messageHOD);
+        message=(Button) findViewById(R.id.BmessageHOD);
         message.setVisibility(View.GONE);
     }
      private void addElementInSpinner(){
-         select=(Spinner) findViewById(R.id.selectacademicyear);
+         select=(Spinner) findViewById(R.id.Spinnerselectacademicyear);
          select.setOnItemSelectedListener(this);
          ArrayAdapter<CharSequence> degree = ArrayAdapter.createFromResource(this,R.array.academicYear, android.R.layout.simple_spinner_item);
          degree.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

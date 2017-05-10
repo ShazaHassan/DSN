@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/L1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
@@ -9,7 +10,7 @@
     tools:context="com.example.android.dsn.QuestionForCh">
 
     <TextView
-        android:id="@+id/chapterNo"
+        android:id="@+id/TvchapterNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -17,23 +18,25 @@
         android:textSize="30sp" />
 
     <Space
+        android:id="@+id/space1"
         android:layout_width="match_parent"
         android:layout_height="20dp" />
 
     <LinearLayout
+        android:id="@+id/L2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/importantQuestion"
+            android:id="@+id/BimportantQuestion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:text="Important" />
 
         <Button
-            android:id="@+id/answeredQuestion"
+            android:id="@+id/BansweredQuestion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -43,6 +46,7 @@
             android:text="Answered" />
 
         <SearchView
+            android:id="@+id/Searchv"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0">
@@ -52,24 +56,28 @@
     </LinearLayout>
 
     <Space
+        android:id="@+id/space2"
         android:layout_width="match_parent"
         android:layout_height="20dp" />
 
     <ScrollView
+        android:id="@+id/S1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/L3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/R1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <EditText
-                    android:id="@+id/writeQuestion"
+                    android:id="@+id/ETwriteQuestion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -77,31 +85,31 @@
                     android:inputType="textMultiLine" />
 
                 <Button
-                    android:id="@+id/askQuetion"
+                    android:id="@+id/BaskQuetion"
                     android:layout_width="137dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_below="@+id/writeQuestion"
+                    android:layout_below="@+id/ETwriteQuestion"
                     android:onClick="askQuestion"
                     android:text="Ask" />
 
             </RelativeLayout>
 
             <LinearLayout
-                android:id="@+id/askedQuestion"
+                android:id="@+id/LaskedQuestion"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <RelativeLayout
-                    android:id="@+id/question1"
+                    android:id="@+id/Rquestion1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:visibility="gone">
 
                     <TextView
-                        android:id="@+id/question"
+                        android:id="@+id/Tvquestion"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:text="ssbdhjdvfbdvfdghfvhfv fbnvghfvdg dgffcgdfdhgfdcfdgc dgcffc"
@@ -109,29 +117,29 @@
                         android:textSize="24sp" />
 
                     <Button
-                        android:id="@+id/answerQuetions"
+                        android:id="@+id/BanswerQuetions"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        android:layout_below="@+id/question"
+                        android:layout_below="@+id/Tvquestion"
                         android:onClick="writeAnswer"
                         android:text="answer" />
 
                     <CheckBox
-                        android:id="@+id/important"
+                        android:id="@+id/CBimportant"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/question"
+                        android:layout_below="@+id/Tvquestion"
                         android:text="Important" />
 
                     <EditText
-                        android:id="@+id/WriteAnswer"
+                        android:id="@+id/ETWriteAnswer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:layout_below="@+id/important"
+                        android:layout_below="@+id/CBimportant"
                         android:layout_marginLeft="9dp"
                         android:layout_marginStart="9dp"
                         android:ems="10"
@@ -139,23 +147,23 @@
                         android:visibility="gone" />
 
                     <Button
-                        android:id="@+id/publishAnsewr"
+                        android:id="@+id/BpublishAnsewr"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        android:layout_below="@+id/WriteAnswer"
+                        android:layout_below="@+id/ETWriteAnswer"
                         android:onClick="publishAnswer"
                         android:text="Answer"
                         android:visibility="gone" />
 
                     <Button
-                        android:id="@+id/Cancel"
+                        android:id="@+id/BCancel"
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
-                        android:layout_alignLeft="@+id/WriteAnswer"
-                        android:layout_alignStart="@+id/WriteAnswer"
-                        android:layout_below="@+id/WriteAnswer"
+                        android:layout_alignLeft="@+id/ETWriteAnswer"
+                        android:layout_alignStart="@+id/ETWriteAnswer"
+                        android:layout_below="@+id/ETWriteAnswer"
                         android:onClick="cancel"
                         android:text="Cancel"
                         android:visibility="gone" />

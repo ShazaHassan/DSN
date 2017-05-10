@@ -22,9 +22,9 @@ public class MessageToRepresentative extends AppCompatActivity {
     }
 
     public void sendMessage(View view) {
-        LinearLayout messages= (LinearLayout) findViewById(R.id.messages);
+        LinearLayout messages= (LinearLayout) findViewById(R.id.L3messages);
         TextView message=new TextView(this);
-        EditText writeMessage= (EditText) findViewById(R.id.writeMessage);
+        EditText writeMessage= (EditText) findViewById(R.id.ETwriteMessage);
         String messageWritten=writeMessage.getText().toString();
         View view1 =new View(this);//add a line to seperate between two message
         view1.setLayoutParams(new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,1));//set the height and width for line

@@ -19,10 +19,10 @@ public class SelectAcadYear extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_acad_year);
-        first= (Button)findViewById(R.id.firstyear);
-        second= (Button)findViewById(R.id.secondyear);
-        third= (Button)findViewById(R.id.thirdyear);
-        forth= (Button)findViewById(R.id.forthyear);
+        first= (Button)findViewById(R.id.Bfirstyear);
+        second= (Button)findViewById(R.id.Bsecondyear);
+        third= (Button)findViewById(R.id.Bthirdyear);
+        forth= (Button)findViewById(R.id.Bforthyear);
 
     }
 

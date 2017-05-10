@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/L1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
@@ -10,16 +11,18 @@
 
 
     <ScrollView
+        android:id="@+id/S1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/L2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/TvHOD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="HOD"
@@ -28,24 +31,25 @@
                 android:textColor="?attr/colorPrimary" />
 
             <RelativeLayout
+                android:id="@+id/R1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/messageHOD"
+                    android:id="@+id/BmessageHOD"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:onClick="messageToHOD"
                     android:text="Message" />
 
                 <Button
-                    android:id="@+id/uploadFilesHOD"
+                    android:id="@+id/BuploadFilesHOD"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:text="Upload Files" />
 
                 <Spinner
-                    android:id="@+id/selectacademicyear"
+                    android:id="@+id/Spinnerselectacademicyear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -56,12 +60,13 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/R2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp">
 
                 <EditText
-                    android:id="@+id/writePostHOD"
+                    android:id="@+id/ETwritePostHOD"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -69,19 +74,19 @@
                     android:inputType="textMultiLine" />
 
                 <Button
-                    android:id="@+id/postHOD"
+                    android:id="@+id/BpostHOD"
                     android:layout_width="137dp"
                     android:layout_height="40dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_below="@+id/writePostHOD"
+                    android:layout_below="@+id/ETwritePostHOD"
                     android:onClick="writePost"
                     android:text="Post" />
 
             </RelativeLayout>
 
             <LinearLayout
-                android:id="@+id/writtenPostHOD"
+                android:id="@+id/L3writtenPostHOD"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"></LinearLayout>

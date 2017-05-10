@@ -2,12 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/L1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     tools:context="com.example.android.dsn.Registration">
 
     <LinearLayout
+        android:id="@+id/L2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
@@ -17,13 +19,14 @@
         app:layout_constraintVertical_bias="0.485">
 
         <RelativeLayout
+            android:id="@+id/R1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout_editor_absoluteX="4dp"
             tools:layout_editor_absoluteY="0dp">
 
             <TextView
-                android:id="@+id/Register"
+                android:id="@+id/TvRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -39,10 +42,10 @@
                 android:textStyle="italic" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/ETusername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/Register"
+                android:layout_below="@+id/TvRegister"
                 android:layout_marginTop="29dp"
                 android:layout_weight="1"
                 android:ems="10"
@@ -50,12 +53,12 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/mail"
+                android:id="@+id/ETmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/editText"
-                android:layout_alignStart="@+id/editText"
-                android:layout_below="@+id/editText"
+                android:layout_alignLeft="@+id/ETusername"
+                android:layout_alignStart="@+id/ETusername"
+                android:layout_below="@+id/ETusername"
                 android:layout_marginTop="12dp"
                 android:layout_weight="1"
                 android:ems="10"
@@ -63,37 +66,37 @@
                 android:inputType="textEmailAddress" />
 
             <EditText
-                android:id="@+id/Pass"
+                android:id="@+id/ETPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/mail"
-                android:layout_alignStart="@+id/mail"
-                android:layout_below="@+id/mail"
+                android:layout_alignLeft="@+id/ETmail"
+                android:layout_alignStart="@+id/ETmail"
+                android:layout_below="@+id/ETmail"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Password:"
                 android:inputType="textPassword" />
 
             <EditText
-                android:id="@+id/pass2"
+                android:id="@+id/ETrepeatpassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/Pass"
-                android:layout_alignStart="@+id/Pass"
-                android:layout_below="@+id/Pass"
+                android:layout_alignLeft="@+id/ETPass"
+                android:layout_alignStart="@+id/ETPass"
+                android:layout_below="@+id/ETPass"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Repeat password:"
                 android:inputType="textPassword" />
 
             <Button
-                android:id="@+id/reg"
+                android:id="@+id/Bregister"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/pass2"
+                android:layout_below="@+id/ETrepeatpassword"
                 android:layout_marginEnd="26dp"
                 android:layout_marginRight="26dp"
                 android:layout_marginTop="11dp"
@@ -101,12 +104,12 @@
                 android:text="Register" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/TvMyTouch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/Register"
+                android:layout_alignLeft="@+id/TvRegister"
                 android:layout_alignParentBottom="true"
-                android:layout_alignStart="@+id/Register"
+                android:layout_alignStart="@+id/TvRegister"
                 android:layout_marginBottom="82dp"
                 android:layout_marginLeft="13dp"
                 android:layout_marginStart="13dp"

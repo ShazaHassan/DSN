@@ -1,7 +1,6 @@
 package com.example.android.dsn;
 
 import android.graphics.Color;
-import android.icu.text.StringPrepParseException;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,9 +11,6 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import static com.example.android.dsn.R.id.post;
-import static com.example.android.dsn.R.id.writePost;
 
 public class HODForStudent extends AppCompatActivity implements HOD{
     private LinearLayout addPost;
@@ -31,13 +27,13 @@ public class HODForStudent extends AppCompatActivity implements HOD{
 
     @Override
     public void writePost(View view) {
-        addPost=(LinearLayout) findViewById(R.id.writtenPostHOD);
+        addPost=(LinearLayout) findViewById(R.id.L3writtenPostHOD);
         post =new TextView(this);
         View view1 =new View(this);
         view1.setLayoutParams(new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,1));//set the size of line which separate between posts
         view1.setBackgroundColor(Color.GRAY);
         post.setBackgroundResource(R.drawable.bordertopost);//add the rectangle for each post
-        writePost= (EditText) findViewById(R.id.writePostHOD) ;
+        writePost= (EditText) findViewById(R.id.ETwritePostHOD) ;
         String text=writePost.getText().toString();//get text of post from EditText
         writePost.setText("");//clear EditText after add text in group
         if(text.equals(""));
@@ -54,11 +50,11 @@ public class HODForStudent extends AppCompatActivity implements HOD{
     public void editInElement() {
         Button message,uploadFiles;
         Spinner select;
-        message=(Button) findViewById(R.id.messageHOD);
+        message=(Button) findViewById(R.id.BmessageHOD);
         message.setVisibility(View.GONE);
-        uploadFiles=(Button) findViewById(R.id.uploadFilesHOD);
+        uploadFiles=(Button) findViewById(R.id.BuploadFilesHOD);
         uploadFiles.setVisibility(View.GONE);
-        select=(Spinner) findViewById(R.id.selectacademicyear);
+        select=(Spinner) findViewById(R.id.Spinnerselectacademicyear);
         select.setVisibility(View.GONE);
     }
 

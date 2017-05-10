@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    
+
+    android:id="@+id/L1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
@@ -10,6 +10,7 @@
     tools:context="com.example.android.dsn.SelectAcadYear">
 
     <ScrollView
+        android:id="@+id/Sc1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -19,11 +20,12 @@
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/R1"
                 android:layout_width="match_parent"
                 android:layout_height="516dp">
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/TvSelectAcademicYear"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -35,44 +37,44 @@
                     android:textSize="18sp" />
 
                 <Button
-                    android:id="@+id/firstyear"
+                    android:id="@+id/Bfirstyear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/textView2"
+                    android:layout_below="@+id/TvSelectAcademicYear"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="63dp"
-                    android:text="First year"
-                    android:onClick="firstYear"/>
+                    android:onClick="firstYear"
+                    android:text="First year" />
 
                 <Button
-                    android:id="@+id/secondyear"
+                    android:id="@+id/Bsecondyear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/firstyear"
+                    android:layout_below="@+id/Bfirstyear"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="43dp"
-                    android:text="Second Year"
-                    android:onClick="secondYear"/>
+                    android:onClick="secondYear"
+                    android:text="Second Year" />
 
                 <Button
-                    android:id="@+id/thirdyear"
+                    android:id="@+id/Bthirdyear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/secondyear"
+                    android:layout_below="@+id/Bsecondyear"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="43dp"
-                    android:text="Third Year"
-                    android:onClick="thirdYear"/>
+                    android:onClick="thirdYear"
+                    android:text="Third Year" />
 
                 <Button
-                    android:id="@+id/forthyear"
+                    android:id="@+id/Bforthyear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/thirdyear"
+                    android:layout_below="@+id/Bthirdyear"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="43dp"
-                    android:text="Forth Year"
-                    android:onClick="forthYear"/>
+                    android:onClick="forthYear"
+                    android:text="Forth Year" />
 
             </RelativeLayout>
         </LinearLayout>

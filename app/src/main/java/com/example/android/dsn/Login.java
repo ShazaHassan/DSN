@@ -3,7 +3,6 @@ package com.example.android.dsn;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 
@@ -23,7 +22,7 @@ public class Login extends AppCompatActivity {
     public void login(View view) {
         View focusView=new View(this);
         boolean cancel=false;
-        username=(EditText) findViewById(R.id.Username);
+        username=(EditText) findViewById(R.id.ETUsername);
         String UserName=username.getText().toString();
         if (UserName.equals("Shaza"))
         {

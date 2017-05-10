@@ -1,9 +1,7 @@
 package com.example.android.dsn;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,9 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 import static android.widget.RelativeLayout.BELOW;
-import static com.example.android.dsn.R.id.question;
 
 /**
  * Created by Shaza Hassan on 09-May-17.
@@ -45,7 +41,7 @@ public class QuestionForChForDoctor extends AppCompatActivity {
          EditText writeAnswer= new EditText(this);
          Button publishAnswer=new Button(this);
          Button cancel=new Button(this);
-         RelativeLayout questionWithAnswer= new RelativeLayout(this);
+         final RelativeLayout questionWithAnswer= new RelativeLayout(this);
         //
         IDQuestion++;
         IDButtonAnswer++;
@@ -63,7 +59,7 @@ public class QuestionForChForDoctor extends AppCompatActivity {
         cancel.setId(IDCancel);
         questionWithAnswer.setId(IDMainPage);
         int count=1;
-        LinearLayout page = (LinearLayout) findViewById(R.id.askedQuestion);
+        LinearLayout page = (LinearLayout) findViewById(R.id.LaskedQuestion);
         RelativeLayout.LayoutParams attributeForRelative=new
                 RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         questionWithAnswer.setLayoutParams(attributeForRelative);
@@ -75,45 +71,72 @@ public class QuestionForChForDoctor extends AppCompatActivity {
 
         //button answer
         RelativeLayout.LayoutParams attributeForButtonAnswer=new
-                RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 40);
+                RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         attributeForButtonAnswer.addRule(RelativeLayout.BELOW,IDQuestion);
         attributeForButtonAnswer.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
         Answer.setLayoutParams(attributeForButtonAnswer);
-
+        Answer.setText("B1");
         // check box
         RelativeLayout.LayoutParams attributeForImportant=new
                 RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        attributeForImportant.addRule(RelativeLayout.BELOW,IDQuestion);
+        attributeForImportant.addRule(BELOW,IDQuestion);
         attributeForImportant.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
         important.setText("important");
         important.setLayoutParams(attributeForImportant);
         //write answer
         RelativeLayout.LayoutParams attributeForEditText=new
                 RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        attributeForEditText.addRule(RelativeLayout.BELOW,IDImportant);
+        attributeForEditText.addRule(BELOW,IDImportant);
         //writeAnswer.setVisibility(View.GONE);
         writeAnswer.setLayoutParams(attributeForEditText);
         //button for publish answer
         RelativeLayout.LayoutParams attributeForButtonPublishAnswer=new
-                RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 40);
+                RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         attributeForButtonPublishAnswer.addRule(RelativeLayout.BELOW,IDWriteAnswer);
         attributeForButtonPublishAnswer.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-        publishAnswer.setLayoutParams(attributeForButtonAnswer);
+        publishAnswer.setLayoutParams(attributeForButtonPublishAnswer);
         //button for cancel
         RelativeLayout.LayoutParams attributeForButtonCancel=new
-                RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, 40);
-        attributeForButtonCancel.addRule(RelativeLayout.BELOW,IDWriteAnswer);
+                RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        attributeForButtonCancel.addRule(BELOW,IDWriteAnswer);
         attributeForButtonCancel.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
-        publishAnswer.setLayoutParams(attributeForButtonAnswer);
+        cancel.setLayoutParams(attributeForButtonCancel);
         ///add elements to relative layout
+        Answer.setText("Answer");
+        publishAnswer.setText("Answer");
+        cancel.setText("Canel");
         questionWithAnswer.addView(writeQuestion,0);
         questionWithAnswer.addView(Answer,1);
         questionWithAnswer.addView(important,2);
         questionWithAnswer.addView(writeAnswer,3);
         questionWithAnswer.addView(publishAnswer,4);
         questionWithAnswer.addView(cancel,5);
+        writeAnswer.setVisibility(View.GONE);
+        publishAnswer.setVisibility(View.GONE);
+        cancel.setVisibility(View.GONE);
+
+
+        setActionOfAnswerButton(Answer,writeAnswer,publishAnswer,cancel);
+        publishAnswer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
 
     }
+    private void setActionOfAnswerButton(final View AnswerButton, final View writeAnswer, final View publishAnswer, final View cancel ){
+        AnswerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                writeAnswer.setVisibility(View.VISIBLE);
+                publishAnswer.setVisibility(View.VISIBLE);
+                cancel.setVisibility(View.VISIBLE);
+                AnswerButton.setVisibility(View.GONE);
+            }
+        });
+    }
+
+
    /* private void updateId(){
         IDQuestion++;
         IDButtonAnswer++;

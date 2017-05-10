@@ -203,13 +203,13 @@
                     android:id="@+id/editTeachassistance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBottom="@+id/teach"
+                    android:layout_alignBottom="@+id/Tvdepartment"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true" />
 
                 <TextView
-                    android:id="@+id/teach"
+                    android:id="@+id/Tvdepartment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Teaching Assistanc"

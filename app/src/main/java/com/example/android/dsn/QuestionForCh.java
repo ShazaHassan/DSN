@@ -6,15 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import static android.R.attr.id;
-import static com.example.android.dsn.R.id.writeQuestion;
 
 public class QuestionForCh extends AppCompatActivity {
     private static boolean pushQuestion;
@@ -26,13 +20,13 @@ public class QuestionForCh extends AppCompatActivity {
         setContentView(R.layout.activity_question_for_ch);
         Intent intent = getIntent();
         String chNo = intent.getStringExtra("no");//take the number  of ch
-        TextView title = (TextView) findViewById(R.id.chapterNo);
+        TextView title = (TextView) findViewById(R.id.TvchapterNo);
         title.setText(chNo);//set the title of the page by the number of the ch
     }
 
     public void answeredQuestions(View view) {
         Intent answersPage = new Intent(this, AnswerPage.class);
-        TextView title = (TextView) findViewById(R.id.chapterNo);
+        TextView title = (TextView) findViewById(R.id.TvchapterNo);
         String ti = title.getText().toString();
         answersPage.putExtra("titleOfCh", ti);
         startActivity(answersPage);
@@ -90,10 +84,10 @@ public class QuestionForCh extends AppCompatActivity {
 
     public void askQuestion(View view) {
         int count=0;
-        EditText writeQuestion= (EditText) findViewById(R.id.writeQuestion);
+        EditText writeQuestion= (EditText) findViewById(R.id.ETwriteQuestion);
         Question= writeQuestion.getText().toString();//get Question from edit text
         TextView question= new TextView(this);
-        LinearLayout askedQuestion= (LinearLayout) findViewById(R.id.askedQuestion);
+        LinearLayout askedQuestion= (LinearLayout) findViewById(R.id.LaskedQuestion);
         LinearLayout.LayoutParams attributeForQuestion=
                 new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         //add attribute for text view

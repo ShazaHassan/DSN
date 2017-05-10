@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class QuestionStartPage extends AppCompatActivity {
@@ -21,7 +19,7 @@ public class QuestionStartPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_start_page);
         Intent intent=getIntent();
-        TextView quTitle= (TextView) findViewById(R.id.questionTitle);
+        TextView quTitle= (TextView) findViewById(R.id.TvquestionTitle);
         String ti=intent.getStringExtra("sub");
         quTitle.setText(ti);
     }

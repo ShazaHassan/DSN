@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/L1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
@@ -10,23 +11,25 @@
     tools:context="com.example.android.dsn.MessageToRepresentative">
 
     <LinearLayout
+        android:id="@+id/L2"
         android:layout_width="match_parent"
         android:layout_height="437dp"
         android:layout_weight="1.03"
         android:orientation="vertical">
 
         <ScrollView
+            android:id="@+id/S1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
-                android:id="@+id/messages"
+                android:id="@+id/L3messages"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/messageTo"
+                    android:id="@+id/TvmessageTo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Message to Repesentative"
@@ -38,17 +41,19 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/L4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ScrollView
+            android:id="@+id/S2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1">
 
             <EditText
-                android:id="@+id/writeMessage"
+                android:id="@+id/ETwriteMessage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -58,7 +63,7 @@
         </ScrollView>
 
         <Button
-            android:id="@+id/send"
+            android:id="@+id/Bsend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

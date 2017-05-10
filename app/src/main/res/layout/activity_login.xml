@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/L1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
@@ -10,7 +11,7 @@
 
     <LinearLayout
 
-        android:id="@+id/Linear"
+        android:id="@+id/L2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
@@ -21,6 +22,7 @@
         app:layout_constraintVertical_bias="0.529">
 
         <RelativeLayout
+            android:id="@+id/R1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.17"
@@ -28,7 +30,7 @@
             tools:layout_editor_absoluteY="8dp">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/Tvfohu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -42,10 +44,10 @@
                 tools:text="FOHU" />
 
             <TextView
-                android:id="@+id/teach"
+                android:id="@+id/Tvdepartment"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView4"
+                android:layout_below="@+id/Tvfohu"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="26dp"
                 android:layout_weight="1"
@@ -56,12 +58,12 @@
                 tools:text="Computers Engineering Department" />
 
             <EditText
-                android:id="@+id/Username"
+                android:id="@+id/ETUsername"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/teach"
+                android:layout_below="@+id/Tvdepartment"
                 android:layout_marginTop="35dp"
                 android:layout_weight="1"
                 android:ems="10"
@@ -69,38 +71,38 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/Pass"
+                android:id="@+id/ETPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/Username"
-                android:layout_alignStart="@+id/Username"
-                android:layout_below="@+id/Username"
+                android:layout_alignLeft="@+id/ETUsername"
+                android:layout_alignStart="@+id/ETUsername"
+                android:layout_below="@+id/ETUsername"
                 android:layout_marginTop="24dp"
                 android:ems="10"
                 android:hint="Password:"
                 android:inputType="textPassword" />
 
             <Button
-                android:id="@+id/Login"
+                android:id="@+id/BLogin"
                 style="@android:style/Widget.Button.Inset"
                 android:layout_width="192dp"
                 android:layout_height="wrap_content"
+                android:layout_above="@+id/BresetPass"
+                android:layout_alignEnd="@+id/BresetPass"
+                android:layout_alignRight="@+id/BresetPass"
                 android:onClick="login"
-                android:text="Login"
-                android:layout_above="@+id/reserPass"
-                android:layout_alignRight="@+id/reserPass"
-                android:layout_alignEnd="@+id/reserPass" />
+                android:text="Login" />
 
             <Button
-                android:id="@+id/reserPass"
+                android:id="@+id/BresetPass"
                 style="@android:style/Widget.Button.Inset"
                 android:layout_width="190dp"
                 android:layout_height="wrap_content"
-                android:onClick="GoToResetPassword"
-                android:text="Forgot your password"
-                android:layout_marginBottom="39dp"
                 android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="39dp"
+                android:onClick="GoToResetPassword"
+                android:text="Forgot your password" />
 
         </RelativeLayout>
 

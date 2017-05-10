@@ -48,20 +48,20 @@ public class TaskPageForDoctors extends AppCompatActivity {
                 // make sure that the 3 editTexts and text views  visible, "upload" button is invisible
 
 
-                Text3 = (EditText) TaskPageForDoctors.this.findViewById(R.id.no);
+                Text3 = (EditText) TaskPageForDoctors.this.findViewById(R.id.ETno);
                 Text3.setVisibility(View.VISIBLE);
 
-                Text4 = (EditText) TaskPageForDoctors.this.findViewById(R.id.dead);
+                Text4 = (EditText) TaskPageForDoctors.this.findViewById(R.id.ETdead);
                 Text4.setVisibility(View.VISIBLE);
 
-                Text5 = (EditText) TaskPageForDoctors.this.findViewById(R.id.des);
+                Text5 = (EditText) TaskPageForDoctors.this.findViewById(R.id.ETdes);
                 Text5.setVisibility(View.VISIBLE);
 
 
-                text10 = (TextView) TaskPageForDoctors.this.findViewById(R.id.textView10);
+                text10 = (TextView) TaskPageForDoctors.this.findViewById(R.id.Tvdes);
                 text10.setVisibility(View.INVISIBLE);
 
-                text14 = (TextView) TaskPageForDoctors.this.findViewById(R.id.textView14);
+                text14 = (TextView) TaskPageForDoctors.this.findViewById(R.id.Tvdead);
                 text14.setVisibility(View.INVISIBLE);
 
               //  text16 = (TextView) TaskPageForDoctors.this.findViewById(R.id.textView16);
@@ -94,9 +94,9 @@ public class TaskPageForDoctors extends AppCompatActivity {
 
        // GET Edit texts where the tasks are written in
 
-        TaskNum = (EditText) findViewById(R.id.no);
-        TaskDesc = (EditText) findViewById(R.id.des);
-        TaskDeadline = (EditText) findViewById(R.id.dead);
+        TaskNum = (EditText) findViewById(R.id.ETno);
+        TaskDesc = (EditText) findViewById(R.id.ETdes);
+        TaskDeadline = (EditText) findViewById(R.id.ETdead);
 
         //get text of post from EditText
 

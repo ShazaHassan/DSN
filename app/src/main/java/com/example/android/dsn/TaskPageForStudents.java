@@ -28,20 +28,20 @@ public class TaskPageForStudents extends AppCompatActivity {
         // make sure that the "upload" button is visible ,3 editTexts,text views and any other button is invisible,
 
 
-        Text3 = (EditText) TaskPageForStudents.this.findViewById(R.id.no);
+        Text3 = (EditText) TaskPageForStudents.this.findViewById(R.id.ETno);
         Text3.setVisibility(View.INVISIBLE);
 
-        Text4 = (EditText) TaskPageForStudents.this.findViewById(R.id.dead);
+        Text4 = (EditText) TaskPageForStudents.this.findViewById(R.id.ETdead);
         Text4.setVisibility(View.INVISIBLE);
 
-        Text5 = (EditText) TaskPageForStudents.this.findViewById(R.id.des);
+        Text5 = (EditText) TaskPageForStudents.this.findViewById(R.id.ETdes);
         Text5.setVisibility(View.INVISIBLE);
 
 
-        text10 = (TextView) TaskPageForStudents.this.findViewById(R.id.textView10);
+        text10 = (TextView) TaskPageForStudents.this.findViewById(R.id.Tvdes);
         text10.setVisibility(View.INVISIBLE);
 
-        text14 = (TextView) TaskPageForStudents.this.findViewById(R.id.textView14);
+        text14 = (TextView) TaskPageForStudents.this.findViewById(R.id.Tvdead);
         text14.setVisibility(View.INVISIBLE);
 
         //text16 = (TextView) TaskPageForStudents.this.findViewById(R.id.textView16);
@@ -56,7 +56,7 @@ public class TaskPageForStudents extends AppCompatActivity {
         banswers = (Button)TaskPageForStudents.this.findViewById(R.id.BAnswers);
         banswers.setVisibility(View.INVISIBLE);
 
-        TAddnewtask=(TextView) TaskPageForStudents.this.findViewById(R.id.Addtask);
+        TAddnewtask=(TextView) TaskPageForStudents.this.findViewById(R.id.TvAddnewtask);
         TAddnewtask.setVisibility(View.INVISIBLE);
 
 

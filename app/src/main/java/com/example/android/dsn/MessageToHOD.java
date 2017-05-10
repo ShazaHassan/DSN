@@ -23,9 +23,9 @@ public class MessageToHOD extends AppCompatActivity {
     }
 
     public void sendMessage(View view) {
-        LinearLayout messages= (LinearLayout) findViewById(R.id.messages);
+        LinearLayout messages= (LinearLayout) findViewById(R.id.L3messages);
         TextView message=new TextView(this);
-        EditText writeMessage= (EditText) findViewById(R.id.writeMessage);
+        EditText writeMessage= (EditText) findViewById(R.id.ETwriteMessage);
         String messageWritten=writeMessage.getText().toString();
         writeMessage.setText("");
         message.setText(messageWritten);
@@ -39,7 +39,7 @@ public class MessageToHOD extends AppCompatActivity {
 
     }
     private void editInElement(){
-        TextView head= (TextView) findViewById(R.id.messageTo);
+        TextView head= (TextView) findViewById(R.id.TvmessageTo);
         head.setText("Message To HOD");
     }
 }

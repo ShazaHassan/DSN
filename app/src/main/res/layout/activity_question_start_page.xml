@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/L1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
@@ -9,11 +10,12 @@
     tools:context="com.example.android.dsn.QuestionStartPage">
 
     <RelativeLayout
+        android:id="@+id/R1"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/questionTitle"
+            android:id="@+id/TvquestionTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -23,24 +25,26 @@
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/addChapter"
+            android:id="@+id/BaddChapter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/TvquestionTitle"
             android:layout_marginTop="28dp"
             android:onClick="addChapter"
             android:text="Add Chapter"
-            android:textSize="14sp"
-            android:layout_below="@+id/questionTitle"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:textSize="14sp" />
 
         <LinearLayout
+            android:id="@+id/L2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/addChapter"
+            android:layout_below="@+id/BaddChapter"
             android:orientation="vertical">
 
             <HorizontalScrollView
+                android:id="@+id/HSV1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
