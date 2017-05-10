@@ -9,8 +9,10 @@ import android.widget.EditText;
 public class Login extends AppCompatActivity {
 
    private EditText username;
+    DataBaseHelper myDB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        myDB = new DataBaseHelper (this); //call the constructor of database helper
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
     }
