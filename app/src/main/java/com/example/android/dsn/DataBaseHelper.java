@@ -84,6 +84,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         //Execute the Query written inside the .execSQL
 
+        //yarab
        // db.execSQL("create table" + DATABASE_TABLE1 + "("+ COL_11+ ")" );
         db.execSQL("create table" + DATABASE_TABLE1 + "( FName TEXT , MName TEXT, LName TEXT, Email BLOB, Password BLOB, ID INTEGER PRIMARY KEY AUTOINCREMENT, DepName TEXT, AcYear  INTEGER NOT NULL, Representative BOOLEAN NOT NULL CHECK (Representative IN (0,1)");
         db.execSQL("create table" + DATABASE_TABLE2 + "(TaskNO INTEGER PRIMARY KEY AUTOINCREMENT,Description TEXT, Deadline DATETIME");
