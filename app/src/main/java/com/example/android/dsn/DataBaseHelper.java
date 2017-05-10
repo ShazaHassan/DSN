@@ -1,15 +1,9 @@
 package com.example.android.dsn;
-import  android.database.sqlite.*;
+
 import android.content.Context;
 import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-
-import com.google.android.gms.tasks.Task;
-
-import static android.database.sqlite.SQLiteDatabase.openOrCreateDatabase;
-
 
 /**
  * Created by Mariam  on 10/05/2017.
@@ -17,7 +11,7 @@ import static android.database.sqlite.SQLiteDatabase.openOrCreateDatabase;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 
-    public static final String DATABASE_NAME = "DSN.db";
+    public static final String DATABASE_NAME = "DSN.DB";
 
     // Definition of STUDENT Table Variables
 
@@ -40,12 +34,12 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COL_22 = "Description";
     public static final String COL_23 = "Deadline";
 
-  /*  // Definition of AnswersOfTasks Table Variables
+    // Definition of AnswersOfTasks Table Variables
 
     public static final String DATABASE_TABLE3 = "AnswersOfTasks";
     public static final String COL_31 = "PathFile";
     public static final String COL_32 = "DeadLine";
-*/
+
 
     // Definition of Doctor Table Variables
 
@@ -60,38 +54,51 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
 
 
+    // Definition of STUDENT Table Variables
+
+  /*  public static final String DATABASE_TABLE5 = "Student";
+    public static final String COL_51 = "FName";
+    public static final String COL_52 = "MName";
+    public static final String COL_53 = "LName";
+    public static final String COL_54 = "Email";
+    public static final String COL_55 = "Password";
+    public static final String COL_56 = "ID";
+    public static final String COL_57 = "DepName";
+    public static final String COL_58 = "AcYear"; */
+
+
     //when this constructor is called , DB will be created
 
 
     public DataBaseHelper(Context context) {
-        super(context,DATABASE_NAME, null,4); //constructor which create the database and the tables
+        super(context,DATABASE_NAME, null, 1); //constructor which create the database and the tables
         SQLiteDatabase db = this.getWritableDatabase(); //this line is to check that database is created
-        SQLiteDatabase db1 = this.getReadableDatabase();
+    }
 
-}
+    public DataBaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version, DatabaseErrorHandler errorHandler) {
+        super(context, name, factory, version, errorHandler);
+    }
 
     @Override
-    //Execute the Query written inside the .execSQL
-
     public void onCreate(SQLiteDatabase db) {
-      //  SQLiteDatabase mydatabase = openOrCreateDatabase("DSN", MODE_PRIVATE,null);
 
-        db.execSQL("create table Student" + "( FName TEXT , MName TEXT, LName TEXT, Email TEXT, Password TEXT, ID INTEGER PRIMARY KEY AUTOINCREMENT, DepName TEXT, AcYear  INTEGER NOT NULL, Representative BOOLEAN NOT NULL CHECK (Representative IN (0,1)");
-        db.execSQL("create table TASK" + "(TaskNO INTEGER PRIMARY KEY AUTOINCREMENT,Description TEXT, Deadline DATETIME");
+        //Execute the Query written inside the .execSQL
 
-        // data type of path file attribute did not detected
+       // db.execSQL("create table" + DATABASE_TABLE1 + "("+ COL_11+ ")" );
+        db.execSQL("create table" + DATABASE_TABLE1 + "( FName TEXT , MName TEXT, LName TEXT, Email BLOB, Password BLOB, ID INTEGER PRIMARY KEY AUTOINCREMENT, DepName TEXT, AcYear  INTEGER NOT NULL, Representative BOOLEAN NOT NULL CHECK (Representative IN (0,1)");
+        db.execSQL("create table" + DATABASE_TABLE2 + "(TaskNO INTEGER PRIMARY KEY AUTOINCREMENT,Description TEXT, Deadline DATETIME");
+        // data type of pathfile attribute didnot detected
        //   db.execSQL("create table" + DATABASE_TABLE3 + "(PathFile ,DeadLine DATETIME");
-
-      db.execSQL("create table Doctor" + "(DocName TEXT,DepName TEXT,HOD BOOLEAN NOT NULL CHECK (HOD IN (0,1)) ,Degree TEXT ,ID INTEGER PRIMARY KEY AUTOINCREMENT,Email BLOB, Password BLOB");
+        db.execSQL("create table" + DATABASE_TABLE4 + "(DocName TEXT,DepName TEXT,HOD BOOLEAN NOT NULL CHECK (HOD IN (0,1) ,Degree TEXT ,ID INTEGER PRIMARY KEY AUTOINCREMENT,Email BLOB, Password BLOB");
 
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS Student");
-        db.execSQL("DROP TABLE IF EXISTS TASK");
-        db.execSQL("DROP TABLE IF EXISTS Doctor");
+        db.execSQL("DROP TABLE IF EXISTS" + DATABASE_TABLE1);
+        db.execSQL("DROP TABLE IF EXISTS" + DATABASE_TABLE2);
+        db.execSQL("DROP TABLE IF EXISTS" + DATABASE_TABLE4);
         onCreate(db);
 
 
