@@ -15,7 +15,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     // Definition of STUDENT Table Variables
 
-    public static final String DATABASE_TABLE1 = "Student";
+  /* public static final String DATABASE_TABLE1 = "Student";
     public static final String COL_11 = "FName";
     public static final String COL_12 = "MName";
     public static final String COL_13 = "LName";
@@ -185,26 +185,26 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
         //Execute the Query written inside the .execSQL
 //create table for subject
-        db.execSQL("create table "+ DATABASE_TABLE6 +
+      /*  db.execSQL("create table "+ DATABASE_TABLE6 +
                 "(SubjectName TEXT,Code INTEGER PRIMARY KEY ,DepName TEXT,DocID INTEGER,Semester TEXT,Year TEXT)" +
                 "DocID IS NULL OR EXISTS(SELECT 1 FROM Doctor WHERE ID=DocID)");
 //create table for subject of student
-        db.execSQL("create table "+ DATABASE_TABLE7 +
+     /*   db.execSQL("create table "+ DATABASE_TABLE7 +
                 "(IDStudent INTEGER PRIMARY KEY ,Sub1 INTEGER,Sub2 INTEGER,Sub3 INTEGER,Sub4 INTEGER," +
-                "Sub5 INTEGER, sub6 INTEGER, sub7 INTEGER,sub8 INTEGER,sub9 INTEGER, sub10 INTEGER, sub11 INTEGER, sub12 INTEGER)");
+                "Sub5 INTEGER, sub6 INTEGER, sub7 INTEGER,sub8 INTEGER,sub9 INTEGER, sub10 INTEGER, sub11 INTEGER, sub12 INTEGER)");*/
 // create table for quetion
 
-        db.execSQL("create table "+ DATABASE_TABLE8 +
+        db.execSQL("create table run"+
                 "(IDDr INTEGER,IDStudent INTEGER,Question Text, Answer TEXT, Important BOOLEAN NOT NULL CHECK (Important IN (1,0)))");
 
-       // db.execSQL("create table" + DATABASE_TABLE1 + "("+ COL_11+ ")" );
+     /*  // db.execSQL("create table" + DATABASE_TABLE1 + "("+ COL_11+ ")" );
         db.execSQL("create table" + DATABASE_TABLE1 + "( FName TEXT , MName TEXT, LName TEXT, Email BLOB, Password BLOB, ID INTEGER PRIMARY KEY AUTOINCREMENT, DepName TEXT, AcYear  INTEGER NOT NULL, Representative BOOLEAN NOT NULL CHECK (Representative IN (0,1)");
         db.execSQL("create table" + DATABASE_TABLE2 + "(TaskNO INTEGER PRIMARY KEY AUTOINCREMENT,Description TEXT, Deadline DATETIME");
         // data type of pathfile attribute didnot detected
        //   db.execSQL("create table" + DATABASE_TABLE3 + "(PathFile ,DeadLine DATETIME");
         db.execSQL("create table" + DATABASE_TABLE4 + "(DocName TEXT,DepName TEXT,HOD BOOLEAN NOT NULL CHECK (HOD IN (0,1) ,Degree TEXT ,ID INTEGER PRIMARY KEY AUTOINCREMENT,Email BLOB, Password BLOB");
 
-
+*/
     }
 
     @Override
@@ -212,9 +212,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXIST"+ DATABASE_TABLE6);
         db.execSQL("DROP TABLE IF EXIST"+ DATABASE_TABLE7);
         db.execSQL("DROP TABLE IF EXIST"+ DATABASE_TABLE8);
-        db.execSQL("DROP TABLE IF EXISTS" + DATABASE_TABLE1);
+      /*  db.execSQL("DROP TABLE IF EXISTS" + DATABASE_TABLE1);
         db.execSQL("DROP TABLE IF EXISTS" + DATABASE_TABLE2);
-        db.execSQL("DROP TABLE IF EXISTS" + DATABASE_TABLE4);
+        db.execSQL("DROP TABLE IF EXISTS" + DATABASE_TABLE4);*/
         onCreate(db);
 
 
