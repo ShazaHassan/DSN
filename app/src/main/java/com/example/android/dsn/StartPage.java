@@ -6,12 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 
 public class StartPage extends AppCompatActivity {
+    DataBaseHelper DBHelper;
     private View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_page);
+        DBHelper =new DataBaseHelper(this);
     }
     public void GoToLogin(View view){
         this.view = view;
