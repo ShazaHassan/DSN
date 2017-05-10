@@ -53,15 +53,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COL_47 = "HOD";
 
 
-    public static final String COL_11 = "FName";
-    public static final String COL_12 = "MName";
-    public static final String COL_13 = "LName";
-    public static final String COL_4 = "Email";
-    public static final String COL_5 = "Password";
-    public static final String COL_6 = "ID";
-    public static final String COL_7 = "DepName";
-    public static final String COL_8 = "AcYear";
-
     // Definition of STUDENT Table Variables
 /*
     public static final String DATABASE_TABLE2 = "Student";
@@ -180,7 +171,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     public DataBaseHelper(Context context) {
 
-        super(context,DATABASE_NAME, null, 1);
         super(context,DATABASE_NAME, null, 1); //constructor which create the database and the tables
         SQLiteDatabase db = this.getWritableDatabase(); //this line is to check that database is created
     }
@@ -194,15 +184,15 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 
         //Execute the Query written inside the .execSQL
-
+//create table for subject
         db.execSQL("create table "+ DATABASE_TABLE6 +
                 "(SubjectName TEXT,Code INTEGER PRIMARY KEY ,DepName TEXT,DocID INTEGER,Semester TEXT,Year TEXT)" +
                 "DocID IS NULL OR EXISTS(SELECT 1 FROM Doctor WHERE ID=DocID)");
-
+//create table for subject of student
         db.execSQL("create table "+ DATABASE_TABLE7 +
                 "(IDStudent INTEGER PRIMARY KEY ,Sub1 INTEGER,Sub2 INTEGER,Sub3 INTEGER,Sub4 INTEGER," +
                 "Sub5 INTEGER, sub6 INTEGER, sub7 INTEGER,sub8 INTEGER,sub9 INTEGER, sub10 INTEGER, sub11 INTEGER, sub12 INTEGER)");
-
+// create table for quetion
 
         db.execSQL("create table "+ DATABASE_TABLE8 +
                 "(IDDr INTEGER,IDStudent INTEGER,Question Text, Answer TEXT, Important BOOLEAN NOT NULL CHECK (Important IN (1,0)))");
@@ -222,7 +212,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXIST"+ DATABASE_TABLE6);
         db.execSQL("DROP TABLE IF EXIST"+ DATABASE_TABLE7);
         db.execSQL("DROP TABLE IF EXIST"+ DATABASE_TABLE8);
-        onCreate(db);
         db.execSQL("DROP TABLE IF EXISTS" + DATABASE_TABLE1);
         db.execSQL("DROP TABLE IF EXISTS" + DATABASE_TABLE2);
         db.execSQL("DROP TABLE IF EXISTS" + DATABASE_TABLE4);
