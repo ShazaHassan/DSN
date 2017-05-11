@@ -32,4 +32,9 @@ public class StartPage extends AppCompatActivity {
         Intent StartRegisterationActivity = new Intent(StartPage.this,Registration.class);
         startActivity(StartRegisterationActivity);
     }
+
+    /*// method which insert data into database
+     public int insertData(){
+
+     }*/
 }

@@ -54,28 +54,29 @@
             <Button
                 android:id="@+id/BLogin"
                 style="@android:style/Widget.Button.Inset"
-                android:layout_width="190dp"
+                android:layout_width="350dp"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/TvMytouch"
-                android:layout_alignRight="@+id/TvMytouch"
                 android:layout_below="@+id/Tvdepartment"
-                android:layout_marginTop="137dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="140dp"
                 android:layout_weight="1"
+                android:background="@android:drawable/checkbox_off_background"
                 android:onClick="GoToLogin"
-                android:text="Login" />
+                android:text="Login"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/Bregisteration"
                 style="@android:style/Widget.Button.Inset"
-                android:layout_width="190dp"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/BLogin"
-                android:layout_alignStart="@+id/BLogin"
-                android:layout_below="@+id/BLogin"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="26dp"
                 android:layout_weight="1"
                 android:onClick="GoToRegisteration"
-                android:text="Registeration" />
+                android:text="Registeration"
+                android:layout_below="@+id/BLogin"
+                android:layout_centerHorizontal="true" />
 
             <TextView
                 android:id="@+id/TvMytouch"

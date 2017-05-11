@@ -33,7 +33,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
-            android:text="Important" />
+            android:background="@android:drawable/checkbox_off_background"
+            android:text="Important"
+            android:textAllCaps="false"
+            android:textStyle="italic" />
 
         <Button
             android:id="@+id/BansweredQuestion"
@@ -42,8 +45,11 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="0"
+            android:background="@android:drawable/checkbox_off_background"
             android:onClick="answeredQuestions"
-            android:text="Answered" />
+            android:text="Answered"
+            android:textAllCaps="false"
+            android:textStyle="italic" />
 
         <SearchView
             android:id="@+id/Searchv"
@@ -91,8 +97,11 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_below="@+id/ETwriteQuestion"
+                    android:background="@android:drawable/checkbox_off_background"
                     android:onClick="askQuestion"
-                    android:text="Ask" />
+                    android:text="Ask"
+                    android:textAllCaps="false"
+                    android:textStyle="italic" />
 
             </RelativeLayout>
 

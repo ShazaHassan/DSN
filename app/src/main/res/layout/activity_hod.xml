@@ -25,10 +25,12 @@
                 android:id="@+id/TvHOD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="serif"
                 android:text="HOD"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-                android:textColor="?attr/colorPrimary" />
+                android:textColor="?attr/colorPrimary"
+                android:textStyle="italic" />
 
             <RelativeLayout
                 android:id="@+id/R1"
@@ -37,16 +39,20 @@
 
                 <Button
                     android:id="@+id/BmessageHOD"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="40dp"
+                    android:background="@android:drawable/checkbox_off_background"
                     android:onClick="messageToHOD"
-                    android:text="Message" />
+                    android:text="Message"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/BuploadFilesHOD"
-                    android:layout_width="wrap_content"
+                    android:layout_width="150dp"
                     android:layout_height="40dp"
-                    android:text="Upload Files" />
+                    android:background="@android:drawable/checkbox_off_background"
+                    android:text="Upload Files"
+                    android:textAllCaps="false" />
 
                 <Spinner
                     android:id="@+id/Spinnerselectacademicyear"
@@ -69,6 +75,7 @@
                     android:id="@+id/ETwritePostHOD"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/common_google_signin_btn_icon_light_normal_background"
                     android:ems="10"
                     android:hint="Write Post..."
                     android:inputType="textMultiLine" />
@@ -80,8 +87,11 @@
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_below="@+id/ETwritePostHOD"
+                    android:layout_marginTop="14dp"
+                    android:background="@android:drawable/checkbox_off_background"
                     android:onClick="writePost"
-                    android:text="Post" />
+                    android:text="Post"
+                    android:textAllCaps="false" />
 
             </RelativeLayout>
 

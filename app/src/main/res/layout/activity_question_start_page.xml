@@ -26,15 +26,19 @@
 
         <Button
             android:id="@+id/BaddChapter"
-            android:layout_width="wrap_content"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/TvquestionTitle"
             android:layout_marginTop="28dp"
+            android:background="@android:drawable/checkbox_off_background"
+            android:fontFamily="sans-serif"
             android:onClick="addChapter"
             android:text="Add Chapter"
-            android:textSize="14sp" />
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="bold|italic" />
 
         <LinearLayout
             android:id="@+id/L2"
