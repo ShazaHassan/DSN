@@ -29,7 +29,6 @@ public class Login extends AppCompatActivity {
         if (UserName.equals("Student")||UserName.equals("student"))
         {
             Intent login= new Intent(Login.this,GroupOfAcadYearForStudent.class);
-            login.putExtra("user",UserName);
             startActivity(login);
             cancel=false;
             username.setText("");

@@ -28,17 +28,13 @@ public class GroupOfAcadYearForStudent extends AppCompatActivity implements Grou
     private EditText writePost;
     private TextView post;
     private static String publisher;
-    DataBaseHelper helper;
 
    @Override
     protected void onCreate(Bundle savedInstanceState) {
        super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_group_of_acad_year);
        addElementInSpinnerOfSubject();
-       Intent publisherPost=getIntent();
-       publisher = publisherPost.getStringExtra("user");
        editInElement();
-       helper=new DataBaseHelper(this);
 
    }
 
