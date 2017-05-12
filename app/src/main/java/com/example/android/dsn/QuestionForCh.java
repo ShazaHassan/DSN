@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class QuestionForCh extends AppCompatActivity {
     private static boolean pushQuestion;
-    private static String Question, answer;
+    private static String Question;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,56 +32,6 @@ public class QuestionForCh extends AppCompatActivity {
         startActivity(answersPage);
     }
 
-   /* public void publishAnswer(View view) {
-        TextView question = (TextView) findViewById(R.id.question);
-        EditText writeAnswer = (EditText) findViewById(R.id.WriteAnswer);
-        Question = question.getText().toString();
-        answer = writeAnswer.getText().toString();
-        if(answer.equals(""))
-            cancel(view);
-        else {
-            push = true;
-            RelativeLayout relativeLayout = (RelativeLayout) findViewById(R.id.question1);
-            ((LinearLayout) relativeLayout.getParent()).removeView(relativeLayout);
-        }
-
-    }*/
-
-   public static boolean isPush() {
-        return pushQuestion;
-    }
-
-   public static String getQuestion() {
-        return Question;
-    }
-
-    /*public static String getAnswer() {
-        return answer;
-    }*/
-
-   /* public void cancel(View view) {
-        Button answerButton = (Button) findViewById(R.id.answerQuetions);
-        EditText writeAnswer = (EditText) findViewById(R.id.WriteAnswer);
-        Button publishAnswer = (Button) findViewById(R.id.publishAnsewr);
-        Button cancel = (Button) findViewById(R.id.Cancel);
-        answerButton.setVisibility(View.VISIBLE);
-        writeAnswer.setText("");
-        writeAnswer.setVisibility(View.GONE);
-        publishAnswer.setVisibility(View.GONE);
-        cancel.setVisibility(View.GONE);
-    }*/
-
-    /*public void writeAnswer(View view) {
-        Button answerButton = (Button) findViewById(R.id.answerQuetions);
-        EditText writeAnswer = (EditText) findViewById(R.id.WriteAnswer);
-        Button publishAnswer = (Button) findViewById(R.id.publishAnsewr);
-        Button cancel = (Button) findViewById(R.id.Cancel);
-        answerButton.setVisibility(View.GONE);
-        writeAnswer.setVisibility(View.VISIBLE);
-        publishAnswer.setVisibility(View.VISIBLE);
-        cancel.setVisibility(View.VISIBLE);
-    }*/
-
     public void askQuestion(View view) {
         int count=0;
         EditText writeQuestion= (EditText) findViewById(R.id.ETwriteQuestion);
@@ -97,11 +47,24 @@ public class QuestionForCh extends AppCompatActivity {
         {
             count++;
             writeQuestion.setText("");
-            pushQuestion=true;
             question.setTextSize(20);
             question.setTextColor(Color.BLACK);
-            question.setText("Question"+count+": "+question);
+            question.setText("Question"+count+": "+Question);
+            pushQuestion=true;
             askedQuestion.addView(question);
         }
+    }
+
+    public boolean isPushQuestion() {
+        return pushQuestion;
+    }
+
+    public String getQuestion() {
+        return Question;
+    }
+
+    public void ImportantQuestion(View view) {
+        Intent important=new Intent(this,ImpotantQuestion.class);
+        startActivity(important);
     }
 }

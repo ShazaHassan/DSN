@@ -26,21 +26,24 @@ public class Login extends AppCompatActivity {
         boolean cancel=false;
         username=(EditText) findViewById(R.id.ETUsername);
         String UserName=username.getText().toString();
-        if (UserName.equals("Shaza"))
+        if (UserName.equals("Student")||UserName.equals("student"))
         {
             Intent login= new Intent(Login.this,GroupOfAcadYearForStudent.class);
+            login.putExtra("user",UserName);
             startActivity(login);
             cancel=false;
             username.setText("");
         }
-            else if(UserName.equals("Mariam")){
+            else if(UserName.equals("Doctor")||UserName.equals("doctor")){
             Intent login= new Intent(Login.this,SelectAcadYear.class);
+            login.putExtra("user",UserName);
             startActivity(login);
             cancel=false;
             username.setText("");
         }
-        else if (UserName.equals("Sara")) {
+        else if (UserName.equals("HOD")|| UserName.equals("hod")) {
             Intent login= new Intent(Login.this,HODForHOD.class);
+            login.putExtra("user",UserName);
             startActivity(login);
             cancel=false;
             username.setText("");

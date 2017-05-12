@@ -11,14 +11,12 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class StartPage extends AppCompatActivity {
     private View view;
-    DataBaseHelper myDB;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_page);
-       myDB = new DataBaseHelper (this); //call the constructor of database helper
 
     }
     public void GoToLogin(View view){

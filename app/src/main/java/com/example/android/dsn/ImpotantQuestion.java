@@ -1,57 +1,45 @@
 package com.example.android.dsn;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.android.dsn.QuestionForCh;
+public class ImpotantQuestion extends AppCompatActivity {
 
-public class AnswerPage extends AppCompatActivity {
     private int countQuestion = 0, countAnswer = 100 + countQuestion;
-    private static boolean Important;
     LinearLayout page ;
     RelativeLayout questionWithAnswer ;
     TextView question ;
     TextView answer ;
-    CheckBox important ;
-    String Question ;
-    String Answer;
-
+    private  String Answer,Question;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_answer_page);
-        Intent intent = getIntent();
-        String chNo = intent.getStringExtra("titleOfCh");
-        TextView title = (TextView) findViewById(R.id.titleOfAnswer);
-        title.setText("Answer of " + chNo);
-        page = (LinearLayout) findViewById(R.id.answerTheQuestionforChapter);
+        setContentView(R.layout.activity_impotant_question);
         questionWithAnswer = new RelativeLayout(this);
+        page = (LinearLayout) findViewById(R.id.LImportantQuestion);
         question = new TextView(this);//create textView to put Question in it
         answer = new TextView(this);//create textView to put Answer in it
-        important = new CheckBox(this);//create check box to see if Question is important or not
-       QuestionForChForDoctor questionForCh = new QuestionForChForDoctor();
-
-        if (questionForCh.isPush())
-        {
-            Question = questionForCh.getQuestion();//get string that pass from activity QuestionForCh (Question)
-            Answer = questionForCh.getAnswer();//get string that pass from activity QuestionForCh (Answer)
-            write( Question,Answer);
-
+        QuestionForChForDoctor questionForChForDoctor=new QuestionForChForDoctor();
+        AnswerPage answerPage= new AnswerPage();
+        if(answerPage.isImportant()){
+            Answer=answerPage.getAnswer();
+            Question=answerPage.getQuestion();
+            write();
         }
-
+        if (questionForChForDoctor.isImportant()){
+            Answer=questionForChForDoctor.getAnswer();
+            Question=questionForChForDoctor.getQuestion();
+            write();
+        }
     }
-
-    public void write( String Question,String Answer) {
+    public void write( ) {
         countQuestion++;
         countAnswer++;
         RelativeLayout.LayoutParams relativeAttribute = new
@@ -70,37 +58,15 @@ public class AnswerPage extends AppCompatActivity {
         answer.setTextSize(20);
         question.setTextColor(Color.BLACK);
         question.setTextSize(20);
-        question.setText("Question "+countQuestion+": "+Question);
-        answer.setText("Answer: "+Answer);
+        question.setText(Question);
+        answer.setText(Answer);
         answer.setLayoutParams(answerAttribute);//add attribute to textView of answer
         RelativeLayout.LayoutParams checkAttribute = new
                 RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         //to set attribute for check box
-        important.setText("Important");
         checkAttribute.addRule(RelativeLayout.BELOW, countAnswer);//check under answer
         checkAttribute.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);// check at right of page
-        important.setLayoutParams(checkAttribute);//add attribute to check box
         questionWithAnswer.addView(question, 0);
         questionWithAnswer.addView(answer, 1);
-        questionWithAnswer.addView(important, 2);
-    }
-
-    private void checkBox(){
-        if(important.isChecked()){
-            Important=true;
-            important.setVisibility(View.GONE);
-        }
-    }
-
-    public boolean isImportant() {
-        return Important;
-    }
-
-    public String getQuestion() {
-        return Question;
-    }
-
-    public String getAnswer() {
-        return Answer;
     }
 }

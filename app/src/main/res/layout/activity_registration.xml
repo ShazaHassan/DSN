@@ -53,7 +53,7 @@
                 android:inputType="textPersonName" />
 
             <EditText
-                android:id="@+id/ETmail"
+                android:id="@+id/ETemail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/ETusername"
@@ -69,9 +69,9 @@
                 android:id="@+id/ETPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/ETmail"
-                android:layout_alignStart="@+id/ETmail"
-                android:layout_below="@+id/ETmail"
+                android:layout_alignLeft="@+id/ETemail"
+                android:layout_alignStart="@+id/ETemail"
+                android:layout_below="@+id/ETemail"
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Password:"

@@ -35,9 +35,9 @@
         <activity android:name=".QuestionForCh" />
         <activity android:name=".TaskPageForStudents" />
         <activity android:name=".AnswerPage" />
-        <activity android:name=".QuestionForChForDoctor"/>
-        <activity android:name=".QuestionOfChForDr"/>
-        <activity android:name=".AnswersOfTasks"></activity>
+        <activity android:name=".QuestionForChForDoctor" />
+        <activity android:name=".AnswersOfTasks" />
+        <activity android:name=".ImpotantQuestion"></activity>
     </application>
 
 </manifest>
