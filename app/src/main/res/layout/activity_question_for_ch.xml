@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_margin="10dp"
     android:orientation="vertical"
-    tools:context="com.example.android.dsn.QuestionForCh">
+    tools:context="com.example.android.dsn.QuestionForChStudent">
 
     <TextView
         android:id="@+id/TvchapterNo"
@@ -36,7 +36,8 @@
             android:background="@android:drawable/checkbox_off_background"
             android:text="Important"
             android:textAllCaps="false"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            android:onClick="ImportantQuestion"/>
 
         <Button
             android:id="@+id/BansweredQuestion"

@@ -30,9 +30,9 @@ public class QuestionForChForDoctor extends AppCompatActivity {
         //set the title of the page by the number of the ch
         RelativeLayout r = (RelativeLayout) findViewById(R.id.R1);
         r.setVisibility(View.GONE);
-        QuestionForCh questionForCh = new QuestionForCh();
-        if (questionForCh.isPushQuestion()) {
-            String question = questionForCh.getQuestion();
+        QuestionForChStudent questionForChStudent = new QuestionForChStudent();
+        if (questionForChStudent.isPushQuestion()) {
+            String question = questionForChStudent.getQuestion();
             AnswerAndQuestion(question);
 
         }

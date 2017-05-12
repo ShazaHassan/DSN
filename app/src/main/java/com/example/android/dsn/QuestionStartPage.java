@@ -38,7 +38,7 @@ public class QuestionStartPage extends AppCompatActivity {
         chapterNo.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent page=new Intent(QuestionStartPage.this,QuestionForCh.class);
+                Intent page=new Intent(QuestionStartPage.this,QuestionForChStudent.class);
                 String ch=chapterNo.getText().toString();
                 page.putExtra("no",ch);
                 startActivity(page);

@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class QuestionForCh extends AppCompatActivity {
+public class QuestionForChStudent extends AppCompatActivity {
     private static boolean pushQuestion;
     private static String Question;
 

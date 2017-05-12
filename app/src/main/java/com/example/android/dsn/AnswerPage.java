@@ -6,13 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.example.android.dsn.QuestionForCh;
 
 public class AnswerPage extends AppCompatActivity {
     private int countQuestion = 0, countAnswer = 100 + countQuestion;
@@ -43,8 +40,8 @@ public class AnswerPage extends AppCompatActivity {
 
         if (questionForCh.isPush())
         {
-            Question = questionForCh.getQuestion();//get string that pass from activity QuestionForCh (Question)
-            Answer = questionForCh.getAnswer();//get string that pass from activity QuestionForCh (Answer)
+            Question = questionForCh.getQuestion();//get string that pass from activity QuestionForChStudent (Question)
+            Answer = questionForCh.getAnswer();//get string that pass from activity QuestionForChStudent (Answer)
             write( Question,Answer);
 
         }
