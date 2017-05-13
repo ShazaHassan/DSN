@@ -63,12 +63,11 @@
                             android:layout_height="wrap_content"
                             android:layout_alignBottom="@+id/Bupload"
                             android:layout_alignParentLeft="true"
-                            android:layout_alignParentStart="true"
                             android:fontFamily="cursive"
                             android:text="Add new task:"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textSize="30sp"
-                            android:textStyle="bold|italic"
+                            android:textSize="20sp"
+                            android:textStyle="italic"
                             tools:layout_editor_absoluteX="16dp"
                             tools:layout_editor_absoluteY="135dp" />
 
@@ -166,6 +165,7 @@
                             android:layout_below="@+id/TvTasks"
                             android:layout_marginTop="14dp"
                             android:background="@android:drawable/checkbox_off_background"
+                            android:onClick="GoToTaskAnswers"
                             android:text="Upload Answer" />
 
                         <Button

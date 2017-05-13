@@ -7,6 +7,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * Created by Mariam on 22-April-17.
+ *
+ */
+
 public class ResetPassword extends AppCompatActivity {
         DataBaseHelper helper;
     EditText email,pass, repeat;
@@ -22,7 +27,7 @@ public class ResetPassword extends AppCompatActivity {
     }
 
     public void GoToLogin(View view) {
-        if(pass.getText().toString().equals(repeat.getText().toString())) {
+       /* if(pass.getText().toString().equals(repeat.getText().toString())) {
 
 
             boolean isUpdate = helper.update(email.getText().toString(), pass.getText().toString());
@@ -37,7 +42,7 @@ public class ResetPassword extends AppCompatActivity {
         else{
             Toast.makeText(ResetPassword.this, "not matched password", Toast.LENGTH_LONG).show();
 
-        }
+        }*/
         Intent StartLoginActivity = new Intent(ResetPassword.this, Login.class);
         startActivity(StartLoginActivity);
     }

@@ -13,6 +13,11 @@ import android.widget.TextView;
 import static com.example.android.dsn.R.id.post;
 import static com.example.android.dsn.R.id.writePost;
 
+/**
+ * Created by Mariam on 9-May-17.
+ *
+ */
+
 public class MessageToRepresentative extends AppCompatActivity {
 
     @Override

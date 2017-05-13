@@ -10,6 +10,11 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+/**
+ * Created by Mariam on 9-May-17.
+ *
+ */
+
 public class QuestionForChStudent extends AppCompatActivity {
     private static boolean pushQuestion;
     private static String Question;

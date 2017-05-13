@@ -94,7 +94,7 @@
                 android:layout_above="@+id/BresetPass"
                 android:layout_alignEnd="@+id/BresetPass"
                 android:layout_alignRight="@+id/BresetPass"
-                android:onClick="login"
+                android:onClick="Login"
                 android:text="Login" />
 
             <Button

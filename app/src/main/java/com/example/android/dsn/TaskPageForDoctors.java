@@ -1,7 +1,7 @@
 package com.example.android.dsn;
 
 /*
-created by Mariam Mamdouh on 5-5-2017
+created by Mariam on 5-5-2017
  */
 
 import android.content.Intent;
@@ -73,7 +73,9 @@ public class TaskPageForDoctors extends AppCompatActivity {
 
             }
 
-      public void AddNewTask(View view) {
+
+
+    public void AddNewTask(View view) {
         AddTask = (LinearLayout) findViewById(R.id.writtenpost);
         OldTaskNum = new TextView(this);
         OldTaskDeadline = new TextView(this);
@@ -86,11 +88,13 @@ public class TaskPageForDoctors extends AppCompatActivity {
         view1.setLayoutParams(new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1));
         view1.setBackgroundColor(Color.GRAY);
 
-        //add the rectangle for each post
+        /*
+        add the rectangle for each post
 
-       /* OldTaskNum.setBackgroundResource(R.drawable.bordertopost);
+        OldTaskNum.setBackgroundResource(R.drawable.bordertopost);
         OldTaskDesc.setBackgroundResource(R.drawable.bordertopost);
-        OldTaskDeadline.setBackgroundResource(R.drawable.bordertopost);*/
+        OldTaskDeadline.setBackgroundResource(R.drawable.bordertopost);
+        */
 
        // GET Edit texts where the tasks are written in
 
@@ -143,11 +147,7 @@ public class TaskPageForDoctors extends AppCompatActivity {
 
 
 
-   /* public void VisibleInputTex (View view){
 
-        mEditText = (EditText) findViewById(R.id.editText);
-        mButton = (Button) findViewById(R.id.button);
 
-    }*/
-    //}
-//}
+
+

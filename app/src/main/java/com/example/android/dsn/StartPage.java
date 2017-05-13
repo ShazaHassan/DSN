@@ -9,30 +9,37 @@ import android.database.DatabaseErrorHandler;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+
+/**
+ * Created by Mariam on 20-April-17.
+ *
+*/
 public class StartPage extends AppCompatActivity {
     private View view;
+    DataBaseHelper mydb1;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_page);
+        mydb1 = new DataBaseHelper(this);
 
     }
-    public void GoToLogin(View view){
+
+    public void GoToLogin(View view) {
         this.view = view;
-        Intent StartLoginActivity = new Intent(StartPage.this,Login.class);
+        Intent StartLoginActivity = new Intent(StartPage.this, Login.class);
         startActivity(StartLoginActivity);
     }
 
 
-    public void GoToRegisteration(View view){
-        Intent StartRegisterationActivity = new Intent(StartPage.this,Registration.class);
+    public void GoToRegisteration(View view) {
+        Intent StartRegisterationActivity = new Intent(StartPage.this, Registration.class);
         startActivity(StartRegisterationActivity);
     }
-
-    /*// method which insert data into database
-     public int insertData(){
-
-     }*/
 }
+    // method which insert data into database
+
+
+

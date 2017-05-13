@@ -1,5 +1,6 @@
 package com.example.android.dsn;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 /**
- * Created by lenovo on 09/05/2017.
+ * Created by Mariam on  09-May-17.
  */
 
 public class TaskPageForStudents extends AppCompatActivity {
@@ -61,5 +62,10 @@ public class TaskPageForStudents extends AppCompatActivity {
 
 
 
+    }
+
+    public void GoToTaskAnswers (View view){
+        Intent StartTaskAnswersActivity = new Intent(TaskPageForStudents.this, TaskAnswers.class);
+        startActivity(StartTaskAnswersActivity);
     }
 }

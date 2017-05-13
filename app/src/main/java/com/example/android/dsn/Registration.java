@@ -1,10 +1,16 @@
 package com.example.android.dsn;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
+/**
+ * Created by Mariam on 22-April-17.
+ *
+ */
 
 public class Registration extends AppCompatActivity {
         DataBaseHelper helper;
@@ -26,7 +32,7 @@ public class Registration extends AppCompatActivity {
             String mail=email.getText().toString();
             String pass=password.getText().toString();
             String rep=repeat.getText().toString();
-            if(pass.equals(rep)) {
+            /*if(pass.equals(rep)) {
 
                 Boolean isInsert=helper.insertDataForUser(name,
                     mail,
@@ -43,9 +49,9 @@ public class Registration extends AppCompatActivity {
         else{
             Toast.makeText(Registration.this,"not match password",Toast.LENGTH_LONG).show();
 
-        }
+        }*/
 
-       /* Intent StartLoginActivity = new Intent(Registration.this, Login.class);
-        startActivity(StartLoginActivity);*/
+        Intent StartLoginActivity = new Intent(Registration.this, Login.class);
+        startActivity(StartLoginActivity);
     }
 }

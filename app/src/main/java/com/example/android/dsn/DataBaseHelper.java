@@ -27,10 +27,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COL_16 = "ID";
     public static final String COL_17 = "DepName";
     public static final String COL_18 = "AcYear";
-    public static final String COL_19 = "Representative";
+    public static final String COL_19 = "Representative";*/
 
 
-    // Definition of TASK Table Variables
+  /*  // Definition of TASK Table Variables
 
     public static final String DATABASE_TABLE2 = "TASK";
     public static final String COL_21 = "TaskNO";
@@ -171,18 +171,23 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COL_106 = "ID";
     public static final String COL_107 = "DepName";
     public static final String COL_108 = "AcYear";
+
+
     //when this constructor is called , DB will be created
 */
+  public static final String DATABASE_TABLE_TRY = "Try";
+    public static final String COL_101 = "Name";
+    public static final String COL_102 = "Password";
 
     public DataBaseHelper(Context context) {
-        super(context,DATABASE_NAME, null, 1); //constructor which create the database and the tables
-        SQLiteDatabase db = this.getWritableDatabase(); //this line is to check that database is created
+        super(context,"DSN.db", null, 1); //constructor which create the database and the tables
     }
 
 
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL("create table Try" + "(name text, password varchar)");
 
         //Execute the Query written inside the .execSQL
        /* //create table for subject
@@ -196,9 +201,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         // create table for quetion
 
         //yarab
-       // db.execSQL("create table" + DATABASE_TABLE1 + "("+ COL_11+ ")" );
-        db.execSQL("create table" + DATABASE_TABLE1 + "( FName TEXT , MName TEXT, LName TEXT, Email BLOB, Password BLOB, ID INTEGER PRIMARY KEY AUTOINCREMENT, DepName TEXT, AcYear  INTEGER NOT NULL, Representative BOOLEAN NOT NULL CHECK (Representative IN (0,1)");
-        db.execSQL("create table" + DATABASE_TABLE2 + "(TaskNO INTEGER PRIMARY KEY AUTOINCREMENT,Description TEXT, Deadline DATETIME");
+       db.execSQL("create table" + DATABASE_TABLE1 + "("+ COL_11+ ")" );*/
+     //   db.execSQL("create table" + DATABASE_TABLE1 + "( FName TEXT , MName TEXT, LName TEXT, Email BLOB, Password BLOB, ID INTEGER PRIMARY KEY AUTOINCREMENT, DepName TEXT, AcYear  INTEGER NOT NULL, Representative BOOLEAN NOT NULL CHECK (Representative IN (0,1)");
+       /* db.execSQL("create table" + DATABASE_TABLE2 + "(TaskNO INTEGER PRIMARY KEY AUTOINCREMENT,Description TEXT, Deadline DATETIME");
         // data type of pathfile attribute didnot detected
        //   db.execSQL("create table" + DATABASE_TABLE3 + "(PathFile ,DeadLine DATETIME");
         db.execSQL("create table" + DATABASE_TABLE4 + "(DocName TEXT,DepName TEXT,HOD BOOLEAN NOT NULL CHECK (HOD IN (0,1) ,Degree TEXT ,ID INTEGER PRIMARY KEY AUTOINCREMENT,Email BLOB, Password BLOB");
@@ -208,7 +213,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("create table TASK(TaskNO INTEGER PRIMARY KEY AUTOINCREMENT,Description TEXT, Deadline DATETIME");
         //db.execSQL("create table" + DATABASE_TABLE4 + "(DocName TEXT,DepName TEXT,HOD BOOLEAN NOT NULL CHECK (HOD IN (0,1) ,Degree TEXT ,ID INTEGER PRIMARY KEY AUTOINCREMENT,Email BLOB, Password BLOB");
 */
-        db.execSQL("create table user (ID PRIMARY KEY AUTOINCREMENT,name text ,email text, password text)");
+       // db.execSQL("create table user (ID PRIMARY KEY AUTOINCREMENT,name text ,email text, password text)");
       //  db.execSQL("create table post(NamePublisher text,post text)");
     }
 
@@ -223,12 +228,12 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS TASK");
         db.execSQL("DROP TABLE IF EXISTS QUESTION");
         //   db.execSQL("DROP TABLE IF EXISTS" + DATABASE_TABLE4);*/
-        db.execSQL("drop table if exist user");
-        db.execSQL("INSERT INTO USER VALUES ('DOCTOR', 'doctor@yahoo.com','asd')");
+        db.execSQL("drop table if exist Try");
+     //   db.execSQL("INSERT INTO USER VALUES ('DOCTOR', 'doctor@yahoo.com','asd')");
         onCreate(db);
 
     }
-    public boolean insertDataForUser(String name, String email, String password){
+   /* public boolean insertDataForUser(String name, String email, String password){
 
         SQLiteDatabase database= this.getWritableDatabase();
         ContentValues contentValues=new ContentValues();
@@ -247,7 +252,21 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         contentValues.put("password",Pass);
         db.update("user",contentValues,"email=?",new String[] {mail});
         return true;
-    }
+    }*/
+
+  /* public boolean insertData(String Name, String Password){
+       SQLiteDatabase db = this.getWritableDatabase(); //this line is to check that database is created
+       ContentValues contentValues=new ContentValues();
+       contentValues.put("name",Name);
+       contentValues.put("password",Password);
+      Long result = db.insert("try",null,contentValues);
+       if(result==-1)
+           return  false;
+       else return true;
+
+
+
+   }*/
 
 
 }
