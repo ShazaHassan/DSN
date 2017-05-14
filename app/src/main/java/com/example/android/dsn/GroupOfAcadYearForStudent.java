@@ -109,6 +109,7 @@ public class GroupOfAcadYearForStudent extends AppCompatActivity implements Grou
         writePost.setText("");//clear EditText after add text in group
         if(text.equals(""));
         else {
+            writePost.setText("");//clear EditText after add text in group
            //FIRST GIVE ID FOR EVERY ELEMENT IN DATA
             String ID=databasePost.push().getKey();
             //SEND DATA TO CLASS THIS CLASS USE TO SEND DATA TO DATABASE

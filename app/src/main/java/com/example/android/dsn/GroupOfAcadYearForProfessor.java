@@ -104,9 +104,9 @@ public class GroupOfAcadYearForProfessor extends AppCompatActivity implements Ad
     public void writePost(View view){
         writePost= (EditText) findViewById(R.id.writePost) ;
         String text=writePost.getText().toString();//get text of post from EditText
-        writePost.setText("");//clear EditText after add text in group
         if(text.equals(""));
         else {
+            writePost.setText("");//clear EditText after add text in group
             writePost.setText("");
             //FIRST GIVE ID FOR EVERY ELEMENT IN DATA
             String ID=databasePost.push().getKey();
