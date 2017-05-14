@@ -38,14 +38,14 @@ public class AnswerPage extends AppCompatActivity {
         important = new CheckBox(this);//create check box to see if Question is important or not
        QuestionForChForDoctor questionForCh = new QuestionForChForDoctor();
 
-        if (questionForCh.isPush())
+      /*  if (questionForCh.isPush())
         {
             Question = questionForCh.getQuestion();//get string that pass from activity QuestionForChStudent (Question)
             Answer = questionForCh.getAnswer();//get string that pass from activity QuestionForChStudent (Answer)
             write( Question,Answer);
 
         }
-        checkBox();
+        checkBox();*/
 
     }
 

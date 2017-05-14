@@ -23,6 +23,7 @@ public class GetTaskFromDatabase extends ArrayAdapter<AddTaskToDatabase> {
         this.context=context;
         this.taskList=taskList;
     }
+
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

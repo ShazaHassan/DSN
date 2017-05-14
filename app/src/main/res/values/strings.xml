@@ -4,6 +4,15 @@
         <item></item>
         <item>edit</item>
     </string-array>
+    <string-array name="Delete">
+        <item></item>
+        <item>Delete</item>
+    </string-array>
+    <string-array name="Message">
+        <item>Message</item>
+        <item>To Representative</item>
+        <item>To Doctor</item>
+    </string-array>
     <string-array name="editDegree">
         <item></item>
         <item>edit</item>

@@ -67,11 +67,6 @@
         android:layout_width="match_parent"
         android:layout_height="20dp" />
 
-    <ScrollView
-        android:id="@+id/S1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <LinearLayout
             android:id="@+id/L3"
             android:layout_width="match_parent"
@@ -106,14 +101,11 @@
 
             </RelativeLayout>
 
-            <LinearLayout
-                android:id="@+id/LaskedQuestion"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-            </LinearLayout>
-
         </LinearLayout>
-    </ScrollView>
+
+    <ListView
+        android:id="@+id/LVQuestionAdded"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </LinearLayout>

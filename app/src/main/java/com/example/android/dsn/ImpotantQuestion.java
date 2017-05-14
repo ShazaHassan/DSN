@@ -28,7 +28,7 @@ public class ImpotantQuestion extends AppCompatActivity {
         answer = new TextView(this);//create textView to put Answer in it
         QuestionForChForDoctor questionForChForDoctor=new QuestionForChForDoctor();
         AnswerPage answerPage= new AnswerPage();
-        if(answerPage.isImportant()){
+        /*if(answerPage.isImportant()){
             Answer=answerPage.getAnswer();
             Question=answerPage.getQuestion();
             write();
@@ -37,7 +37,7 @@ public class ImpotantQuestion extends AppCompatActivity {
             Answer=questionForChForDoctor.getAnswer();
             Question=questionForChForDoctor.getQuestion();
             write();
-        }
+        }*/
     }
     public void write( ) {
         countQuestion++;

@@ -33,7 +33,6 @@ public class GetPostFromDatabase extends ArrayAdapter<PutPostInDatabase> {
         LayoutInflater inflater=context.getLayoutInflater();
 
         View listViewItem=inflater.inflate(R.layout.post_for_database,null,true); //take the layout of post for database as template for each element will show
-
         TextView Post= (TextView) listViewItem.findViewById(R.id.PostFromDatabase);
         PutPostInDatabase putPostInDatabase=postList.get(position);
         Post.setText(putPostInDatabase.getPost());

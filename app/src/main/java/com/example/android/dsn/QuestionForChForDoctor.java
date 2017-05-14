@@ -10,8 +10,18 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static android.widget.RelativeLayout.BELOW;
 
@@ -20,26 +30,26 @@ import static android.widget.RelativeLayout.BELOW;
  */
 
 public class QuestionForChForDoctor extends AppCompatActivity {
-    private static String Answer, Question;
-    private static boolean push = false, Important = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_for_ch);
+
         //set the title of the page by the number of the ch
         RelativeLayout r = (RelativeLayout) findViewById(R.id.R1);
         r.setVisibility(View.GONE);
-        QuestionForChStudent questionForChStudent = new QuestionForChStudent();
-        if (questionForChStudent.isPushQuestion()) {
+       /* if (questionForChStudent.isPushQuestion()) {
             String question = questionForChStudent.getQuestion();
             AnswerAndQuestion(question);
 
-        }
+        }*/
 
     }
 
-    private void AnswerAndQuestion(String question) {
+
+
+/* private void AnswerAndQuestion(String question) {
         //definition id for elements
         int IDQuestion = 0, IDButtonAnswer = 100 + IDQuestion, IDImportant = 200 + IDQuestion, IDWriteAnswer = 300 + IDQuestion, IDCancel = 400 + IDQuestion, IDPublishAnswer = 500 + IDQuestion, IDMainPage = 600 + IDQuestion, IDAnswerText = 700 + IDQuestion;
 
@@ -252,5 +262,5 @@ public class QuestionForChForDoctor extends AppCompatActivity {
     public void ImportantQuestion(View view) {
         Intent important=new Intent(this,ImpotantQuestion.class);
         startActivity(important);
-    }
+    }*/
 }
