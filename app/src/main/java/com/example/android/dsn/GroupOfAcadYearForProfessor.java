@@ -107,6 +107,7 @@ public class GroupOfAcadYearForProfessor extends AppCompatActivity implements Ad
         writePost.setText("");//clear EditText after add text in group
         if(text.equals(""));
         else {
+            writePost.setText("");
             //FIRST GIVE ID FOR EVERY ELEMENT IN DATA
             String ID=databasePost.push().getKey();
             //SEND DATA TO CLASS THIS CLASS USE TO SEND DATA TO DATABASE

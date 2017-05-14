@@ -27,7 +27,6 @@ public class HODForStudent extends AppCompatActivity implements HOD{
 
     @Override
     public void writePost(View view) {
-        addPost=(LinearLayout) findViewById(R.id.L3writtenPostHOD);
         post =new TextView(this);
         View view1 =new View(this);
         view1.setLayoutParams(new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,1));//set the size of line which separate between posts
@@ -38,10 +37,7 @@ public class HODForStudent extends AppCompatActivity implements HOD{
         writePost.setText("");//clear EditText after add text in group
         if(text.equals(""));
         else {
-            writePost.setText("");//clear EditText after add text in group
-            post.setText(text);
-            addPost.addView(post);//add text view in page
-            addPost.addView(view1);//add line to separate between posts
+
         }
 
     }

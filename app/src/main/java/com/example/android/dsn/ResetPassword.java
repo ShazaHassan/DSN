@@ -13,13 +13,11 @@ import android.widget.Toast;
  */
 
 public class ResetPassword extends AppCompatActivity {
-        DataBaseHelper helper;
     EditText email,pass, repeat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset_password);
-        helper =new DataBaseHelper(this);
         email= (EditText) findViewById(R.id.ETemail);
         pass= (EditText ) findViewById(R.id.ETpassword);
         repeat= (EditText) findViewById(R.id.ETrepeatpassword);

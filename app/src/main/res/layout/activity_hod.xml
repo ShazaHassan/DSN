@@ -10,10 +10,6 @@
     tools:context="com.example.android.dsn.HODForStudent">
 
 
-    <ScrollView
-        android:id="@+id/S1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/L2"
@@ -95,11 +91,10 @@
 
             </RelativeLayout>
 
-            <LinearLayout
-                android:id="@+id/L3writtenPostHOD"
+            <ListView
+                android:id="@+id/LVPostHOD"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"></LinearLayout>
+                android:layout_height="match_parent" />
+
         </LinearLayout>
-    </ScrollView>
 </LinearLayout>
