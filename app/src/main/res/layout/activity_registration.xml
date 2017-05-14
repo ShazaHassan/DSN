@@ -8,114 +8,131 @@
     android:layout_margin="10dp"
     tools:context="com.example.android.dsn.Registration">
 
-    <LinearLayout
-        android:id="@+id/L2"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.485">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:id="@+id/R1"
+        <LinearLayout
+            android:id="@+id/L2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout_editor_absoluteX="4dp"
-            tools:layout_editor_absoluteY="0dp">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.485">
 
-            <TextView
-                android:id="@+id/TvRegister"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="54dp"
-                android:layout_marginStart="54dp"
-                android:layout_marginTop="40dp"
-                android:layout_weight="1"
-                android:text="Registeration"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="45sp"
-                android:textStyle="italic" />
-
-            <EditText
-                android:id="@+id/ETusername"
+            <RelativeLayout
+                android:id="@+id/R1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/TvRegister"
-                android:layout_marginTop="29dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Username :"
-                android:inputType="textPersonName" />
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="4dp"
+                tools:layout_editor_absoluteY="0dp">
 
-            <EditText
-                android:id="@+id/ETemail"
+                <TextView
+                    android:id="@+id/TvRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="54dp"
+                    android:layout_marginStart="54dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_weight="1"
+                    android:text="Registeration"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="45sp"
+                    android:textStyle="italic" />
+
+                <EditText
+                    android:id="@+id/ETusername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/TvRegister"
+                    android:layout_marginTop="29dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Username :"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:id="@+id/ETemail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/ETusername"
+                    android:layout_alignStart="@+id/ETusername"
+                    android:layout_below="@+id/ETusername"
+                    android:layout_marginTop="12dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Email :"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/ETPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/ETemail"
+                    android:layout_alignStart="@+id/ETemail"
+                    android:layout_below="@+id/ETemail"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Password:"
+                    android:inputType="textPassword" />
+
+                <EditText
+                    android:id="@+id/ETrepeatpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/ETPass"
+                    android:layout_alignStart="@+id/ETPass"
+                    android:layout_below="@+id/ETPass"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Repeat password:"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/Bregister"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/ETrepeatpassword"
+                    android:layout_marginEnd="26dp"
+                    android:layout_marginRight="26dp"
+                    android:layout_marginTop="11dp"
+                    android:onClick="GoToLogin"
+                    android:text="Register" />
+
+                <TextView
+                    android:id="@+id/TvMyTouch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/TvRegister"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/TvRegister"
+                    android:layout_below="@+id/Bregister"
+                    android:layout_marginBottom="82dp"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginStart="13dp"
+                    android:text="Made with love and lot of code " />
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/list_item"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/ETusername"
-                android:layout_alignStart="@+id/ETusername"
-                android:layout_below="@+id/ETusername"
-                android:layout_marginTop="12dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Email :"
-                android:inputType="textEmailAddress" />
+                android:layout_height="match_parent" />
 
-            <EditText
-                android:id="@+id/ETPass"
+            <ListView
+                android:id="@+id/ListID"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/ETemail"
-                android:layout_alignStart="@+id/ETemail"
-                android:layout_below="@+id/ETemail"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Password:"
-                android:inputType="textPassword" />
+                android:layout_height="match_parent" />
 
-            <EditText
-                android:id="@+id/ETrepeatpassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/ETPass"
-                android:layout_alignStart="@+id/ETPass"
-                android:layout_below="@+id/ETPass"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint="Repeat password:"
-                android:inputType="textPassword" />
-
-            <Button
-                android:id="@+id/Bregister"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/ETrepeatpassword"
-                android:layout_marginEnd="26dp"
-                android:layout_marginRight="26dp"
-                android:layout_marginTop="11dp"
-                android:onClick="GoToLogin"
-                android:text="Register" />
-
-            <TextView
-                android:id="@+id/TvMyTouch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/TvRegister"
-                android:layout_alignParentBottom="true"
-                android:layout_alignStart="@+id/TvRegister"
-                android:layout_marginBottom="82dp"
-                android:layout_marginLeft="13dp"
-                android:layout_marginStart="13dp"
-                android:text="Made with love and lot of code " />
-
-        </RelativeLayout>
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

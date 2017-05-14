@@ -151,11 +151,12 @@ public class QuestionForChForDoctor extends AppCompatActivity {
                     cancel.setVisibility(View.GONE);
                     publishAnswer.setVisibility(View.GONE);
                     writeAnswer.setVisibility(View.GONE);
-                    push = true;
-                    ((LinearLayout) questionAndAnswer.getParent()).removeView(questionAndAnswer);
                     if(important.isChecked()){
                         Important=true;
                     }
+                    push = true;
+                    ((LinearLayout) questionAndAnswer.getParent()).removeView(questionAndAnswer);
+
                 }
             }
         });

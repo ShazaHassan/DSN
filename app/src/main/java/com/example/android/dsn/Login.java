@@ -8,38 +8,20 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class Login extends AppCompatActivity {
-  /* DataBaseHelper myd1;
-    EditText ETUsername,ETPass;
-    Button BLogin;*/
 
    private EditText username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setContentView(R.layout.activity_login);
         super.onCreate(savedInstanceState);
-
-       /* ETUsername = (EditText)findViewById(R.id.ETUsername);
-        ETPass = (EditText)findViewById(R.id.ETPass);
-        BLogin = (Button) findViewById(R.id.BLogin);
-        AddLogin();*/
-
-
     }
 
-    /*public void AddLogin(){
-        BLogin.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v) {
-                        myd1.insertData(ETUsername.getText().toString(),ETPass.getText().toString());
-
-
-                    }
-                }
-        );
-
+   /* @Override
+    public void onBackPressed() {
+        finish();
     }*/
-   public void GoToResetPassword(View view){
+
+    public void GoToResetPassword(View view){
         Intent StartResetPasswordActivity = new Intent(Login.this,ResetPassword.class);
         startActivity(StartResetPasswordActivity);
     }

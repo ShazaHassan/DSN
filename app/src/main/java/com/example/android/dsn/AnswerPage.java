@@ -45,6 +45,7 @@ public class AnswerPage extends AppCompatActivity {
             write( Question,Answer);
 
         }
+        checkBox();
 
     }
 
@@ -83,10 +84,16 @@ public class AnswerPage extends AppCompatActivity {
     }
 
     private void checkBox(){
-        if(important.isChecked()){
-            Important=true;
-            important.setVisibility(View.GONE);
-        }
+        important.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(important.isChecked())
+                {
+                    Important=true;
+                    important.setVisibility(View.GONE);
+                }
+            }
+        });
     }
 
     public boolean isImportant() {
