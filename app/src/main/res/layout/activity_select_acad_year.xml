@@ -43,12 +43,13 @@
                     android:id="@+id/Bfirstyear"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
+                    android:layout_below="@+id/TvSelectAcademicYear"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="45dp"
                     android:background="@android:drawable/checkbox_off_background"
                     android:onClick="firstYear"
                     android:text="First year"
-                    android:layout_below="@+id/TvSelectAcademicYear"
-                    android:layout_centerHorizontal="true" />
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/Bsecondyear"
@@ -60,7 +61,8 @@
                     android:layout_marginTop="23dp"
                     android:background="@android:drawable/checkbox_off_background"
                     android:onClick="secondYear"
-                    android:text="Second Year" />
+                    android:text="Second Year"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/Bthirdyear"
@@ -72,7 +74,8 @@
                     android:layout_marginTop="27dp"
                     android:background="@android:drawable/checkbox_off_background"
                     android:onClick="thirdYear"
-                    android:text="Third Year" />
+                    android:text="Third Year"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/Bforthyear"
@@ -91,10 +94,11 @@
                     android:id="@+id/TvMyTouch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/Bforthyear"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="59dp"
-                    android:text="Made with lonve an d lots of code" />
+                    android:text="Made with love an d lots of code"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignLeft="@+id/Bforthyear"
+                    android:layout_alignStart="@+id/Bforthyear"
+                    android:layout_marginBottom="54dp" />
 
             </RelativeLayout>
         </LinearLayout>
