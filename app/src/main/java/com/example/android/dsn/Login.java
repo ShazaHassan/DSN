@@ -21,11 +21,6 @@ public class Login extends AppCompatActivity {
         finish();
     }*/
 
-    public void GoToResetPassword(View view){
-        Intent StartResetPasswordActivity = new Intent(Login.this,ResetPassword.class);
-        startActivity(StartResetPasswordActivity);
-    }
-
     public void Login(View view) {
         View focusView=new View(this);
         boolean cancel=false;

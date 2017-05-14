@@ -45,7 +45,6 @@ public class HODForHOD extends AppCompatActivity implements HOD, AdapterView.OnI
         addElementInSpinner();
     }
 
-    @Override
     public void writePost(View view) {
         writePost= (EditText) findViewById(R.id.ETwritePostHOD) ;
         String text=writePost.getText().toString();//get text of post from EditText

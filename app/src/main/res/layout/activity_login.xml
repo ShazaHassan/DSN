@@ -91,22 +91,11 @@
                 style="@android:style/Widget.Button.Inset"
                 android:layout_width="192dp"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/BresetPass"
-                android:layout_alignEnd="@+id/BresetPass"
-                android:layout_alignRight="@+id/BresetPass"
                 android:onClick="Login"
-                android:text="Login" />
-
-            <Button
-                android:id="@+id/BresetPass"
-                style="@android:style/Widget.Button.Inset"
-                android:layout_width="190dp"
-                android:layout_height="wrap_content"
+                android:text="Login"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="39dp"
-                android:onClick="GoToResetPassword"
-                android:text="Forgot your password" />
+                android:layout_marginBottom="38dp" />
 
         </RelativeLayout>
 

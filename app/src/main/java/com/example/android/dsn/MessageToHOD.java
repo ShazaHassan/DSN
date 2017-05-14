@@ -20,6 +20,7 @@ public class MessageToHOD extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_message_to_representative);
+        editInElement();
     }
 
     public void sendMessage(View view) {

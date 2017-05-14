@@ -7,6 +7,5 @@ import android.view.View;
  */
 
 public interface HOD {
-    public void writePost(View view);
     public void editInElement();
 }
