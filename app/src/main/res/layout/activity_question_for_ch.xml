@@ -103,15 +103,10 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
-        <ListView
+    <ListView
             android:id="@+id/LVQuestion"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-    </LinearLayout>
 
 </LinearLayout>

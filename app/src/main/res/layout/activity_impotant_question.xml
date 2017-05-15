@@ -16,14 +16,16 @@
         android:textAllCaps="false"
         android:textSize="24sp" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <SearchView
+        android:id="@+id/searchImportant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TVImportantQuestionTitle" />
 
-        <LinearLayout
-            android:id="@+id/LImportantQuestion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+    <ListView
+        android:id="@+id/LVQuestionAndAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchImportant" />
+
 </LinearLayout>

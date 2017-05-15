@@ -16,7 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Registration" />
         <activity android:name=".SelectAcadYear" />
         <activity android:name=".GroupOfAcadYearForProfessor" />
         <activity android:name=".GroupOfAcadYearForStudent" />

@@ -28,4 +28,16 @@ public class AddAnswerAndQuestionToDatabase {
     public String getAnswer() {
         return Answer;
     }
+
+    public void setIDQuestion(String IDQuestion) {
+        this.IDQuestion = IDQuestion;
+    }
+
+    public void setQuestion(String question) {
+        Question = question;
+    }
+
+    public void setAnswer(String answer) {
+        Answer = answer;
+    }
 }

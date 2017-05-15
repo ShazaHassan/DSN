@@ -27,17 +27,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/titleOfAnswer" />
 
-        <ScrollView
+        <ListView
+            android:id="@+id/LVQuestionAndAnswer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/search">
+            android:layout_below="@+id/search" />
 
-            <LinearLayout
-                android:id="@+id/answerTheQuestionforChapter"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </ScrollView>
+
     </RelativeLayout>
 
 </LinearLayout>

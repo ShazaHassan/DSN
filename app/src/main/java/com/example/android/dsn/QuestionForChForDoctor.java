@@ -42,8 +42,6 @@ public class QuestionForChForDoctor extends AppCompatActivity {
         listViewPost=(ListView)  findViewById(R.id.LVQuestion);
         questionList=new ArrayList<>();
         //set the title of the page by the number of the ch
-        RelativeLayout r = (RelativeLayout) findViewById(R.id.R1);
-        r.setVisibility(View.GONE);
     }
 
     @Override
@@ -58,9 +56,9 @@ public class QuestionForChForDoctor extends AppCompatActivity {
                     AddQuestionToDatabase putPost= postSnapShot.getValue(AddQuestionToDatabase.class);
                     questionList.add(putPost);//store the data that come from database in arrayList
                 }
-                GetQuestionFromDatabaseForDr getQuestionFromDatabaseForDre= new
+                GetQuestionFromDatabaseForDr getQuestionFromDatabaseForDr= new
                         GetQuestionFromDatabaseForDr(QuestionForChForDoctor.this,questionList);
-                listViewPost.setAdapter(getQuestionFromDatabaseForDre);//show the data in arrayList
+                listViewPost.setAdapter(getQuestionFromDatabaseForDr);//show the data in arrayList
             }
 
             @Override
@@ -70,4 +68,17 @@ public class QuestionForChForDoctor extends AppCompatActivity {
         });
     }
 
+
+    public void ImportantQuestion(View view) {
+        Intent important=new Intent(this,ImpotantQuestion.class);
+        startActivity(important);
+    }
+
+    public void answeredQuestions(View view) {
+        Intent answersPage = new Intent(this, AnswerPage.class);
+        /*TextView title = (TextView) findViewById(R.id.TvchapterNo);
+        String ti = title.getText().toString();
+        answersPage.putExtra("titleOfCh", ti);*/
+        startActivity(answersPage);
+    }
 }

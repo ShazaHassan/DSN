@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background">
+
+        <TextView
+            android:id="@+id/TVQuestionWasAnsweredDatabase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/TVAnsweredOfQuestionForDatabase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TVQuestionWasAnsweredDatabase"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/CBImportantDatabase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TVAnsweredOfQuestionForDatabase"
+            android:text="Important"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</LinearLayout>

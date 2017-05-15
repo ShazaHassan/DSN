@@ -45,4 +45,7 @@ public class QuestionStartPage extends AppCompatActivity {
             }
         });
     }
+
+    public void ImportantQuestion(View view) {
+    }
 }

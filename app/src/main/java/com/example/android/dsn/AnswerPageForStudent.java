@@ -1,16 +1,8 @@
 package com.example.android.dsn;
 
-import android.content.Intent;
-import android.graphics.Color;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.CheckBox;
-import android.widget.LinearLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,7 +13,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AnswerPage extends AppCompatActivity {
+/**
+ * Created by ShazaHassan on 15-May-17.
+ */
+
+public class AnswerPageForStudent extends AppCompatActivity {
     DatabaseReference databaseQuestionAndAnswer;
     ListView listViewQuestionAndAnswer;
     List<AddAnswerAndQuestionToDatabase> questionAndAnswerList;
@@ -40,7 +36,7 @@ public class AnswerPage extends AppCompatActivity {
 
     }
 
-   @Override
+    @Override
     protected void onStart() {
         super.onStart();
         databaseQuestionAndAnswer.addValueEventListener(new ValueEventListener() {
@@ -52,9 +48,9 @@ public class AnswerPage extends AppCompatActivity {
                     AddAnswerAndQuestionToDatabase putPost= questionAndAnswerSnapShot.getValue(AddAnswerAndQuestionToDatabase.class);
                     questionAndAnswerList.add(putPost);//store the data that come from database in arrayList
                 }
-                GetAnswerAndQuestionForDatabase getPostFromDatabase=
-                        new GetAnswerAndQuestionForDatabase(AnswerPage.this,questionAndAnswerList);
-                listViewQuestionAndAnswer.setAdapter(getPostFromDatabase);//show the data in arrayList
+                GetAnswerAndQuestionForDatabaseForStudent getAnswerAndQuestionForDatabaseForStudent=
+                        new GetAnswerAndQuestionForDatabaseForStudent(AnswerPageForStudent.this,questionAndAnswerList);
+                listViewQuestionAndAnswer.setAdapter(getAnswerAndQuestionForDatabaseForStudent);//show the data in arrayList
             }
 
 

@@ -14,11 +14,9 @@
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
-        <RelativeLayout
-            android:id="@+id/R1"
+        <ListView
+            android:id="@+id/LVTaskAnswer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </RelativeLayout>
+            android:layout_height="match_parent" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

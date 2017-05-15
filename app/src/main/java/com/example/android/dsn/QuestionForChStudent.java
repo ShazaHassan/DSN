@@ -27,7 +27,6 @@ import java.util.List;
  */
 
 public class QuestionForChStudent extends AppCompatActivity {
-    private static boolean pushQuestion;
     DatabaseReference databaseQuestion;
     ListView listViewPost;
     List<AddQuestionToDatabase> questionList;
@@ -47,9 +46,9 @@ public class QuestionForChStudent extends AppCompatActivity {
 
     public void answeredQuestions(View view) {
         Intent answersPage = new Intent(this, AnswerPage.class);
-        TextView title = (TextView) findViewById(R.id.TvchapterNo);
+        /*TextView title = (TextView) findViewById(R.id.TvchapterNo);
         String ti = title.getText().toString();
-        answersPage.putExtra("titleOfCh", ti);
+        answersPage.putExtra("titleOfCh", ti);*/
         startActivity(answersPage);
     }
 
@@ -67,7 +66,6 @@ public class QuestionForChStudent extends AppCompatActivity {
             addQuestionToDatabase.setIDQuestion(IDQuestion);
             addQuestionToDatabase.setQuestion(question);
             databaseQuestion.child(IDQuestion).setValue(addQuestionToDatabase);
-            pushQuestion=true;
 
         }
     }
@@ -94,10 +92,6 @@ public class QuestionForChStudent extends AppCompatActivity {
 
             }
         });
-    }
-
-    public boolean isPushQuestion() {
-        return pushQuestion;
     }
 
     public void ImportantQuestion(View view) {

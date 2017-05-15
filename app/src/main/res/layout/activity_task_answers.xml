@@ -92,55 +92,56 @@
                 android:layout_below="@+id/TvTasknNo"
                 android:layout_marginTop="50dp"
                 android:fontFamily="casual"
-                android:text="Answers:"
+                android:text="File"
                 android:textColor="@color/common_google_signin_btn_text_dark_focused"
                 android:textSize="16sp" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/EDFullName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/TvFullName:"
-                android:layout_alignBottom="@+id/TvFullName:"
-                android:layout_marginLeft="23dp"
-                android:layout_marginStart="23dp"
-                android:layout_toRightOf="@+id/TvFullName:"
                 android:background="@android:drawable/alert_light_frame"
                 android:ems="10"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:layout_alignBaseline="@+id/TvFullName:"
+                android:layout_alignBottom="@+id/TvFullName:"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp" />
 
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/EDSection"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/TvSection"
                 android:layout_alignBottom="@+id/TvSection"
-                android:layout_alignLeft="@+id/editText"
-                android:layout_alignStart="@+id/editText"
+                android:layout_alignLeft="@+id/EDFullName"
+                android:layout_alignStart="@+id/EDFullName"
                 android:background="@android:drawable/alert_light_frame"
                 android:ems="10"
                 android:inputType="textMultiLine" />
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/EDTaskNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/TvTasknNo"
                 android:layout_alignBottom="@+id/TvTasknNo"
-                android:layout_alignLeft="@+id/editText2"
-                android:layout_alignStart="@+id/editText2"
+                android:layout_alignLeft="@+id/EDSection"
+                android:layout_alignStart="@+id/EDSection"
                 android:background="@android:drawable/alert_light_frame"
                 android:ems="10"
                 android:inputType="textMultiLine" />
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/EDFile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/TvAnswers"
                 android:layout_alignBottom="@+id/TvAnswers"
-                android:layout_alignLeft="@+id/editText3"
-                android:layout_alignStart="@+id/editText3"
+                android:layout_alignLeft="@+id/EDTaskNo"
+                android:layout_alignStart="@+id/EDTaskNo"
                 android:background="@android:drawable/alert_light_frame"
                 android:ems="10"
                 android:inputType="textMultiLine" />
@@ -159,10 +160,11 @@
                 android:id="@+id/Bupload"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/editText4"
+                android:layout_below="@+id/EDFile"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="19dp"
                 android:background="@android:drawable/checkbox_off_background"
+                android:onClick="UploadTask"
                 android:text="Upload"
                 android:textAllCaps="false"
                 android:textStyle="italic" />
