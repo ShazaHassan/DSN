@@ -33,30 +33,21 @@
 
                 <Spinner
                     android:id="@+id/others"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
                     android:layout_weight="1" />
 
                 <Spinner
                     android:id="@+id/message"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_marginEnd="57dp"
-                    android:layout_marginRight="57dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_toLeftOf="@+id/posted"
                     android:layout_toStartOf="@+id/posted"
                     android:layout_weight="1" />
 
-                <Button
-                    android:id="@+id/posted"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_weight="1"
-                    android:text="Posted by Dr" />
             </LinearLayout>
 
             <Space

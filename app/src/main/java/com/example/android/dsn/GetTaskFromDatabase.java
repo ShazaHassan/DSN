@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -31,10 +32,9 @@ public class GetTaskFromDatabase extends ArrayAdapter<AddTaskToDatabase> {
 
         View listViewItem=inflater.inflate(R.layout.task_for_database,null,true); //take the layout of post for database as template for each element will show
 
-        TextView taskNo= (TextView) listViewItem.findViewById(R.id.TVTaskNoDatabase);
+        final TextView taskNo= (TextView) listViewItem.findViewById(R.id.TVTaskNoDatabase);
         TextView taskDesc= (TextView) listViewItem.findViewById(R.id.TVTaskDescDatabase);
         TextView taskDeadline= (TextView) listViewItem.findViewById(R.id.TVTaskDeadlineDatabase);
-
         //set text in textView in which in template layout
         AddTaskToDatabase addTaskToDatabase=taskList.get(position);
         taskNo.setText("Task Number:"+addTaskToDatabase.getTaskNo());

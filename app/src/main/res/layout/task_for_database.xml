@@ -32,5 +32,6 @@
             android:text="TextView"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp" />
+
     </LinearLayout>
 </LinearLayout>

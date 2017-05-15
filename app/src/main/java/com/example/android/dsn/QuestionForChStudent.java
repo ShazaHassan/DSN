@@ -28,12 +28,16 @@ import java.util.List;
 
 public class QuestionForChStudent extends AppCompatActivity {
     private static boolean pushQuestion;
-
+    DatabaseReference databaseQuestion;
+    ListView listViewPost;
+    List<AddQuestionToDatabase> questionList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question_for_ch);
-
+        databaseQuestion=FirebaseDatabase.getInstance().getReference("QuestionOfCh");
+        listViewPost=(ListView)  findViewById(R.id.LVQuestion);
+        questionList=new ArrayList<>();
         Intent intent = getIntent();
         String chNo = intent.getStringExtra("no");//take the number  of ch
         TextView title = (TextView) findViewById(R.id.TvchapterNo);
@@ -52,16 +56,45 @@ public class QuestionForChStudent extends AppCompatActivity {
     public void askQuestion(View view) {
 
         EditText writeQuestion= (EditText) findViewById(R.id.ETwriteQuestion);
-        String Question= writeQuestion.getText().toString();//get Question from edit text
+        String question= writeQuestion.getText().toString();//get Question from edit text
 
-        if(Question.equals(""));
+        if(question.equals(""));
         else
         {
+            writeQuestion.setText("");
+            String IDQuestion=databaseQuestion.push().getKey();
+            AddQuestionToDatabase addQuestionToDatabase=new AddQuestionToDatabase();
+            addQuestionToDatabase.setIDQuestion(IDQuestion);
+            addQuestionToDatabase.setQuestion(question);
+            databaseQuestion.child(IDQuestion).setValue(addQuestionToDatabase);
             pushQuestion=true;
 
         }
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        databaseQuestion.addValueEventListener(new ValueEventListener() {
+            //valueEventListener use to auto update when new data inserted in database
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+               questionList.clear();//clear arrayList at every print to prevent repeated data when will show to user
+                for (DataSnapshot postSnapShot : dataSnapshot.getChildren()) {
+                    AddQuestionToDatabase putPost= postSnapShot.getValue(AddQuestionToDatabase.class);
+                    questionList.add(putPost);//store the data that come from database in arrayList
+                }
+                GetQuestionFromDatabase getQuestionFromDatabase= new
+                        GetQuestionFromDatabase(QuestionForChStudent.this,questionList);
+                listViewPost.setAdapter(getQuestionFromDatabase);//show the data in arrayList
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
 
     public boolean isPushQuestion() {
         return pushQuestion;
