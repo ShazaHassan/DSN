@@ -43,12 +43,44 @@ public class GetPostFromDatabase extends ArrayAdapter<PutPostInDatabase> {
         View listViewItem=inflater.inflate(R.layout.post_for_database,null,true); //take the layout of post for database as template for each element will show
         final TextView Post= (TextView) listViewItem.findViewById(R.id.PostFromDatabase);
         Button delete= (Button) listViewItem.findViewById(R.id.Delete);
-       final PutPostInDatabase putPostInDatabase=postList.get(position);
+        final PutPostInDatabase putPostInDatabase=postList.get(position);
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String ID=putPostInDatabase.getID();
                 DatabaseReference databaseReference=FirebaseDatabase.getInstance().getReference("post").child(ID);
+                databaseReference.setValue(null);
+            }
+        });
+        Post.setText(putPostInDatabase.getPost());
+        return listViewItem;
+    }
+}
+
+
+class GetPostFromDatabaseForHOD extends ArrayAdapter<PutPostInDatabase> {
+    private Activity context;
+    private List<PutPostInDatabase> postList;
+    public GetPostFromDatabaseForHOD (Activity context,List<PutPostInDatabase> postList){
+        super(context,R.layout.post_for_database,postList);
+        this.context=context;
+        this.postList=postList;
+    }
+
+    @NonNull
+    @Override
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        LayoutInflater inflater=context.getLayoutInflater();
+
+        View listViewItem=inflater.inflate(R.layout.post_for_database,null,true); //take the layout of post for database as template for each element will show
+        final TextView Post= (TextView) listViewItem.findViewById(R.id.PostFromDatabase);
+        Button delete= (Button) listViewItem.findViewById(R.id.Delete);
+        final PutPostInDatabase putPostInDatabase=postList.get(position);
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String ID=putPostInDatabase.getID();
+                DatabaseReference databaseReference=FirebaseDatabase.getInstance().getReference("HODPost").child(ID);
                 databaseReference.setValue(null);
             }
         });

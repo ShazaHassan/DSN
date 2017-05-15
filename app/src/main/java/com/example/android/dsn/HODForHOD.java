@@ -73,7 +73,7 @@ public class HODForHOD extends AppCompatActivity implements HOD, AdapterView.OnI
                     PutPostInDatabase putPost= postSnapShot.getValue(PutPostInDatabase.class);
                     postList.add(putPost);//store the data that come from database in arrayList
                 }
-                GetPostFromDatabase getPostFromDatabase= new GetPostFromDatabase(HODForHOD.this,postList);
+                GetPostFromDatabaseForHOD getPostFromDatabase= new GetPostFromDatabaseForHOD(HODForHOD.this,postList);
                 listViewPost.setAdapter(getPostFromDatabase);//show the data in arrayList
             }
 

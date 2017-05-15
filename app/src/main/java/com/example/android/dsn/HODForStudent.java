@@ -51,7 +51,7 @@ public class HODForStudent extends AppCompatActivity implements HOD{
                     PutPostInDatabase putPost= postSnapShot.getValue(PutPostInDatabase.class);
                     postList.add(putPost);//store the data that come from database in arrayList
                 }
-                GetPostFromDatabase getPostFromDatabase= new GetPostFromDatabase(HODForStudent.this,postList);
+                GetPostFromDatabaseForHOD getPostFromDatabase= new GetPostFromDatabaseForHOD(HODForStudent.this,postList);
                 listViewPost.setAdapter(getPostFromDatabase);//show the data in arrayList
             }
 

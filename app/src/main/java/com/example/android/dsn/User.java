@@ -5,49 +5,69 @@ package com.example.android.dsn;
  */
 
 public class User {
-    String name,email,pass,depart;
+    String Name,Email,Password,Department;
     public User() {
     }
 
     public String getName() {
-        return name;
+        return Name;
     }
 
     public String getEmail() {
-        return email;
+        return Email;
     }
 
-    public String getPass() {
-        return pass;
+    public String getPassword() {
+        return Password;
     }
 
-    public String getDepart() {
-        return depart;
+    public String getDepartment() {
+        return Department;
     }
 }
 class Student{
-    String name,email,pass,depart,yeaar;
+    String Name,Email,Password,Department,AcadmicYear;
 
     public Student() {
     }
 
     public String getName() {
-        return name;
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
     }
 
     public String getEmail() {
-        return email;
+        return Email;
     }
 
-    public String getPass() {
-        return pass;
+    public void setEmail(String email) {
+        Email = email;
     }
 
-    public String getDepart() {
-        return depart;
+    public String getPassword() {
+        return Password;
     }
 
-    public String getYeaar() {
-        return yeaar;
+    public void setPassword(String password) {
+        Password = password;
+    }
+
+    public String getDepartment() {
+        return Department;
+    }
+
+    public void setDepartment(String department) {
+        Department = department;
+    }
+
+    public String getAcadmicYear() {
+        return AcadmicYear;
+    }
+
+    public void setAcadmicYear(String acadmicYear) {
+        AcadmicYear = acadmicYear;
     }
 }

@@ -10,7 +10,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/TVNameNoDatabase"
+            android:id="@+id/TVNameDatabase"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"

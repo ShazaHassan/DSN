@@ -26,24 +26,26 @@ public class AnswersOfTasks extends AppCompatActivity {
         setContentView(R.layout.activity_answers_of_tasks);
     }
 
-   /* @Override
+    @Override
     protected void onStart() {
         super.onStart();
         answerTaskDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for(DataSnapshot answerSnapShor:dataSnapshot.getChildren()){
-                    AddTaskAnswerForDatabase addTaskToDatabase=answerSnapShor.getValue(AddTaskAnswerForDatabase.class);
+                answerList.clear();
+                for(DataSnapshot answerSnapShot:dataSnapshot.getChildren()){
+                    AddTaskAnswerForDatabase addTaskToDatabase=answerSnapShot.getValue(AddTaskAnswerForDatabase.class);
                     answerList.add(addTaskToDatabase);//store the data that come from database in arrayList
                 }
-                GetAnswerofTaskFromDaabase getTaskFromDatabase=new GetTaskFromDatabase(AnswersOfTasks.this,answerList);
-                answerList.setAdapter(getTaskFromDatabase);//show the data in arrayList                }
-            }
+                GetAnswerofTaskFromDaabase getTaskFromDatabase=new GetAnswerofTaskFromDaabase(AnswersOfTasks.this,answerList);
+                listViewAnswerTask.setAdapter(getTaskFromDatabase);//show the data in arrayList
+                    }
+
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
             }
         });
-    }*/
+    }
 }

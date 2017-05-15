@@ -19,7 +19,7 @@ import java.util.List;
 public class GetTaskFromDatabase extends ArrayAdapter<AddTaskToDatabase> {
     private Activity context;
     private List<AddTaskToDatabase> taskList;
-    public GetTaskFromDatabase (Activity context,List<AddTaskToDatabase> taskList){
+    public GetTaskFromDatabase (Activity context, List<AddTaskToDatabase> taskList){
         super(context,R.layout.task_for_database,taskList);
         this.context=context;
         this.taskList=taskList;

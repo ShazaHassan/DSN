@@ -53,7 +53,7 @@ public class GroupOfAcadYearForHOD extends AppCompatActivity implements GroupOfA
         textView.setText(message);
         editInElement();
     }
-
+//add data to spinner
     public void editInElement(){
         Spinner subject=(Spinner) findViewById(R.id.subjectSelect);
         subject.setVisibility(View.GONE);

@@ -33,10 +33,17 @@ public class GetAnswerofTaskFromDaabase extends ArrayAdapter<AddTaskAnswerForDat
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
-
         View listViewItem = inflater.inflate(R.layout.post_for_database, null, true); //take the layout of post for database as template for each element will show
         AddTaskAnswerForDatabase addTaskAnswerForDatabase = answerList.get(position);
 
+        TextView nameStudent=(TextView) listViewItem.findViewById(R.id.TVNameDatabase);
+        TextView sec=(TextView) listViewItem.findViewById(R.id.TVSecDatabase);
+        TextView taskNo=(TextView) listViewItem.findViewById(R.id.TVTaskNoDatabase);
+        TextView file=(TextView) listViewItem.findViewById(R.id.TVFileDatabase);
+        nameStudent.setText(addTaskAnswerForDatabase.getName());
+        sec.setText(addTaskAnswerForDatabase.getSec());
+        taskNo.setText(addTaskAnswerForDatabase.getNo());
+        file.setText(addTaskAnswerForDatabase.getFile());
         return listViewItem;
     }
 }
