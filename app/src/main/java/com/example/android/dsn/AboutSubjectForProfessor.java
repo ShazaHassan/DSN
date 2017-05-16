@@ -15,6 +15,7 @@ import static com.example.android.dsn.R.id.Edit;
 
 public class AboutSubjectForProfessor extends AppCompatActivity implements AdapterView.OnItemSelectedListener,AboutSubject {
 
+
     private Spinner editContain, editDegree, editTeach, messenger, others;
 
     @Override
