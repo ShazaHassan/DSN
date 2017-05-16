@@ -1,18 +1,13 @@
 package com.example.android.dsn;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
-/**
- * Created by ShazaHassan on 16-May-17.
- */
+import android.os.Bundle;
 
 public class ImportantQuestionForDr extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_impotant_question);
-
+        setContentView(R.layout.activity_important_question_for_dr);
     }
 }

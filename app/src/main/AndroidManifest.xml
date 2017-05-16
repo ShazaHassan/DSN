@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.android.dsn">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -35,7 +37,9 @@
         <activity android:name=".QuestionForChForDoctor" />
         <activity android:name=".AnswersOfTasks" />
         <activity android:name=".ImpotantQuestion" />
-        <activity android:name=".TaskAnswers"></activity>
+        <activity android:name=".TaskAnswers" />
+        <activity android:name=".ImportantQuestionForDr" />
+        <activity android:name=".QuestionStartPageForDr"></activity>
     </application>
 
 </manifest>
