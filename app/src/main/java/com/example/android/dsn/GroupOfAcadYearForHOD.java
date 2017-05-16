@@ -27,7 +27,7 @@ import java.util.List;
 import static com.example.android.dsn.R.id.hod;
 
 /**
- * Created by Mariam on 05-May-17.
+ * Created by ShazaHassan on 05-May-17.
  */
 
 public class GroupOfAcadYearForHOD extends AppCompatActivity implements GroupOfAcadYear {

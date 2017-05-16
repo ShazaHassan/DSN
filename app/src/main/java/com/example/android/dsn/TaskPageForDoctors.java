@@ -1,7 +1,7 @@
 package com.example.android.dsn;
 
 /*
-created by Mariam on 5-5-2017
+created by ShazaHassan on 5-5-2017
  */
 
 import android.content.Intent;

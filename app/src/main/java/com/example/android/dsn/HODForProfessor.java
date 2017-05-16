@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Mariam on 05-May-17.
+ * Created by ShazaHassan on 05-May-17.
  */
 
 public class HODForProfessor extends AppCompatActivity implements HOD {

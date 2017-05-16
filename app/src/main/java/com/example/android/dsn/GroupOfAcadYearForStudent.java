@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Mariam on 02-May-17.
+ * Created by ShazaHassan on 02-May-17.
  */
 
 public class GroupOfAcadYearForStudent extends AppCompatActivity implements GroupOfAcadYear,AdapterView.OnItemSelectedListener {

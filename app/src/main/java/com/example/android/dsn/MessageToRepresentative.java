@@ -14,7 +14,7 @@ import static com.example.android.dsn.R.id.post;
 import static com.example.android.dsn.R.id.writePost;
 
 /**
- * Created by Mariam on 9-May-17.
+ * Created by ShazaHassan on 9-May-17.
  *
  */
 
