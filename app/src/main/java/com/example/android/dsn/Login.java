@@ -51,8 +51,8 @@ public class Login extends AppCompatActivity {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     studentlist.clear();
-                    for (DataSnapshot drSnapShot : dataSnapshot.getChildren()) {
-                        Student user = drSnapShot.getValue(Student.class);
+                    for (DataSnapshot studentSnapShot : dataSnapshot.getChildren()) {
+                        Student user = studentSnapShot.getValue(Student.class);
                         studentlist.add(user);
                     }
                     for (int i = 0; i < studentlist.size(); i++) {
@@ -61,6 +61,7 @@ public class Login extends AppCompatActivity {
                             if (pass.equals(password)) {
                                 Intent group = new Intent(Login.this, GroupOfAcadYearForStudent.class);
                                 startActivity(group);
+                                break;
                             } else {
                                 Toast.makeText(Login.this, "Worng password", Toast.LENGTH_LONG).show();
                             }
@@ -94,6 +95,8 @@ public class Login extends AppCompatActivity {
                             if (pass.equals(password)) {
                                 Intent select = new Intent(Login.this, SelectAcadYear.class);
                                 startActivity(select);
+                                break;
+
                             } else {
                                 Toast.makeText(Login.this, "Wrong password", Toast.LENGTH_LONG).show();
                             }
@@ -128,6 +131,7 @@ public class Login extends AppCompatActivity {
                             if (pass.equals(password)) {
                                 Intent group = new Intent(Login.this, HODForHOD.class);
                                 startActivity(group);
+                                break;
                             } else {
                                 Toast.makeText(Login.this, "Wrong password", Toast.LENGTH_LONG).show();
                             }

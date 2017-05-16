@@ -70,7 +70,7 @@ public class QuestionForChForDoctor extends AppCompatActivity {
 
 
     public void ImportantQuestion(View view) {
-        Intent important=new Intent(this,ImpotantQuestion.class);
+        Intent important=new Intent(this,ImportantQuestionForDr.class);
         startActivity(important);
     }
 

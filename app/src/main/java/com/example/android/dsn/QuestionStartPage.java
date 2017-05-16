@@ -39,6 +39,7 @@ public class QuestionStartPage extends AppCompatActivity {
         databaseNewCh=FirebaseDatabase.getInstance().getReference("NewChapter");
         chapterListView=(ListView) findViewById(R.id.LVChNo);
         chapterList=new ArrayList<>();
+
     }
 
     public void addChapter(View view) {
@@ -46,24 +47,6 @@ public class QuestionStartPage extends AppCompatActivity {
         String ID=databaseNewCh.push().getKey();
         AddnewChForDatabase addnewChForDatabase=new AddnewChForDatabase(ID,"Chapter"+count);
         databaseNewCh.child(ID).setValue(addnewChForDatabase);
-       /* LinearLayout button=(LinearLayout) findViewById(R.id.buttons);
-        LinearLayout.LayoutParams params= new
-                LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        params.setMargins(10,10,10,10);
-        button.setBaselineAligned(true);
-        final Button chapterNo= new Button(this);
-        chapterNo.setLayoutParams(new WindowManager.LayoutParams());
-        chapterNo.setText("chapter "+count+"");
-        button.addView(chapterNo,params);
-        chapterNo.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent page=new Intent(QuestionStartPage.this,QuestionForChStudent.class);
-                String ch=chapterNo.getText().toString();
-                page.putExtra("no",ch);
-                startActivity(page);
-            }
-        });*/
 
     }
 
