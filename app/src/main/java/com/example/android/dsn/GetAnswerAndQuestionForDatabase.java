@@ -117,6 +117,36 @@ class GetAnswerAndQuestionForDatabaseForImportant extends ArrayAdapter<AddAnswer
 }
 
 
+class GetAnswerAndQuestionForDatabaseForImportantForStudent extends ArrayAdapter<AddAnswerAndQuestionToDatabase> {
+    private Activity context;
+    private List<AddAnswerAndQuestionToDatabase> answerAndQuestionList;
+
+    public GetAnswerAndQuestionForDatabaseForImportantForStudent(Activity context, List<AddAnswerAndQuestionToDatabase> answerAndQuestionList) {
+        super(context, R.layout.answer_and_important_for_database, answerAndQuestionList);
+        this.context = context;
+        this.answerAndQuestionList = answerAndQuestionList;
+    }
+
+    @NonNull
+    @Override
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        LayoutInflater inflater = context.getLayoutInflater();
+
+        View listViewItem = inflater.inflate(R.layout.answer_and_important_for_database, null, true);
+        AddAnswerAndQuestionToDatabase addAnswerAndQuestionToDatabase=answerAndQuestionList.get(position);
+        TextView Question=(TextView) listViewItem.findViewById(R.id.TVQuestionWasAnsweredDatabase);
+        TextView Answer=(TextView) listViewItem.findViewById(R.id.TVAnsweredOfQuestionForDatabase);
+        Question.setText(addAnswerAndQuestionToDatabase.getQuestion());
+        Answer.setText(addAnswerAndQuestionToDatabase.getAnswer());
+        CheckBox important=(CheckBox) listViewItem.findViewById(R.id.CBImportantDatabase);
+        important.setChecked(true);
+        important.setVisibility(View.GONE);
+        //take the layout of post for database as template for each element will show
+        return  listViewItem;
+
+    }
+}
+
 
 class GetAnswerAndQuestionForDatabaseForStudent extends ArrayAdapter<AddAnswerAndQuestionToDatabase> {
     private Activity context;
@@ -146,7 +176,6 @@ class GetAnswerAndQuestionForDatabaseForStudent extends ArrayAdapter<AddAnswerAn
 
         //get checkBox from layout
         CheckBox important=(CheckBox) listViewItem.findViewById(R.id.CBImportantDatabase);
-
         important.setVisibility(View.GONE);
         return  listViewItem;
 
