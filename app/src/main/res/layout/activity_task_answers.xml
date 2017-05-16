@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mytouch"
     android:orientation="vertical"
     tools:context="com.example.android.dsn.TaskAnswers">
 
@@ -11,7 +12,6 @@
         android:id="@+id/L1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
         android:orientation="horizontal"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
@@ -20,7 +20,6 @@
             android:id="@+id/R1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp">
 
@@ -38,7 +37,7 @@
                 android:fontFamily="serif"
                 android:text="Upload Your Answers"
                 android:textAlignment="center"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
                 android:textSize="20sp"
                 android:textStyle="italic" />
 
@@ -54,7 +53,7 @@
                 android:layout_marginTop="60dp"
                 android:fontFamily="casual"
                 android:text="Full Name:"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
                 android:textSize="16sp" />
 
             <TextView
@@ -67,7 +66,7 @@
                 android:layout_marginTop="40dp"
                 android:fontFamily="casual"
                 android:text="Section:"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
                 android:textSize="16sp" />
 
             <TextView
@@ -80,7 +79,7 @@
                 android:layout_marginTop="51dp"
                 android:fontFamily="casual"
                 android:text="Task No.:"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
                 android:textSize="16sp" />
 
             <TextView
@@ -93,22 +92,22 @@
                 android:layout_marginTop="50dp"
                 android:fontFamily="casual"
                 android:text="File"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
                 android:textSize="16sp" />
 
             <EditText
                 android:id="@+id/EDFullName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@android:drawable/alert_light_frame"
-                android:ems="10"
-                android:inputType="textMultiLine"
                 android:layout_alignBaseline="@+id/TvFullName:"
                 android:layout_alignBottom="@+id/TvFullName:"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginEnd="20dp" />
+                android:background="@android:drawable/alert_light_frame"
+                android:ems="10"
+                android:inputType="textMultiLine" />
 
             <EditText
                 android:id="@+id/EDSection"
@@ -146,28 +145,19 @@
                 android:ems="10"
                 android:inputType="textMultiLine" />
 
-            <TextView
-                android:id="@+id/TvMyTouch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/TvUploadYourAnswers"
-                android:layout_alignParentBottom="true"
-                android:layout_alignStart="@+id/TvUploadYourAnswers"
-                android:layout_marginBottom="12dp"
-                android:text="Made with love and lots of code" />
-
             <Button
                 android:id="@+id/Bupload"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/EDFile"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="19dp"
                 android:background="@android:drawable/checkbox_off_background"
                 android:onClick="UploadTask"
                 android:text="Upload"
                 android:textAllCaps="false"
-                android:textStyle="italic" />
+                android:textStyle="italic"
+                android:layout_below="@+id/EDFile"
+                android:layout_alignRight="@+id/TvUploadYourAnswers"
+                android:layout_alignEnd="@+id/TvUploadYourAnswers"
+                android:layout_marginTop="45dp" />
 
         </RelativeLayout>
 

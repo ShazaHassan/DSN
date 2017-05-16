@@ -43,7 +43,7 @@ public class QuestionStartPage extends AppCompatActivity {
     }
 
     public void addChapter(View view) {
-       count++;
+        count++;
         String ID=databaseNewCh.push().getKey();
         AddnewChForDatabase addnewChForDatabase=new AddnewChForDatabase(ID,"Chapter"+count);
         databaseNewCh.child(ID).setValue(addnewChForDatabase);

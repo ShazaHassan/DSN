@@ -67,8 +67,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
             android:onClick="sendMessage"
-            android:text="Send" />
+            android:text="Send"
+            android:textAllCaps="false"
+            android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+            android:textStyle="italic" />
     </LinearLayout>
 
 </LinearLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:background="@drawable/none"
     android:orientation="vertical"
     tools:context="com.example.android.dsn.AnswerPage">
 
@@ -16,8 +16,10 @@
             android:id="@+id/titleOfAnswer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="TextView"
             android:textAlignment="center"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
             android:textSize="24sp"
             android:textStyle="bold" />
 

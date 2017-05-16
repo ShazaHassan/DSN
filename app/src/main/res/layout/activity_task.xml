@@ -5,6 +5,7 @@
     android:id="@+id/L1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/none"
     android:orientation="vertical"
     tools:context="com.example.android.dsn.TaskPageForDoctors">
     Public EditText mEditText;
@@ -32,151 +33,153 @@
                 android:layout_height="wrap_content">
 
                 <RelativeLayout
-                        android:id="@+id/L5"
+                    android:id="@+id/L5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/TvTasks"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="13dp"
+                        android:text="(subject name) Tasks"
+                        android:textAlignment="center"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/common_google_signin_btn_text_dark_default"
+                        android:textSize="30sp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/TvAddnewtask"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Bupload"
+                        android:layout_alignParentLeft="true"
+                        android:fontFamily="cursive"
+                        android:text="Add new task:"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                        android:textColor="@color/common_google_signin_btn_text_dark_default"
+                        android:textSize="20sp"
+                        android:textStyle="italic"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="135dp" />
+
+                    <EditText
+                        android:id="@+id/ETno"
+                        android:layout_width="370dp"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/ETdes"
+                        android:layout_alignStart="@+id/ETdes"
+                        android:layout_below="@+id/TvAddnewtask"
+                        android:layout_marginTop="15dp"
+                        android:background="@android:drawable/button_onoff_indicator_off"
+                        android:ems="10"
+                        android:fontFamily="serif"
+                        android:hint="Task No.:"
+                        android:inputType="textPersonName"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/ETdes"
+                        android:layout_width="370dp"
+                        android:layout_height="40dp"
+                        android:layout_alignLeft="@+id/ETdead"
+                        android:layout_alignStart="@+id/ETdead"
+                        android:layout_alignTop="@+id/Tvdes"
+                        android:background="@android:drawable/button_onoff_indicator_off"
+                        android:ems="10"
+                        android:hint="Description:"
+                        android:inputType="textMultiLine"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/ETdead"
+                        android:layout_width="370dp"
+                        android:layout_height="40dp"
+                        android:layout_alignTop="@+id/Tvdead"
+                        android:layout_centerHorizontal="true"
+                        android:background="@android:drawable/button_onoff_indicator_off"
+                        android:ems="10"
+                        android:hint="Deadline:"
+                        android:inputType="textPersonName"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/BAddTask"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/ETdead"
+                        android:layout_alignRight="@+id/ETdead"
+                        android:layout_below="@+id/ETdead"
+                        android:layout_marginTop="15dp"
+                        android:background="@android:drawable/checkbox_off_background"
+                        android:onClick="AddNewTask"
+                        android:text="Add Task"
+                        android:textAllCaps="false"
+                        android:textStyle="italic"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/Tvdes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/ETno"
+                        android:layout_marginTop="11dp"
+                        android:fontFamily="serif"
+                        android:text="Descripion:"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/Tvdead"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/ETdes"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="serif"
+                        android:text="Deadline:"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:visibility="invisible" />
+                    //android:textAlignment="viewStart"
 
 
-                        <TextView
-                            android:id="@+id/TvTasks"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentStart="true"
-                            android:layout_alignParentTop="true"
-                            android:layout_marginTop="13dp"
-                            android:text="(subject name) Tasks"
-                            android:textAlignment="center"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textSize="30sp"
-                            android:textStyle="bold|italic" />
+                    <Button
+                        android:id="@+id/Bupload"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/TvTasks"
+                        android:layout_marginTop="14dp"
+                        android:background="@android:drawable/checkbox_off_background"
+                        android:onClick="GoToTaskAnswers"
+                        android:text="Upload Answer" />
 
-                        <TextView
-                            android:id="@+id/TvAddnewtask"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBottom="@+id/Bupload"
-                            android:layout_alignParentLeft="true"
-                            android:fontFamily="cursive"
-                            android:text="Add new task:"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textSize="20sp"
-                            android:textStyle="italic"
-                            tools:layout_editor_absoluteX="16dp"
-                            tools:layout_editor_absoluteY="135dp" />
+                    <Button
+                        android:id="@+id/BAnswers"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/Bupload"
+                        android:layout_alignBottom="@+id/Bupload"
+                        android:layout_alignLeft="@+id/Bupload"
+                        android:layout_alignStart="@+id/Bupload"
+                        android:background="@android:drawable/checkbox_off_background"
+                        android:onClick="GoToAnswersPage"
+                        android:text="Answers"
+                        android:textAllCaps="false"
+                        android:textStyle="italic" />
 
-                        <EditText
-                            android:id="@+id/ETno"
-                            android:layout_width="370dp"
-                            android:layout_height="40dp"
-                            android:layout_alignLeft="@+id/ETdes"
-                            android:layout_alignStart="@+id/ETdes"
-                            android:layout_below="@+id/TvAddnewtask"
-                            android:layout_marginTop="15dp"
-                            android:background="@android:drawable/button_onoff_indicator_off"
-                            android:ems="10"
-                            android:fontFamily="serif"
-                            android:hint="Task No.:"
-                            android:inputType="textPersonName"
-                            android:visibility="visible" />
-
-                        <EditText
-                            android:id="@+id/ETdes"
-                            android:layout_width="370dp"
-                            android:layout_height="40dp"
-                            android:layout_alignLeft="@+id/ETdead"
-                            android:layout_alignStart="@+id/ETdead"
-                            android:layout_alignTop="@+id/Tvdes"
-                            android:background="@android:drawable/button_onoff_indicator_off"
-                            android:ems="10"
-                            android:hint="Description:"
-                            android:inputType="textMultiLine"
-                            android:visibility="visible" />
-
-                        <EditText
-                            android:id="@+id/ETdead"
-                            android:layout_width="370dp"
-                            android:layout_height="40dp"
-                            android:layout_alignTop="@+id/Tvdead"
-                            android:layout_centerHorizontal="true"
-                            android:background="@android:drawable/button_onoff_indicator_off"
-                            android:ems="10"
-                            android:hint="Deadline:"
-                            android:inputType="textPersonName"
-                            android:visibility="visible" />
-
-                        <Button
-                            android:id="@+id/BAddTask"
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:layout_alignEnd="@+id/ETdead"
-                            android:layout_alignRight="@+id/ETdead"
-                            android:layout_below="@+id/ETdead"
-                            android:layout_marginTop="15dp"
-                            android:background="@android:drawable/checkbox_off_background"
-                            android:onClick="AddNewTask"
-                            android:text="Add Task"
-                            android:textAllCaps="false"
-                            android:textStyle="italic"
-                            android:visibility="visible" />
-
-                        <TextView
-                            android:id="@+id/Tvdes"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentStart="true"
-                            android:layout_below="@+id/ETno"
-                            android:layout_marginTop="11dp"
-                            android:fontFamily="serif"
-                            android:text="Descripion:"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            android:visibility="invisible" />
-
-                        <TextView
-                            android:id="@+id/Tvdead"
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
-                            android:layout_alignParentStart="true"
-                            android:layout_below="@+id/ETdes"
-                            android:layout_marginTop="10dp"
-                            android:fontFamily="serif"
-                            android:text="Deadline:"
-                            android:textSize="22sp"
-                            android:textStyle="bold"
-                            android:visibility="invisible" />
-                        //android:textAlignment="viewStart"
-
-
-                        <Button
-                            android:id="@+id/Bupload"
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignParentRight="true"
-                            android:layout_below="@+id/TvTasks"
-                            android:layout_marginTop="14dp"
-                            android:background="@android:drawable/checkbox_off_background"
-                            android:onClick="GoToTaskAnswers"
-                            android:text="Upload Answer" />
-
-                        <Button
-                            android:id="@+id/BAnswers"
-                            android:layout_width="160dp"
-                            android:layout_height="wrap_content"
-                            android:layout_alignBaseline="@+id/Bupload"
-                            android:layout_alignBottom="@+id/Bupload"
-                            android:layout_alignLeft="@+id/Bupload"
-                            android:layout_alignStart="@+id/Bupload"
-                            android:background="@android:drawable/checkbox_off_background"
-                            android:onClick="GoToAnswersPage"
-                            android:text="Answers"
-                            android:textAllCaps="false"
-                            android:textStyle="italic" />
-
-                    </RelativeLayout>
+                </RelativeLayout>
 
 
             </ScrollView>

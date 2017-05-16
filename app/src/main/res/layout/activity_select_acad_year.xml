@@ -5,13 +5,13 @@
     android:id="@+id/L1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    android:background="@drawable/mytouch"
     android:orientation="vertical"
     tools:context="com.example.android.dsn.SelectAcadYear">
 
     <ScrollView
         android:id="@+id/Sc1"
-        android:layout_width="match_parent"
+        android:layout_width="371dp"
         android:layout_height="match_parent">
 
         <LinearLayout
@@ -35,7 +35,7 @@
                     android:fontFamily="serif"
                     android:text="Select Acad Year"
                     android:textAlignment="center"
-                    android:textColor="@android:color/background_dark"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
                     android:textSize="25sp"
                     android:textStyle="bold|italic" />
 
@@ -85,7 +85,7 @@
                     android:layout_alignLeft="@+id/Bthirdyear"
                     android:layout_alignStart="@+id/Bthirdyear"
                     android:layout_below="@+id/Bthirdyear"
-                    android:layout_marginTop="25dp"
+                    android:layout_marginTop="26dp"
                     android:background="@android:drawable/checkbox_off_background"
                     android:onClick="forthYear"
                     android:text="Forth Year" />
@@ -94,11 +94,12 @@
                     android:id="@+id/TvMyTouch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Made with love an d lots of code"
-                    android:layout_alignParentBottom="true"
                     android:layout_alignLeft="@+id/Bforthyear"
+                    android:layout_alignParentBottom="true"
                     android:layout_alignStart="@+id/Bforthyear"
-                    android:layout_marginBottom="54dp" />
+                    android:layout_marginBottom="52dp"
+                    android:text="Made with love and lots of code"
+                    android:visibility="invisible" />
 
             </RelativeLayout>
         </LinearLayout>

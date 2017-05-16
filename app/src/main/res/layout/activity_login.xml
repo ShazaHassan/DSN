@@ -5,7 +5,7 @@
     android:id="@+id/L1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:background="@drawable/login"
     android:orientation="vertical"
     tools:context="com.example.android.dsn.Login">
 
@@ -14,6 +14,7 @@
         android:id="@+id/L2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/login"
         android:orientation="horizontal"
         android:weightSum="1"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,134 +24,94 @@
 
         <RelativeLayout
             android:id="@+id/R1"
-            android:layout_width="match_parent"
+            android:layout_width="366dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.17"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp">
 
-            <TextView
-                android:id="@+id/Tvfohu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                android:text="FOHU"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="70sp"
-                android:textStyle="italic"
-                tools:text="FOHU"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
-                android:id="@+id/Tvdepartment"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_weight="1"
-                android:text="Computers Engineering Department"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="20sp"
-                android:textStyle="italic"
-                tools:text="Computers Engineering Department"
-                android:layout_below="@+id/Tvfohu"
-                android:layout_centerHorizontal="true" />
-
             <EditText
                 android:id="@+id/ETUsername"
-                android:layout_width="match_parent"
+                android:layout_width="357dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
                 android:layout_weight="1"
                 android:background="@android:drawable/alert_light_frame"
                 android:ems="10"
                 android:fontFamily="sans-serif"
                 android:hint="Email:"
                 android:inputType="textPersonName"
-                android:layout_below="@+id/Tvdepartment"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_above="@+id/ETPass"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="25dp" />
 
             <EditText
                 android:id="@+id/ETPass"
-                android:layout_width="match_parent"
+                android:layout_width="357dp"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/ETUsername"
-                android:layout_alignStart="@+id/ETUsername"
-                android:layout_below="@+id/ETUsername"
-                android:layout_marginTop="24dp"
                 android:background="@android:drawable/alert_light_frame"
                 android:ems="10"
                 android:fontFamily="sans-serif"
                 android:hint="Password:"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
 
             <Button
                 android:id="@+id/BLogin"
                 style="@android:style/Widget.Button.Inset"
                 android:layout_width="192dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="58dp"
                 android:onClick="Login"
                 android:text="Login"
-                android:layout_alignBaseline="@+id/textView2"
-                android:layout_alignBottom="@+id/textView2"
+                android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="38dp" />
+
 
             <RadioGroup
                 android:id="@+id/SignAs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/ETPass"
-                android:layout_marginLeft="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="22dp">
-
-                <RadioButton
-                    android:id="@+id/RBDr"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/RBHOD"
-                    android:layout_alignStart="@+id/RBHOD"
-                    android:layout_below="@+id/RBHOD"
-                    android:layout_weight="1"
-                    android:text="Dr" />
-
-                <RadioButton
-                    android:id="@+id/RBHOD"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/RBStudent"
-                    android:layout_alignStart="@+id/RBStudent"
-                    android:layout_below="@+id/RBStudent"
-                    android:layout_weight="1"
-                    android:text="HOD" />
+                android:layout_above="@+id/BLogin"
+                android:layout_alignLeft="@+id/ETPass"
+                android:layout_alignStart="@+id/ETPass"
+                android:layout_marginBottom="13dp">
 
                 <RadioButton
                     android:id="@+id/RBStudent"
-                    android:layout_width="wrap_content"
+                    android:layout_width="133dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/ETPass"
-                    android:layout_weight="1"
-                    android:text="Student" />
-            </RadioGroup><![CDATA[
+                    android:layout_above="@+id/BLogin"
+                    android:layout_alignLeft="@+id/BLogin"
+                    android:layout_alignStart="@+id/BLogin"
+                    android:text="Student"
+                    android:textColor="@color/cardview_light_background" />
 
-            android:layout_marginBottom="12dp"
-                android:text="Made with love and lots of code " />
+                <RadioButton
+                    android:id="@+id/RBHOD"
+                    android:layout_width="126dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/RBStudent"
+                    android:layout_toEndOf="@+id/RBStudent"
+                    android:layout_toRightOf="@+id/RBStudent"
+                    android:text="HOD"
+                    android:textColor="@color/cardview_light_background" />
 
-        ]]>
+                <RadioButton
+                    android:id="@+id/RBDr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/RBStudent"
+                    android:layout_alignTop="@+id/RBStudent"
+                    android:layout_toLeftOf="@+id/BLogin"
+                    android:layout_toStartOf="@+id/BLogin"
+                    android:text="Dr"
+                    android:textColor="@color/cardview_light_background" />
+
+            </RadioGroup>
+
         </RelativeLayout>
 
     </LinearLayout>

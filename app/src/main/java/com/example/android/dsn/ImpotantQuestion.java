@@ -16,6 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static android.R.attr.id;
@@ -31,6 +32,7 @@ public class ImpotantQuestion extends AppCompatActivity {
         setContentView(R.layout.activity_impotant_question);
         databaseImportant= FirebaseDatabase.getInstance().getReference("ImportantQuestion");
         listViewImportant=(ListView) findViewById(R.id.LVQuestionAndAnswer);
+        answerList=new ArrayList<>();
     }
 
     @Override

@@ -37,7 +37,7 @@ public class GroupOfAcadYearForStudent extends AppCompatActivity implements Grou
     protected void onCreate(Bundle savedInstanceState) {
        super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_group_of_acad_year);
-       databasePost= FirebaseDatabase.getInstance().getReference("post");
+       databasePost= FirebaseDatabase.getInstance().getReference("post");//create table in database
        listViewPost=(ListView)  findViewById(R.id.LVPost);
        postList=new ArrayList<>();
        addElementInSpinnerOfSubject();
@@ -111,7 +111,7 @@ public class GroupOfAcadYearForStudent extends AppCompatActivity implements Grou
         if(text.equals(""));
         else {
             writePost.setText("");//clear EditText after add text in group
-           //FIRST GIVE ID FOR EVERY ELEMENT IN DATA
+            //FIRST GIVE ID FOR EVERY ELEMENT IN DATA
             String ID=databasePost.push().getKey();
             //SEND DATA TO CLASS THIS CLASS USE TO SEND DATA TO DATABASE
             PutPostInDatabase putPostInDatabase=new PutPostInDatabase();

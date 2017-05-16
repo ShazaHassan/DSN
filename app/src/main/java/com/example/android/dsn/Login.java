@@ -91,17 +91,13 @@ public class Login extends AppCompatActivity {
                     }
                     for (int i = 0; i < drlist.size(); i++) {
                         String mail = drlist.get(i).getEmail().toString(), password = drlist.get(i).getPassword().toString();
-                        if (Email.equals(mail)) {
-                            if (pass.equals(password)) {
+                        if (Email.equals(mail)&&pass.equals(password)) {
+
                                 Intent select = new Intent(Login.this, SelectAcadYear.class);
                                 startActivity(select);
                                 break;
-
-                            } else {
-                                Toast.makeText(Login.this, "Wrong password", Toast.LENGTH_LONG).show();
-                            }
                         } else {
-                            Toast.makeText(Login.this, "Not Registed User", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Login.this, "Wrong Email or Password", Toast.LENGTH_LONG).show();
                         }
                     }
                 }

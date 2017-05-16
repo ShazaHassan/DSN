@@ -5,7 +5,7 @@
     android:id="@+id/L1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:background="@drawable/none"
     android:orientation="vertical"
     tools:context="com.example.android.dsn.QuestionStartPage">
 
@@ -20,8 +20,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
             android:text="TextView"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
             android:textSize="30sp" />
 
         <Button
@@ -39,6 +41,7 @@
             android:textAllCaps="false"
             android:textSize="14sp"
             android:textStyle="bold|italic" />
+
         <Button
             android:id="@+id/BDeleteCh"
             android:layout_width="140dp"
@@ -54,18 +57,15 @@
             android:textAllCaps="false"
             android:textSize="14sp"
             android:textStyle="bold|italic"
-            android:visibility="gone"/>
+            android:visibility="gone" />
 
     </RelativeLayout>
 
-            <ListView
-                android:id="@+id/LVChNo"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/BaddChapter"/>
-
-
-
+    <ListView
+        android:id="@+id/LVChNo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/BaddChapter" />
 
 
 </LinearLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mytouch"
     android:orientation="vertical"
     android:padding="15dp"
     tools:context="com.example.android.dsn.AboutSubjectForProfessor">
@@ -15,8 +16,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:baselineAligned="false">
+            android:baselineAligned="false"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/title"
@@ -24,7 +25,9 @@
                 android:layout_height="wrap_content"
                 android:text="Software1"
                 android:textAlignment="center"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/cardview_light_background"
+                android:textStyle="italic" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -59,221 +62,221 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/common_google_signin_btn_icon_dark_normal_background">
+                    android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/containOfCourse"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Contents of course"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                        android:textSize="18sp" />
-
-                    <Spinner
-                        android:id="@+id/editContain"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentTop="true" />
-
-                    <TextView
-                        android:id="@+id/textView"
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignEnd="@+id/containOfCourse"
-                        android:layout_alignRight="@+id/containOfCourse"
-                        android:layout_below="@+id/editContain"
-                        android:fontFamily="monospace"
-                        android:text="Ch1:....."
-                        android:textColor="@color/colorPrimaryDark" />
+                        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background">
 
-                    <EditText
-                        android:id="@+id/Contain"
+                        <TextView
+                            android:id="@+id/containOfCourse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contents of course"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                            android:textSize="18sp" />
+
+                        <Spinner
+                            android:id="@+id/editContain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true" />
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignEnd="@+id/containOfCourse"
+                            android:layout_alignRight="@+id/containOfCourse"
+                            android:layout_below="@+id/editContain"
+                            android:fontFamily="monospace"
+                            android:text="Ch1:....."
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <EditText
+                            android:id="@+id/Contain"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/editContain"
+                            android:layout_marginTop="16dp"
+                            android:ems="10"
+                            android:inputType="textMultiLine"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/EditContain"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/Contain"
+                            android:layout_marginTop="7dp"
+                            android:onClick="editContain"
+                            android:text="Edit"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp" />
+
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_below="@+id/editContain"
-                        android:layout_marginTop="16dp"
-                        android:ems="10"
-                        android:inputType="textMultiLine"
-                        android:visibility="gone" />
+                        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background">
 
-                    <Button
-                        android:id="@+id/EditContain"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_below="@+id/Contain"
-                        android:layout_marginTop="7dp"
-                        android:onClick="editContain"
-                        android:text="Edit"
-                        android:visibility="gone" />
+                        <Spinner
+                            android:id="@+id/editDegree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/degree"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true" />
 
-                </RelativeLayout>
+                        <TextView
+                            android:id="@+id/degree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Degree of subject"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                            android:textSize="18sp" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="18dp" />
+                        <TextView
+                            android:id="@+id/degreeOfSub"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/editDegree"
+                            android:layout_marginTop="13dp"
+                            android:text="Final:90"
+                            android:textColor="@color/colorPrimaryDark" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/common_google_signin_btn_icon_dark_normal_background">
+                        <EditText
+                            android:id="@+id/Edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignTop="@+id/degreeOfSub"
+                            android:layout_marginTop="16dp"
+                            android:ems="10"
+                            android:inputType="textMultiLine"
+                            android:visibility="gone" />
 
-                    <Spinner
-                        android:id="@+id/editDegree"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/degree"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentTop="true" />
+                        <Button
+                            android:id="@+id/EditDegree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/Edit"
+                            android:layout_marginTop="13dp"
+                            android:onClick="editDegree"
+                            android:text="Edit"
+                            android:visibility="gone" />
 
-                    <TextView
-                        android:id="@+id/degree"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Degree of subject"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-                        android:textSize="18sp" />
+                    </RelativeLayout>
 
-                    <TextView
-                        android:id="@+id/degreeOfSub"
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp" />
+
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_below="@+id/editDegree"
-                        android:layout_marginTop="13dp"
-                        android:text="Final:90"
-                        android:textColor="@color/colorPrimaryDark" />
+                        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background">
 
-                    <EditText
-                        android:id="@+id/Edit"
+                        <Spinner
+                            android:id="@+id/editTeachassistance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/Tvdepartment"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true" />
+
+                        <TextView
+                            android:id="@+id/Tvdepartment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Teaching Assistanc"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/editTeachAssistance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_below="@+id/editTeachassistance"
+                            android:layout_marginTop="8dp"
+                            android:fontFamily="monospace"
+                            android:text="Eng: Hadeel"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <EditText
+                            android:id="@+id/editTeach"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/editTeachAssistance"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginTop="16dp"
+                            android:ems="10"
+                            android:inputType="textMultiLine"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/EditTeach"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/editTeach"
+                            android:layout_marginTop="9dp"
+                            android:onClick="editTeach"
+                            android:text="Edit"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="18dp" />
+
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_alignTop="@+id/degreeOfSub"
-                        android:layout_marginTop="16dp"
-                        android:ems="10"
-                        android:inputType="textMultiLine"
-                        android:visibility="gone" />
+                        android:background="@drawable/common_google_signin_btn_icon_dark_normal_background">
 
-                    <Button
-                        android:id="@+id/EditDegree"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_below="@+id/Edit"
-                        android:layout_marginTop="13dp"
-                        android:onClick="editDegree"
-                        android:text="Edit"
-                        android:visibility="gone" />
+                        <TextView
+                            android:id="@+id/Slides"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Slides"
+                            android:textSize="18sp" />
 
-                </RelativeLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="18dp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/common_google_signin_btn_icon_dark_normal_background">
-
-                    <Spinner
-                        android:id="@+id/editTeachassistance"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/Tvdepartment"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentTop="true" />
-
-                    <TextView
-                        android:id="@+id/Tvdepartment"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Teaching Assistanc"
-                        android:textSize="18sp" />
-
-                    <TextView
-                        android:id="@+id/editTeachAssistance"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_below="@+id/editTeachassistance"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="monospace"
-                        android:text="Eng: Hadeel"
-                        android:textColor="@color/colorPrimaryDark" />
-
-                    <EditText
-                        android:id="@+id/editTeach"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/editTeachAssistance"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginTop="16dp"
-                        android:ems="10"
-                        android:inputType="textMultiLine"
-                        android:visibility="gone" />
-
-                    <Button
-                        android:id="@+id/EditTeach"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_below="@+id/editTeach"
-                        android:layout_marginTop="9dp"
-                        android:onClick="editTeach"
-                        android:text="Edit"
-                        android:visibility="gone" />
-
-                </RelativeLayout>
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="18dp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/common_google_signin_btn_icon_dark_normal_background">
-
-                    <TextView
-                        android:id="@+id/Slides"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Slides"
-                        android:textSize="18sp" />
-
-                    <Button
-                        android:id="@+id/uploadSlides"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true"
-                        android:text="Upload" />
-                </RelativeLayout>
-        </LinearLayout>
+                        <Button
+                            android:id="@+id/uploadSlides"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:text="Upload" />
+                    </RelativeLayout>
+                </LinearLayout>
             </ScrollView>
         </LinearLayout>
     </ScrollView>
