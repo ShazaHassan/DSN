@@ -13,34 +13,37 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.R.attr.data;
+
 public class AnswersOfTasks extends AppCompatActivity {
-    DatabaseReference answerTaskDatabase;
+   DatabaseReference databaseAnswerTask;
     ListView listViewAnswerTask;
-    List<AddTaskAnswerForDatabase> answerList;
+    List<AddTaskAnswerForDatabase> AnswerTaskList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        answerTaskDatabase= FirebaseDatabase.getInstance().getReference("TaskAnswer");
-        listViewAnswerTask=(ListView) findViewById(R.id.LVTaskAnswer);
-        answerList=new ArrayList<>();
         setContentView(R.layout.activity_answers_of_tasks);
+        databaseAnswerTask=FirebaseDatabase.getInstance().getReference("TaskAnswer");
+        listViewAnswerTask=(ListView) findViewById(R.id.LVTaskAnswer);
+        AnswerTaskList=new ArrayList<>();
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        answerTaskDatabase.addValueEventListener(new ValueEventListener() {
+        databaseAnswerTask.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                answerList.clear();
-                for(DataSnapshot answerSnapShot:dataSnapshot.getChildren()){
-                    AddTaskAnswerForDatabase addTaskToDatabase=answerSnapShot.getValue(AddTaskAnswerForDatabase.class);
-                    answerList.add(addTaskToDatabase);//store the data that come from database in arrayList
+                AnswerTaskList.clear();
+                for(DataSnapshot answerTaskSnapShot:dataSnapshot.getChildren()){
+                    AddTaskAnswerForDatabase addTaskAnswerForDatabase=
+                            answerTaskSnapShot.getValue(AddTaskAnswerForDatabase.class);
+                    AnswerTaskList.add(addTaskAnswerForDatabase);
                 }
-                GetAnswerofTaskFromDaabase getTaskFromDatabase=new GetAnswerofTaskFromDaabase(AnswersOfTasks.this,answerList);
-                listViewAnswerTask.setAdapter(getTaskFromDatabase);//show the data in arrayList
-                    }
-
+                GetAnswerofTaskFromDaabase getAnswerofTaskFromDaabase=
+                        new GetAnswerofTaskFromDaabase(AnswersOfTasks.this,AnswerTaskList);
+                listViewAnswerTask.setAdapter(getAnswerofTaskFromDaabase);
+            }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {

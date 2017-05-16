@@ -38,4 +38,24 @@ public class AddTaskAnswerForDatabase {
     public AddTaskAnswerForDatabase() {
 
     }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public void setSec(String sec) {
+        Sec = sec;
+    }
+
+    public void setNo(String no) {
+        No = no;
+    }
+
+    public void setFile(String file) {
+        File = file;
+    }
 }

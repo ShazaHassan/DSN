@@ -24,7 +24,7 @@ public class GetAnswerofTaskFromDaabase extends ArrayAdapter<AddTaskAnswerForDat
     private List<AddTaskAnswerForDatabase> answerList;
 
     public GetAnswerofTaskFromDaabase(Activity context, List<AddTaskAnswerForDatabase> answerList) {
-        super(context, R.layout.post_for_database, answerList);
+        super(context, R.layout.answer_of_task_for_database, answerList);
         this.context = context;
         this.answerList = answerList;
     }
@@ -33,17 +33,17 @@ public class GetAnswerofTaskFromDaabase extends ArrayAdapter<AddTaskAnswerForDat
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
-        View listViewItem = inflater.inflate(R.layout.post_for_database, null, true); //take the layout of post for database as template for each element will show
+        View listViewItem = inflater.inflate(R.layout.answer_of_task_for_database, null, true); //take the layout of post for database as template for each element will show
         AddTaskAnswerForDatabase addTaskAnswerForDatabase = answerList.get(position);
 
         TextView nameStudent=(TextView) listViewItem.findViewById(R.id.TVNameDatabase);
         TextView sec=(TextView) listViewItem.findViewById(R.id.TVSecDatabase);
         TextView taskNo=(TextView) listViewItem.findViewById(R.id.TVTaskNoDatabase);
         TextView file=(TextView) listViewItem.findViewById(R.id.TVFileDatabase);
-        nameStudent.setText(addTaskAnswerForDatabase.getName());
-        sec.setText(addTaskAnswerForDatabase.getSec());
-        taskNo.setText(addTaskAnswerForDatabase.getNo());
-        file.setText(addTaskAnswerForDatabase.getFile());
+        nameStudent.setText("Name"+addTaskAnswerForDatabase.getName());
+        sec.setText("Sec"+addTaskAnswerForDatabase.getSec());
+        taskNo.setText("task NO"+addTaskAnswerForDatabase.getNo());
+        file.setText("File"+addTaskAnswerForDatabase.getFile());
         return listViewItem;
     }
 }

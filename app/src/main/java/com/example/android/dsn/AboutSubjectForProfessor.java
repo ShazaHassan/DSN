@@ -176,7 +176,7 @@ public class AboutSubjectForProfessor extends AppCompatActivity implements Adapt
             else if(item.equals("Questions"))
             {
                 others.setSelection(0);
-                Intent questionPage=new Intent(AboutSubjectForProfessor.this,QuestionForChForDoctor.class);
+                Intent questionPage=new Intent(AboutSubjectForProfessor.this,QuestionStartPageForDr.class);
                 /*TextView title= (TextView) findViewById(R.id.title) ;
                 String ti=title.getText().toString();*/
                 //questionPage.putExtra("sub",ti);

@@ -39,26 +39,32 @@
             android:textAllCaps="false"
             android:textSize="14sp"
             android:textStyle="bold|italic" />
+        <Button
+            android:id="@+id/BDeleteCh"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/TvquestionTitle"
+            android:layout_marginTop="28dp"
+            android:background="@android:drawable/checkbox_off_background"
+            android:fontFamily="sans-serif"
+            android:onClick="deleteChapter"
+            android:text="Delete Chapter"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:textStyle="bold|italic"
+            android:visibility="gone"/>
 
-        <LinearLayout
-            android:id="@+id/L2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/BaddChapter"
-            android:orientation="vertical">
 
-            <HorizontalScrollView
-                android:id="@+id/HSV1"
+
+            <ListView
+                android:id="@+id/LVChNo"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_below="@+id/BaddChapter"/>
 
-                <LinearLayout
-                    android:id="@+id/buttons"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal" />
-            </HorizontalScrollView>
-        </LinearLayout>
+
 
     </RelativeLayout>
 

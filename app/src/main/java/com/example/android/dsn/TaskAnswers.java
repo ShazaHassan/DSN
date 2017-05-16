@@ -44,6 +44,11 @@ public class TaskAnswers extends AppCompatActivity {
             //SEND DATA TO CLASS THIS CLASS USE TO SEND DATA TO DATABASE
             AddTaskAnswerForDatabase addTaskAnswerForDatabase=new
                     AddTaskAnswerForDatabase(IDTaskAnswer,Name,Sec,No,File);
+            addTaskAnswerForDatabase.setID(IDTaskAnswer);
+            addTaskAnswerForDatabase.setName(Name);
+            addTaskAnswerForDatabase.setSec(Sec);
+            addTaskAnswerForDatabase.setNo(No);
+            addTaskAnswerForDatabase.setFile(File);
             //ADD THE DATA TO DATABASE
             answerTaskDatabase.child(IDTaskAnswer).setValue(addTaskAnswerForDatabase);
         }
