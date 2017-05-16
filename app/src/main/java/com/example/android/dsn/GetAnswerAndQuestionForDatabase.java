@@ -25,7 +25,7 @@ import static android.os.Build.ID;
 import static com.example.android.dsn.R.id.delete;
 
 /**
- * Created by ShazaHassan on 15-May-17.
+ * Created by Mariam on 15-May-17.
  */
 
 public class GetAnswerAndQuestionForDatabase extends ArrayAdapter<AddAnswerAndQuestionToDatabase> {

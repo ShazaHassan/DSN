@@ -57,16 +57,12 @@ public class Login extends AppCompatActivity {
                     }
                     for (int i = 0; i < studentlist.size(); i++) {
                         String mail = studentlist.get(i).getEmail().toString(), password = studentlist.get(i).getPassword().toString();
-                        if (Email.equals(mail)) {
-                            if (pass.equals(password)) {
+                        if (Email.equals(mail) && pass.equals(password)) {
                                 Intent group = new Intent(Login.this, GroupOfAcadYearForStudent.class);
                                 startActivity(group);
                                 break;
-                            } else {
-                                Toast.makeText(Login.this, "Worng password", Toast.LENGTH_LONG).show();
-                            }
                         } else {
-                            Toast.makeText(Login.this, "Not Registed User", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Login.this, "Wrong Email Or Password", Toast.LENGTH_LONG).show();
                         }
                     }
                 }
@@ -123,16 +119,12 @@ public class Login extends AppCompatActivity {
                     for (int i = 0; i < HODlist.size(); i++) {
                         String mail = HODlist.get(i).getEmail().toString(),
                                 password = HODlist.get(i).getPassword().toString();
-                        if (Email.equals(mail)) {
-                            if (pass.equals(password)) {
+                        if (Email.equals(mail) && pass.equals(password)) {
                                 Intent group = new Intent(Login.this, HODForHOD.class);
                                 startActivity(group);
                                 break;
-                            } else {
-                                Toast.makeText(Login.this, "Wrong password", Toast.LENGTH_LONG).show();
-                            }
                         } else {
-                            Toast.makeText(Login.this, "Not Registed User", Toast.LENGTH_LONG).show();
+                            Toast.makeText(Login.this, "Wrong Email or password", Toast.LENGTH_LONG).show();
                         }
                     }
                 }

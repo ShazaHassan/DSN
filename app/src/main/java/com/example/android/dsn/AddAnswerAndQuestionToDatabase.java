@@ -1,7 +1,7 @@
 package com.example.android.dsn;
 
 /**
- * Created by ShazaHassan on 15-May-17.
+ * Created by Mariam on 15-May-17.
  */
 
 public class AddAnswerAndQuestionToDatabase {

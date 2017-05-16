@@ -24,7 +24,7 @@
 
         <RelativeLayout
             android:id="@+id/R1"
-            android:layout_width="366dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp">
@@ -33,6 +33,7 @@
                 android:id="@+id/ETUsername"
                 android:layout_width="357dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
                 android:layout_weight="1"
                 android:background="@android:drawable/alert_light_frame"
                 android:ems="10"
@@ -40,9 +41,7 @@
                 android:hint="Email:"
                 android:inputType="textPersonName"
                 android:layout_above="@+id/ETPass"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginBottom="25dp" />
+                android:layout_centerHorizontal="true" />
 
             <EditText
                 android:id="@+id/ETPass"
@@ -54,20 +53,19 @@
                 android:hint="Password:"
                 android:inputType="textPassword"
                 android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:layout_alignLeft="@+id/ETUsername"
+                android:layout_alignStart="@+id/ETUsername" />
 
             <Button
                 android:id="@+id/BLogin"
                 style="@android:style/Widget.Button.Inset"
                 android:layout_width="192dp"
                 android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
                 android:layout_marginBottom="58dp"
                 android:onClick="Login"
-                android:text="Login"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true" />
-
+                android:text="Login" />
 
 
             <RadioGroup
