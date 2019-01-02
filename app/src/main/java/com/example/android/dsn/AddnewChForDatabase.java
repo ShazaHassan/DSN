@@ -5,7 +5,7 @@ package com.example.android.dsn;
  */
 
 public class AddnewChForDatabase {
-    String ID,ChNO;
+    private String ID, ChNO;
 
     public AddnewChForDatabase(String ID, String chNO) {
         this.ID = ID;

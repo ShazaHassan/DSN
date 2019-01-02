@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/L1"
     android:layout_width="match_parent"
@@ -116,7 +115,6 @@
                         android:layout_alignRight="@+id/ETdead"
                         android:layout_below="@+id/ETdead"
                         android:layout_marginTop="15dp"
-                        android:background="@android:drawable/checkbox_off_background"
                         android:onClick="AddNewTask"
                         android:text="Add Task"
                         android:textAllCaps="false"
@@ -161,7 +159,6 @@
                         android:layout_alignParentRight="true"
                         android:layout_below="@+id/TvTasks"
                         android:layout_marginTop="14dp"
-                        android:background="@android:drawable/checkbox_off_background"
                         android:onClick="GoToTaskAnswers"
                         android:text="Upload Answer" />
 
@@ -173,7 +170,6 @@
                         android:layout_alignBottom="@+id/Bupload"
                         android:layout_alignLeft="@+id/Bupload"
                         android:layout_alignStart="@+id/Bupload"
-                        android:background="@android:drawable/checkbox_off_background"
                         android:onClick="GoToAnswersPage"
                         android:text="Answers"
                         android:textAllCaps="false"

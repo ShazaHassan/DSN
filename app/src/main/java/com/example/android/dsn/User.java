@@ -5,7 +5,7 @@ package com.example.android.dsn;
  */
 
 public class User {
-    String Name,Email,Password,Department;
+    private String Name, Email, Password, Department;
     public User() {
     }
 
@@ -26,7 +26,7 @@ public class User {
     }
 }
 class Student{
-    String Name,Email,Password,Department,AcadmicYear;
+    private String Name, Email, Password, Department, AcadmicYear;
 
     public Student() {
     }

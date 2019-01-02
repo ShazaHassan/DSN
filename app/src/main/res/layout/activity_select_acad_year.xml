@@ -46,7 +46,6 @@
                     android:layout_below="@+id/TvSelectAcademicYear"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="45dp"
-                    android:background="@android:drawable/checkbox_off_background"
                     android:onClick="firstYear"
                     android:text="First year"
                     android:textAllCaps="false" />
@@ -59,7 +58,6 @@
                     android:layout_alignStart="@+id/Bfirstyear"
                     android:layout_below="@+id/Bfirstyear"
                     android:layout_marginTop="23dp"
-                    android:background="@android:drawable/checkbox_off_background"
                     android:onClick="secondYear"
                     android:text="Second Year"
                     android:textAllCaps="false" />
@@ -72,7 +70,6 @@
                     android:layout_alignStart="@+id/Bsecondyear"
                     android:layout_below="@+id/Bsecondyear"
                     android:layout_marginTop="27dp"
-                    android:background="@android:drawable/checkbox_off_background"
                     android:onClick="thirdYear"
                     android:text="Third Year"
                     android:textAllCaps="false" />
@@ -86,7 +83,6 @@
                     android:layout_alignStart="@+id/Bthirdyear"
                     android:layout_below="@+id/Bthirdyear"
                     android:layout_marginTop="26dp"
-                    android:background="@android:drawable/checkbox_off_background"
                     android:onClick="forthYear"
                     android:text="Forth Year" />
 
